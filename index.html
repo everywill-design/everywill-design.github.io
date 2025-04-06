@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>トリイク | ポイ活の新しいカタチ</title>
+  <title>トリイク | 新しいポイ活サービス</title>
   <style>
     body {
       font-family: sans-serif;
       margin: 0;
       padding: 0;
-      background: #fff5e6;
+      background: #fff;
       line-height: 1.6;
     }
     .section {
@@ -27,41 +27,33 @@
       color: #333;
       padding: 0 20px;
     }
-    .line-button {
-      background-color: #06c755;
-      color: white;
-      font-weight: bold;
-      font-size: 16px;
-      padding: 12px 25px;
-      margin-top: 10px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      display: inline-block;
-      text-decoration: none;
-    }
-    .point-highlight {
-      background-color: #fff;
-      border-left: 5px solid #ff9933;
-      border-radius: 8px;
-      margin: 20px;
-      padding: 15px;
+    .step {
       display: flex;
       align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
+      margin-bottom: 30px;
+      gap: 20px;
+      flex-wrap: nowrap;
+      flex-direction: row;
     }
-    .point-highlight img {
-      width: 80px;
+    .step img {
+      width: 100px;
+      height: auto;
       flex-shrink: 0;
     }
-    .point-text {
-      flex: 1;
-      font-size: 15px;
-      color: #444;
+    .step-text {
+      max-width: 600px;
     }
-    .point-text strong {
-      color: #ff6600;
+    .step-text h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+    .points {
+      padding: 0 30px;
+      font-size: 16px;
+      color: #333;
+    }
+    .points p {
+      margin: 10px 0;
     }
     .center {
       text-align: center;
@@ -87,64 +79,198 @@
       color: #333;
       text-decoration: none;
     }
+  
     @media screen and (max-width: 768px) {
-      .point-highlight { flex-direction: column; align-items: flex-start; }
-      .point-highlight img { width: 60px; }
+      .step {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      .step img {
+        width: 80px;
+      }
+      .step-text {
+        max-width: calc(100% - 100px);
+      }
     }
-  </style>
+    
+    .cta-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .cta-text {
+      font-size: 20px;
+      color: #333;
+    }
+    @media screen and (min-width: 600px) {
+      .cta-flex {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+    
+.point-highlight {
+  background-color: #fff;
+  border-left: 5px solid #ff9933;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: background-color 0.3s ease;
+}
+.point-highlight:hover {
+  background-color: #fff0e6;
+}
+.point-highlight img {
+  width: 80px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.point-highlight:hover img {
+  transform: scale(1.05);
+}
+.point-text {
+  flex: 1;
+  font-size: 15px;
+  color: #444;
+}
+.point-text strong {
+  color: #ff6600;
+}
+
+</style>
+
+
 </head>
 <body>
 
+  <!-- ① バナー -->
   <div class="section">
     <img src="バナー2.png" alt="バナー" class="full">
   </div>
+
   <div class="spacer-5"></div>
 
+  <!-- ② ヘッダー1 -->
   <div class="section">
     <img src="ヘッダー1.png" alt="ヘッダー1" class="full">
   </div>
 
+  <!-- ③ 説明文 -->
   <div class="text-box">
     <p>ECで買った荷物を自分で受け取りに行くと、ポイントがもらえる新しいポイ活サービス。</p>
-    <a href="#" class="line-button">まずはLINE登録</a>
   </div>
 
   <div class="spacer-5"></div>
 
+  <!-- ④ ヘッダー2 -->
   <div class="section">
     <img src="ヘッダー2.png" alt="ヘッダー2" class="full">
   </div>
 
+  <!-- ⑤ 利用手順 -->
   <div class="section">
-    <img src="ヘッダー3-2.png" alt="ヘッダー3-2" class="full">
+    <div class="step">
+      <img src="利用手順1.png" alt="Step 1">
+      <div class="step-text">
+        <h3>1. ECサイトで購入</h3>
+        <p>ECサイトでいつも通り商品を選ぶ。</p>
+      </div>
+    </div>
+    <div class="step">
+      <img src="利用手順2.png" alt="Step 2">
+      <div class="step-text">
+        <h3>2. 配送先を変更</h3>
+        <p>配送先をご自身が取りに行ける<br>トリイクサービスの拠点住所を入力。</p>
+      </div>
+    </div>
+    <div class="step">
+      <img src="利用手順3.png" alt="Step 3">
+      <div class="step-text">
+        <h3>3. 荷物が配送先に届く</h3>
+        <p>トリイクサービス拠点に荷物が届き、<br>ご入室QRコードが届く。</p>
+      </div>
+    </div>
+    <div class="step">
+      <img src="利用手順4.png" alt="Step 4">
+      <div class="step-text">
+        <h3>4. 配送先に荷物を取りに行く</h3>
+        <p>トリイクサービス拠点に行き、<br>入口でQRコードをかざして入室。</p>
+      </div>
+    </div>
+    <div class="step">
+      <img src="利用手順5.png" alt="Step 5">
+      <div class="step-text">
+        <h3>5. 配送先で荷物を見つける</h3>
+        <p>ロッカーからご自身の荷物を探す。</p>
+      </div>
+    </div>
+    <div class="step">
+      <img src="利用手順6.png" alt="Step 6">
+      <div class="step-text">
+        <h3>6. 荷物の写真を撮って送る</h3>
+        <p>荷物の写真を撮って、<br>公式LINEへ写真を送信。</p>
+      </div>
+    </div>
+    <div class="step">
+      <img src="利用手順7.png" alt="Step 7">
+      <div class="step-text">
+        <h3>7. ポイント付与</h3>
+        <p>後日、ポイントを付与。<br>今だけAmazonギフト券をプレゼント！</p>
+      </div>
+    </div>
   </div>
 
+  <!-- ⑥ ヘッダー3 -->
   <div class="section">
-    <div class="point-highlight">
-      <img src="学生1.png" alt="学生1">
-      <div class="point-text">
-        <strong>Point1：</strong>通学途中で荷物受け取るだけでポイントがもらえる！
-      </div>
-    </div>
-    <div class="point-highlight">
-      <img src="サラリーマン1.png" alt="サラリーマン1">
-      <div class="point-text">
-        <strong>Point2：</strong>少しでもお小遣い稼ぎが、通勤帰りにできちゃう！
-      </div>
-    </div>
-    <div class="point-highlight">
-      <img src="オフィス女性1.png" alt="オフィス女性1">
-      <div class="point-text">
-        <strong>Point3：</strong>置き配だと、少し不安。
-      </div>
-    </div>
+    <img src="ヘッダー3.png" alt="ヘッダー3" class="full">
   </div>
 
-  <div class="center">
-    <h2>今だけ！LINE登録でアマギフ当たる！</h2>
+  <!-- ⑦-A ポイント付き紹介 -->
+
+<!-- ⑦-A ポイント紹介（3つ） -->
+<div class="section">
+  <div class="point-highlight">
+    <img src="学生1.png" alt="学生1">
+    <div class="point-text">
+      <strong>Point1：</strong>通学途中で荷物受け取るだけでポイントがもらえる！
+    </div>
+  </div>
+  <div class="point-highlight">
+    <img src="サラリーマン1.png" alt="サラリーマン1">
+    <div class="point-text">
+      <strong>Point2：</strong>少しでもお小遣い稼ぎが、通勤帰りにできちゃう！
+    </div>
+  </div>
+  <div class="point-highlight">
+    <img src="オフィス女性1.png" alt="オフィス女性1">
+    <div class="point-text">
+      <strong>Point3：</strong>置き配だと、少し不安。
+    </div>
+  </div>
+</div>
+
+
+<!-- ⑦ ターゲット項目 -->
+  <div class="points">
+    <p>☑ 効率的にポイ活したい方</p>
+    <p>☑ お小遣いを稼ぎたい方</p>
+    <p>☑ 通勤、通学ついでに<br>　 トリイクサービス拠点が近い方</p>
+    <p>☑ 置き配が不安な方</p>
+  </div>
+
+  <!-- ⑧⑨ CTA -->
+  
+  <div class="center cta-flex">
+    <div class="cta-text">今だけ！LINE登録でアマギフ当たる！</div>
     <button class="cta-button">LINEで参加する</button>
   </div>
 
+
+  <!-- ⑩〜⑫ フッターリンク -->
   <div class="footer-links">
     <a href="#">よくある質問</a> |
     <a href="https://everywill-jp.com/" target="_blank">運営会社</a> |
