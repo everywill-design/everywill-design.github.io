@@ -92,7 +92,25 @@
         max-width: calc(100% - 100px);
       }
     }
+    
+    .cta-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .cta-text {
+      font-size: 20px;
+      color: #333;
+    }
+    @media screen and (min-width: 600px) {
+      .cta-flex {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
     </style>
+
 
 </head>
 <body>
@@ -188,15 +206,17 @@
   </div>
 
   <!-- ⑧⑨ CTA -->
-  <div class="center">
-    <h2>今だけ！LINE登録でアマギフ当たる！</h2>
+  
+  <div class="center cta-flex">
+    <div class="cta-text">今だけ！LINE登録でアマギフ当たる！</div>
     <button class="cta-button">LINEで参加する</button>
   </div>
+
 
   <!-- ⑩〜⑫ フッターリンク -->
   <div class="footer-links">
     <a href="#">よくある質問</a> |
-    <a href="#">運営会社</a> |
+    <a href="https://everywill-jp.com/" target="_blank">運営会社</a> |
     <a href="#">プライバシーポリシー</a>
   </div>
 
