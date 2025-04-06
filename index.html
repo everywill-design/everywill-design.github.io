@@ -28,13 +28,26 @@
       padding: 0 20px;
     }
     .step {
-      display: flex;
-      align-items: center;
-      margin-bottom: 30px;
-      gap: 20px;
-      flex-wrap: nowrap;
-      flex-direction: row;
-    }
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  transition: background-color 0.3s ease;
+}
+.step:hover {
+  background-color: #f7f7f7;
+}
+.step img {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.step:hover img {
+  transform: scale(1.05);
+}
     .step img {
       width: 100px;
       height: auto;
@@ -82,9 +95,26 @@
   
     @media screen and (max-width: 768px) {
       .step {
-        flex-direction: row;
-        align-items: flex-start;
-      }
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  transition: background-color 0.3s ease;
+}
+.step:hover {
+  background-color: #f7f7f7;
+}
+.step img {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.step:hover img {
+  transform: scale(1.05);
+}
       .step img {
         width: 80px;
       }
@@ -254,15 +284,7 @@
 </div>
 
 
-<!-- ⑦ ターゲット項目 -->
-  <div class="points">
-    <p>☑ 効率的にポイ活したい方</p>
-    <p>☑ お小遣いを稼ぎたい方</p>
-    <p>☑ 通勤、通学ついでに<br>　 トリイクサービス拠点が近い方</p>
-    <p>☑ 置き配が不安な方</p>
-  </div>
-
-  <!-- ⑧⑨ CTA -->
+<!-- ⑧⑨ CTA -->
   
   <div class="center cta-flex">
     <div class="cta-text">今だけ！LINE登録でアマギフ当たる！</div>
