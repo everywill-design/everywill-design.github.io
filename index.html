@@ -24,114 +24,95 @@
 <title>トリイク | 新しいポイ活サービス</title>
 <style>
     body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      line-height: 1.6;
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
     }
     .section {
-      padding: 20px;
+        padding: 20px;
     }
-    .step-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 10px;
-      max-width: 900px;
-      margin: auto;
+    .section img.full {
+        width: 100%;
+        display: block;
+        margin-bottom: 15px;
+    }
+    .text-box {
+        font-size: 16px;
+        color: #333;
+        padding: 0 20px;
+        margin-bottom: 20px;
     }
     .step-item {
-      background-color: #f9f9f9;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        border-radius: 12px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        margin-bottom: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     }
     .step-item:hover {
-      background-color: #f1f1f1;
-      transform: scale(1.03);
+        background-color: #fef3e0;
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     }
     .step-item img {
-      width: 80px;
-      height: 80px;
-      flex-shrink: 0;
+        width: 70px;
+        height: auto;
+        margin-right: 15px;
+        border-radius: 12px;
+        transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .step-item:hover img {
+        transform: scale(1.1) rotate(-2deg);
+        filter: brightness(1.1);
     }
     .step-text h3 {
-      margin: 0;
-      font-size: 20px;
+        margin: 0 0 5px;
+        font-size: 18px;
+        color: #333;
+        transition: color 0.3s ease;
     }
     .step-text p {
-      margin: 5px 0 0;
-      font-size: 16px;
+        margin: 0;
+        font-size: 16px;
+        color: #666;
+        transition: color 0.3s ease;
     }
-    .reason-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      max-width: 900px;
-      margin: auto;
+    .line-banner {
+        background-color: #06c755;
+        color: #fff;
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 12px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        width: 90%;
+        max-width: 300px;
+        margin: 20px auto;
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
-    .reason-item {
-      display: flex;
-      align-items: center;
-      background-color: #f9f9f9;
-      padding: 15px;
-      border-radius: 10px;
-      gap: 20px;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+    .line-banner:hover {
+        background-color: #04a843;
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     }
-    .reason-item:hover {
-      background-color: #f1f1f1;
-      transform: scale(1.03);
+    .footer-links {
+        text-align: center;
+        margin-top: 40px;
+        padding: 20px;
+        font-size: 14px;
     }
-    .reason-item img {
-      width: 100px;
-      flex-shrink: 0;
-    }
-    .line-button {
-      background-color: #06c755;
-      color: white;
-      padding: 15px 30px;
-      font-size: 18px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin: 20px auto;
-      display: block;
-      text-align: center;
-      width: 80%;
-      max-width: 300px;
-    }
-    .line-button img {
-      width: 20px;
-      margin-right: 10px;
-      vertical-align: middle;
-    }
-    /* Section animation on scroll */
-    .section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .footer-links a {
+        margin: 0 10px;
+        color: #333;
+        text-decoration: none;
     }
 </style>
-<script>
-    document.addEventListener("scroll", function() {
-        const sections = document.querySelectorAll(".section");
-        sections.forEach(section => {
-            const rect = section.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100) {
-                section.classList.add("visible");
-            }
-        });
-    });
-</script>
 </head>
 <body>
 <!-- ① バナー -->
