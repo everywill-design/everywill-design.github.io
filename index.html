@@ -28,15 +28,18 @@
         margin: 0;
         padding: 0;
         background-color: #ffffff;
+        scroll-behavior: smooth;
     }
     .section {
         padding: 20px;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s ease-out forwards;
     }
-    .section img.full {
-        width: 100%;
-        display: block;
-        margin-bottom: 15px;
-    }
+    .section:nth-child(1) { animation-delay: 0.2s; }
+    .section:nth-child(2) { animation-delay: 0.4s; }
+    .section:nth-child(3) { animation-delay: 0.6s; }
+    .section:nth-child(4) { animation-delay: 0.8s; }
     .text-box {
         font-size: 16px;
         color: #333;
@@ -51,66 +54,87 @@
         background-color: #ffffff;
         box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         margin-bottom: 15px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+        flex-wrap: wrap;
+        overflow: hidden;
+        position: relative;
+        animation: fadeInUp 0.8s ease-out;
+    }
+    .step-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255,0.3);
+        transition: left 0.4s ease;
+        z-index: 0;
+    }
+    .step-item:hover::before {
+        left: 100%;
+    }
+    .step-item img {
+        width: 80px;
+        height: auto;
+        margin-bottom: 10px;
+        transition: transform 0.4s ease, filter 0.4s ease;
+        z-index: 1;
+    }
+    .step-text {
+        flex: 1;
+        min-width: 200px;
+        position: relative;
+        z-index: 1;
+        transition: color 0.4s ease;
     }
     .step-item:hover {
         background-color: #fef3e0;
         transform: translateY(-5px) scale(1.02);
         box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     }
-    .step-item img {
-        width: 70px;
-        height: auto;
-        margin-right: 15px;
-        border-radius: 12px;
-        transition: transform 0.3s ease, filter 0.3s ease;
-    }
     .step-item:hover img {
         transform: scale(1.1) rotate(-2deg);
         filter: brightness(1.1);
     }
-    .step-text h3 {
-        margin: 0 0 5px;
-        font-size: 18px;
+    .step-item:hover .step-text {
         color: #333;
-        transition: color 0.3s ease;
-    }
-    .step-text p {
-        margin: 0;
-        font-size: 16px;
-        color: #666;
-        transition: color 0.3s ease;
     }
     .line-banner {
-        background-color: #06c755;
-        color: #fff;
-        padding: 15px 30px;
-        font-size: 18px;
-        border-radius: 12px;
-        text-align: center;
-        text-decoration: none;
         display: block;
+        margin: 20px auto;
         width: 90%;
         max-width: 300px;
-        margin: 20px auto;
-        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
         box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        animation: float 6s ease-in-out infinite alternate;
     }
     .line-banner:hover {
-        background-color: #04a843;
-        transform: translateY(-5px) scale(1.02);
+        transform: translateY(-5px) scale(1.05);
         box-shadow: 0 15px 40px rgba(0,0,0,0.15);
     }
-    .footer-links {
-        text-align: center;
-        margin-top: 40px;
-        padding: 20px;
-        font-size: 14px;
+    @media (min-width: 768px) {
+        .step-item {
+            flex-wrap: nowrap;
+        }
     }
-    .footer-links a {
-        margin: 0 10px;
-        color: #333;
-        text-decoration: none;
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes float {
+        0% {
+            transform: translateY(0px);
+        }
+        100% {
+            transform: translateY(-10px);
+        }
     }
 </style>
 </head>
@@ -134,9 +158,10 @@
 <div class="text-box">
 <p>現在、2025年6月上旬に「九段下駅徒歩1分」に受け取り場所を準備中！ご利用いただいた方にはAmazonギフト券100円と、利用後アンケート回答で＋100円をプレゼント！まずはLINEの友だち登録！</p>
 </div>
-<div class="cta-flex">
-<div class="cta-text">まずは公式LINEに登録！</div>
-<a href="https://lin.ee/LZmxsno" target="_blank" class="cta-button">LINEで参加する</a>
+
+<!-- LINEバナー -->
+<div class="section">
+    <img src="LINE.png" alt="友だち追加" class="line-banner">
 </div>
 </div>
 
@@ -229,11 +254,10 @@
 <strong>Point3：</strong>置き配だと、少し不安なので荷物取りに行きたい。
 </div>
 </div>
+<!-- LINEバナー -->
+<div class="section">
+    <img src="LINE.png" alt="友だち追加" class="line-banner">
 </div>
-<!-- ⑧⑨ CTA -->
-<div class="center cta-flex">
-<div class="cta-text">まずは公式LINEに登録！</div>
-<a href="https://lin.ee/LZmxsno" target="_blank" class="cta-button">LINEで参加する</a>
 </div>
 <div class="center" style="margin-top: 10px;">
 <div style="font-size: 14px; margin-bottom: 5px;">公式SNS</div>
