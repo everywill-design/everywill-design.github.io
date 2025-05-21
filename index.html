@@ -386,5 +386,15 @@
 <a href="https://everywill-jp.com/" target="_blank">運営会社</a> |
 <a href="https://everywill-jp.com/privacy/" target="_blank">プライバシーポリシー</a>
 </div>
+<script>
+function copyAddress() {
+  const address = "東京都千代田区九段南1-5-5九段サウスサイドスクエア4階トリイク九段下";
+  navigator.clipboard.writeText(address).then(() => {
+    alert("住所をコピーしました！");
+  }).catch(err => {
+    alert("コピーに失敗しました");
+  });
+}
+</script>
 </div></body>
 </html>
