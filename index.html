@@ -214,22 +214,44 @@
   }
 }
 
+.header-title {
+  font-size: 48px;
+  color: #ff6600;
+  text-align: center;
+  margin: 60px 0 20px;
+  font-weight: bold;
+  position: relative;
+  animation: fadeSlideUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>
 </head>
 <body>
 <!-- ① バナー -->
-<div class="section">
-<img alt="バナー" class="full" src="バナー2.png"/>
+<div class="section" style="padding: 0;">
+  <img alt="バナー" class="full" src="バナー2.png"/>
+</div>
 <!-- ② ヘッダー1 -->
 <div class="section">
-<img alt="ヘッダー1" class="full" src="ヘッダー1.png"/>
+<h2 class="header-title">トリイクってなに？</h2>
 </div>
 <!-- ③ 説明文 -->
 <div class="text-box">
 <p>ECで買った自分宛の荷物*1を、当社が運営する「トリイク スポット」へ取り行く度、Amazoギフト券がもらえる新サービス！​</p>
 <!-- ② ヘッダー2 -->
 <div class="section">
-<img alt="ヘッダー2" class="full" src="ヘッダー1-2.png"/>
+<h2 class="header-title">キャンペーン実施中</h2>
 </div>
 <!-- ③ 説明文 -->
 <div class="text-box">
@@ -247,7 +269,7 @@
 </div>
 <!-- ④ ヘッダー3 -->
 <div class="section">
-<img alt="ヘッダー3" class="full" src="ヘッダー2.png"/>
+<h2 class="header-title">利用手順</h2>
 </div><div class="section">
 <div class="step">
 <img alt="Step 0" src="利用手順3-2.png"/>
@@ -317,7 +339,7 @@
 <!-- ⑤ 利用手順 -->
 <!-- ⑥ ヘッダー4 -->
 <div class="section">
-<img alt="ヘッダー4" class="full" src="ヘッダー3.png"/>
+<h2 class="header-title">こんなあなたにピッタリ</h2>
 </div>
 <!-- ⑦-A ポイント付き紹介 -->
 <!-- ⑦-A ポイント紹介（3つ） -->
