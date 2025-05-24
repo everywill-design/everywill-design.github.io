@@ -235,6 +235,43 @@
     transform: translateY(0);
   }
 }
+.header-section {
+  background: linear-gradient(135deg, #ff9900, #ffcc66);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(255, 153, 0, 0.25);
+  margin: 40px 20px;
+  padding: 40px 20px;
+  animation: fadeInBanner 1s ease forwards;
+  opacity: 0;
+}
+
+.header-section .header-title {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  opacity: 1; /* 上書き */
+  animation: none; /* 元のfadeSlideUp無効化 */
+}
+
+@keyframes fadeInBanner {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-section .text-box {
+  color: #fff;
+  font-size: 22px;
+  padding: 0;
+  line-height: 1.8;
+}
+
 </style>
 </head>
 <body>
@@ -242,21 +279,20 @@
 <div class="section" style="padding: 0;">
   <img alt="バナー" class="full" src="バナー2.png"/>
 </div>
-<!-- ② ヘッダー1 -->
-<div class="section">
-<h2 class="header-title">トリイクってなに？</h2>
+<!-- ヘッダー1 + 説明文 -->
+<div class="header-section">
+  <h2 class="header-title">トリイクってなに？</h2>
+  <div class="text-box">
+    <p>ECで買った自分宛の荷物*1を、当社が運営する「トリイク スポット」へ取り行く度、Amazoギフト券がもらえる新サービス！​</p>
+  </div>
 </div>
-<!-- ③ 説明文 -->
-<div class="text-box">
-<p>ECで買った自分宛の荷物*1を、当社が運営する「トリイク スポット」へ取り行く度、Amazoギフト券がもらえる新サービス！​</p>
-<!-- ② ヘッダー2 -->
-<div class="section">
-<h2 class="header-title">キャンペーン実施中</h2>
-</div>
-<!-- ③ 説明文 -->
-<div class="text-box">
-<p>2025年6月16日（月）に、1号店「<span onclick="copyAddress()" style="cursor: pointer; color: #06c755; text-decoration: underline;">トリイク九段下</span>
-」スポット（九段下駅徒歩1分）をオープン！​ご利用いただいた方にはAmazonギフト券100円分と、さらに、友だち紹介で＋100円分をプレゼント！​まずはLINEの友だち登録を！​</p>
+<!-- ヘッダー2 + 説明文 -->
+<div class="header-section">
+  <h2 class="header-title">キャンペーン実施中</h2>
+  <div class="text-box">
+    <p>2025年6月16日（月）に、1号店「<span onclick="copyAddress()" style="cursor: pointer; color: #fff; text-decoration: underline;">トリイク九段下</span>
+    」スポット（九段下駅徒歩1分）をオープン！​ご利用いただいた方にはAmazonギフト券100円分と、さらに、友だち紹介で＋100円分をプレゼント！​まずはLINEの友だち登録を！​</p>
+  </div>
 </div>
 <p class="notice-text"><span onclick="copyAddress()" style="cursor: pointer; color: #06c755; text-decoration: underline;">トリイク九段下</span>
 は、ただいま準備を進めております。<br>2025年6月15日（日）以前に荷物をお送りいただいたり、ご訪問いただいたりすることは、準備の都合上ご遠慮いただけますようお願いいたします。</p>
