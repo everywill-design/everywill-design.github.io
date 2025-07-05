@@ -2,9 +2,10 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>トリイクHPへ移動中...</title>
+  <title>ページ移動中｜トリイク</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ✅ Google Analyticsタグ -->
+  <!-- ✅ Google Analytics GA4 タグ -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXG9XL50B6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -13,14 +14,45 @@
     gtag('config', 'G-QXG9XL50B6');
   </script>
 
-  <!-- ✅ 1.5秒後にトリイクHPへ自動遷移 -->
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+      background-color: #fff8f0;
+      color: #444;
+    }
+    .loader {
+      margin-bottom: 1rem;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #f46b00;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  </style>
+
   <script>
+    // UTMパラメータを保持して toriiku-jp.com に遷移
+    const queryParams = window.location.search;
     setTimeout(function() {
-      window.location.href = "https://toriiku-jp.com/";
+      window.location.href = "https://toriiku-jp.com/" + queryParams;
     }, 1500);
   </script>
 </head>
 <body>
-  <p>トリイクのページに移動します。自動的に遷移しない場合は <a href="https://toriiku-jp.com/">こちらをクリック</a> してください。</p>
+  <div class="loader"></div>
+  <p>ページ移動中です…</p>
 </body>
 </html>
