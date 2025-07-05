@@ -7,14 +7,8 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  // UTMパラメータからキャンペーンを取得して設定
-  const params = new URLSearchParams(window.location.search);
-  gtag('config', 'G-QXG9XL50B6', {
-    campaign: params.get('utm_campaign'),
-    campaign_source: params.get('utm_source'),
-    campaign_medium: params.get('utm_medium')
-  });
+  gtag('config', 'G-QXG9XL50B6');
+</script>
 </script>
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow">
