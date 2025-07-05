@@ -9,6 +9,18 @@
   gtag('js', new Date());
   gtag('config', 'G-QXG9XL50B6');
 </script>
+  const params = new URLSearchParams(window.location.search);
+  const campaign = params.get("utm_campaign");
+  const source = params.get("utm_source");
+  const medium = params.get("utm_medium");
+
+  if (campaign || source || medium) {
+    gtag('event', 'campaign_data', {
+      campaign: campaign,
+      source: source,
+      medium: medium
+    });
+  }
 </script>
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow">
