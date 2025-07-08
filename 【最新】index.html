@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QXG9XL50B6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QXG9XL50B6');
+</script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const campaign = params.get("utm_campaign");
+  const source = params.get("utm_source");
+  const medium = params.get("utm_medium");
+
+  if (campaign || source || medium) {
+    gtag('event', 'campaign_data', {
+      campaign: campaign,
+      source: source,
+      medium: medium
+    });
+  }
+</script>
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta content="YOUR_VERIFICATION_CODE_HERE" name="google-site-verification"/><meta charset="utf-8"/>
+<meta name="description" content="トリイクは、ECで買った自分宛の荷物を、当社が運営する「トリイク スポット」へ取り行く度、Amazoギフト券がもらえる新サービス！​">
+<meta name="keywords" content="トリイク, ポイ活, EC, 配送, 節約, ポイント, ポイ活">
+<meta property="og:title" content="トリイク | 新しいポイ活サービス">
+<meta property="og:description" content="ECで買った自分宛の荷物を、当社が運営する「トリイク スポット」へ取り行く度、Amazoギフト券がもらえる新サービス！​。">
+<meta property="og:image" content="https://example.com/og-image.png">
+<meta property="og:url" content="https://example.com">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="ロゴ.png" type="image/png">
+<link rel="apple-touch-icon" href="ロゴ.png" sizes="180x180">
+<link rel="icon" href="ロゴ.png" sizes="192x192" type="image/png">
+<link rel="icon" href="ロゴ.png" sizes="32x32" type="image/png">
+<link rel="icon" href="ロゴ.png" sizes="96x96" type="image/png">
+<link rel="icon" href="ロゴ.png" sizes="16x16" type="image/png">
+<meta name="msapplication-TileImage" content="ロゴ.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+<link rel="apple-touch-icon" href="ロゴ.png" sizes="180x180">
+<link rel="icon" href="ロゴ.png" sizes="192x192" type="image/png">
+<title>トリイク | 新しいポイ活サービス</title>
+    <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      line-height: 1.6;
+    }
+    .section {
+      padding: 20px;
+    }
+    .section img.full {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+　　}
+        .spacer-5 {
+      height: 5px;
+    }
+@media screen and (max-width: 768px) {
+  .text-box {
+    padding: 0 10px;
+    text-align: center;
+  }
+}
+    .step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 25px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  transition: background-color 0.3s ease;
+}
+.step:hover {
+  background-color: #f7f7f7;
+}
+.step img {
+  width: 200px;
+  height: auto;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.step:hover img {
+  transform: scale(1.05);
+}
+    .step img {
+      width: 200px;
+      height: auto;
+      flex-shrink: 0;
+    }
+    .step-text {
+      max-width: 600px;
+        font-size: 24px;
+　　}
+    .step-text h3 {
+      margin: 0 0 10px;
+      font-size: 32px;
+    }
+    .points {
+      padding: 0 30px;
+      font-size: 20px;
+      color: #333;
+    }
+    .points p {
+      margin: 10px 0;
+    }
+    .center {
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .cta-button {
+      background-color: #06c755;
+      color: white;
+      padding: 30px 60px;
+      font-size: 35px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .footer-links {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 25px;
+    }
+    .footer-links a {
+      margin: 0 10px;
+      color: #333;
+      text-decoration: none;
+    }
+  
+    @media screen and (max-width: 768px) {
+      .step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  transition: background-color 0.3s ease;
+}
+.step:hover {
+  background-color: #f7f7f7;
+}
+.step img {
+  width: 200px;
+  height: auto;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.step:hover img {
+  transform: scale(1.05);
+}
+      .step img {
+        width: 160px;
+      }
+      .step-text {
+        max-width: calc(100% - 200px);
+      }
+    }
+    
+    .cta-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .cta-text {
+      font-size: 30px;
+      color: #333;
+    }
+    @media screen and (min-width: 600px) {
+      .cta-flex {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+    
+.point-highlight {
+  background-color: #fff;
+  border-left: 5px solid #ff9933;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: background-color 0.3s ease;
+}
+.point-highlight:hover {
+  background-color: #fff0e6;
+}
+.point-highlight img {
+  width: 160px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+.point-highlight:hover img {
+  transform: scale(1.05);
+}
+.point-text {
+  flex: 1;
+  font-size: 30px;
+  color: #444;
+}
+.point-text strong {
+  color: #ff6600;
+}
+
+.notice-text {
+  font-size: 12px;          /* Slightly smaller on desktop */
+  color: #777;
+  padding: 0 30px;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .notice-text {
+    font-size: 10px;        /* Smaller and compact on mobile */
+    padding: 0 10px;
+    line-height: 1.3;
+    opacity: 0.85;          /* Slightly faded for visual hierarchy */
+    letter-spacing: -0.1px; /* Tighter text appearance */
+  }
+
+  .notice-text p {
+    margin-bottom: 4px;     /* Reduced spacing between paragraphs */
+  }
+}
+
+.header-title {
+  font-size: 48px;
+  color: #ff6600;
+  text-align: center;
+  margin: 60px 0 20px;
+  font-weight: bold;
+  position: relative;
+  animation: fadeSlideUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.banner {
+  background: linear-gradient(135deg, #FFA500, #FF8C00);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 36px;
+  font-weight: bold;
+  animation: bannerFade 1.2s ease forwards;
+  opacity: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 40px 20px 20px;
+}
+
+.header-section .header-title {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  opacity: 1; /* 上書き */
+  animation: none; /* 元のfadeSlideUp無効化 */
+}
+
+@keyframes fadeInBanner {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-section .text-box {
+  color: #fff;
+  font-size: 22px;
+  padding: 0;
+  line-height: 1.8;
+}
+
+        .header-orange {
+  font-size: 42px;
+  font-weight: bold;
+  color: #ff6600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.header-banner {
+  width: 100%;
+  background-color: #f4f2ef;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.header-banner h2 {
+  font-size: 48px;
+  color: #ff6600;
+  margin: 0;
+  font-weight: bold;
+  animation: fadeSlideUp 1s ease forwards;
+  opacity: 0;
+}
+.spacer-30 {
+  height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .point-highlight {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .point-text {
+    font-size: 24px;
+    max-width: 100%;
+  }
+  .point-highlight img {
+    width: 140px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-title,
+  .header-banner h2 {
+    font-size: 32px;
+    padding: 0 10px;
+    text-align: center;
+  }
+}
+
+.center-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+}      
+</style>
+<div class="section" style="padding: 0;">
+</h1>
+  <img alt="バナー2" class="full" src="バナー2.png"/>
+</div>
+<div class="spacer-30"></div>
+</div>
+<!-- ヘッダー1 + 説明文 -->
+<div class="header-banner">
+  <h2>トリイクってなに？</h2>
+</div>
+<div class="text-box">
+      <p>トリイクは、ECサイトで購入した「自分宛ての商品」を「トリイク スポット」に届けて、そこで受け取ることで、Amazonギフト券がもらえる新しいサービス*1です。
+  </div>
+<!-- ヘッダー2 + 説明文 -->
+<div class="header-banner">
+  <h2>荷物の受け取り方を<br>変えるだけでおトクに！</h2>
+</div>
+<div class="text-box">
+    <p>2025年6月16日（月）に、1号店「<span onclick="copyAddress()" style="cursor: pointer; color: #06c755; text-decoration: underline;">トリイク九段下</span>
+  」スポット（九段下駅徒歩1分）をオープン！ご利用いただいた方にはAmazonギフト券100円分と、利用後のアンケート回答で+100円！*2</p>
+</div>
+<!-- ヘッダー3 + 説明文 -->
+<div class="header-banner">
+  <h2>監視カメラや認証機能で<br>安心安全！</h2>
+</div>
+<div class="text-box">
+    <p>荷物の受け取り場所である「トリイクスポット」は監視カメラやセキュリティ認証を完備！<br/>自宅での置き配だと「盗まれたり、雨で濡れたりするのが不安」という心配も解決！！​</p>
+</div>
+<!-- ヘッダー4 + 説明文 -->
+<div class="header-banner">
+  <h2>社会課題を解決する<br>新しいサービス​</h2>
+</div>
+<div class="text-box">
+    <p>多くの人がトリイクを利用することで、宅配ドライバーの負担軽減に繋がり、日増しに深刻化する物流の人手不足問題の解決にも繋がります。荷物の受取り方を変えるだけでおトクに！世の中にイイコトができる！トリイクは、そんな”自分にも社会にもやさしい”サービスです。</p>
+</div>
+<!-- ⑧⑨ CTA -->
+<div class="center cta-flex" style="display: flex; flex-direction: column; align-items: center; margin: 30px 0;">
+    <div class="cta-text">まずは公式LINEに登録！</div>
+    <a href="https://toriiku-jp.com/go-to-line?utm_source=lp&utm_medium=organic&utm_campaign=default" target="_blank">
+        <button class="cta-button">LINEで参加する</button>
+    </a>
+</div>
+<p class="center-text">≪各種スタートアップアワードでの受賞多数≫</p>
+<p class="center-text"><a href="https://everywill-jp.com/blog/%E3%80%90%E6%9C%80%E5%84%AA%E7%A7%80%E8%B3%9E%E3%82%92%E5%8F%97%E8%B3%9E%E3%80%91%E8%B1%AA%E8%8F%AF%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%83%BB%E5%9B%BD%E5%86%85/" target="_blank" style="color: #A9A9A9; text-decoration: underline;">【最優秀賞】豪華ビジネスイベント・国内最大規模のスタートアップアワード The JSSA KANSAI Pitch Award 2025</a>等、他の受賞歴等は<a href="https://everywill-jp.com/blog/" target="_blank" style="color: #A9A9A9; text-decoration: underline;">こちら</a>を参照。</p>
+</div>
+</div>
+<p class="center-text"> ≪サービス概要≫</p>
+</div>
+  <video controls style="max-width: 100%; height: auto;">
+    <source src="LP動画.mp4" type="video/mp4">
+    お使いのブラウザでは動画が再生できません。
+  </video>
+</div>
+</div>
+<!-- ⑥ ヘッダー4 -->
+<div class="header-banner">
+  <h2>こんなあなたにピッタリ</h2>
+</div>
+<div class="text-box" style="text-align: left; padding-left: 20px;">
+<!-- ⑦-A ポイント付き紹介 -->
+<!-- ⑦-A ポイント紹介（3つ） -->
+<div class="section">
+<div class="point-highlight">
+<img alt="学生1" src="学生1.png"/>
+<div class="point-text">
+<strong>Point1：</strong>自宅で荷物を受け取る際、タイミングが合わず再配達になることが多い。再配達は手間で時間がかかるし、ドライバーさんにも申し訳ない。
+</div>
+</div>
+<div class="point-highlight">
+<img alt="サラリーマン1" src="サラリーマン1.png"/>
+<div class="point-text">
+<strong>Point2：</strong>物価上昇によって日増しに家計が厳しくなってきており、生活苦。通勤時間などを活用してポイ活をしているが、もっと効率的に稼ぎたい。
+    </div>
+</div>
+<div class="point-highlight">
+<img alt="オフィス女性1" src="オフィス女性1.png"/>
+<div class="point-text">
+<strong>Point3：</strong>置き配は、盗まれたり、雨で濡れたりするのが不安。​
+    </div>
+</div>
+<!-- ④ ヘッダー3 -->
+<div class="header-banner">
+  <h2>利用手順</h2>
+</div>
+<div class="text-box" style="text-align: left; padding-left: 20px;">
+
+</div>
+<div class="step">
+<img alt="Step 1" src="利用手順3-2.png"/>
+<div class="step-text">
+<h3> <strong>1.トリイク公式LINE登録*3</strong></h3>
+<p><a href="https://lin.ee/XnKe93q" target="_blank" style="color: #06c755; text-decoration: underline;">トリイク公式LINE</a>をまずは登録する。<br/<p class="notice-text">会員登録の際は、必ず、本人のフルネームを登録してください。</p>
+</div>
+</div>
+<div class="step">
+<img alt="Step 2" src="利用手順1.png"/>
+<div class="step-text">
+<h3>2. ECサイトで商品を選択</strong></h3>
+<p>ECサイトやECモールで、いつも通り商品を選ぶ。</p>
+</div>
+</div>
+<div class="step">
+<img alt="Step 3" src="利用手順2.png"/>
+<div class="step-text">
+<h3>3.お届け先住所,日時を指定し購入*4​</h3>
+<p>ECサイト画面で以下の通り指定し、商品を購入。<br/>
+<strong>【お届け先住所】</strong><br/>
+<span onclick="copyAddress()" style="cursor: pointer; color: #06c755; text-decoration: underline;">〒102-0074 東京都 千代田区 九段南<br/>1-5-5-4階トリイク九段下</span><br/>
+<strong>【お届け日時】</strong><br/>
+お届け日：2025年6月16日～同年8月22日<br/>
+時間帯　：午前中（8～12時）<br/>
+※楽天市場,Amazonの入力方法は<a href="https://sites.google.com/view/address-input/%E3%83%9B%E3%83%BC%E3%83%A0" target="_blank" style="color: #06c755; text-decoration: underline;">こちら</a>。<br/></p>
+</div>
+</div>
+<div class="step">
+<img alt="Step 4" src="利用手順3-2.png"/>
+<div class="step-text">
+<h3>4. トリイクスポットの来訪予約*3</h3>
+<p>トリイク公式LINEでトリイクスポットの来訪日時を予約し、入室QRコードを受け取る。<br/>予約日時はいつでも変更可能。</p>
+</div>
+</div>
+<div class="step">
+<img alt="Step 5" src="利用手順4-2.png"/>
+<div class="step-text">
+<h3>5. 荷物がトリイクスポットに届く</h3>
+<p>荷物が到着したらトリイク公式LINEに通知が届く。​</p>
+</div>
+</div>
+<div class="step">
+<img alt="Step 6" src="利用手順4.png"/>
+<div class="step-text">
+<h3>6. トリイクスポットに荷物を取りに行く​</h3>
+<p>トリイクスポットへ行き、<br/>入口にQRコードをかざして入室。</p>
+</div>
+</div>
+<div class="step">
+<img alt="Step 7" src="利用手順5.png"/>
+<div class="step-text">
+<h3>7. トリイクスポットで荷物を見つける*5​</h3>
+<p>ラック（棚）から自分の荷物を探す。​盗難等が生じないか、常時、監視カメラ等で監視しているので安心。​</p>
+</div>
+</div>
+<div class="step">
+<img alt="Step 8" src="利用手順6.png"/>
+<div class="step-text">
+<h3>8. 荷物の写真を撮って送る</h3>
+<p>荷物に貼ってある「荷受人名と電話番号が記載されたシール」の写真を撮り、トリイク公式LINEで写真を送信*6。​</p>
+</div>
+</div>
+<div class="step">
+<img alt="Step 9" src="利用手順7.png"/>
+<div class="step-text">
+<h3>9. Amazonギフト券GET​</h3>
+<p>後日、Amazonギフト券をプレゼント!*2</p>
+</div>
+</div>
+</div>
+<!-- ⑤ 利用手順 -->
+
+</div>
+</div>
+<!-- ⑧⑨ CTA -->
+<div class="center cta-flex" style="display: flex; flex-direction: column; align-items: center; margin: 30px 0;">
+    <div class="cta-text">まずは公式LINEに登録！</div>
+    <a href="https://toriiku-jp.com/go-to-line?utm_source=lp&utm_medium=organic&utm_campaign=default" target="_blank">
+        <button class="cta-button">LINEで参加する</button>
+    </a>
+</div>
+    <div class="center" style="margin-top: 10px;">
+<div style="font-size: 14px; margin-bottom: 5px;">公式SNS</div>
+<a href="https://x.com/toriiku_1025" style="margin: 0 25px;" target="_blank">
+<img alt="X" src="X画像.png" width="80"/>
+</a>
+<a href="https://www.instagram.com/toriiku_1025/" style="margin: 0 10px;" target="_blank">
+<img alt="Instagram" src="Instagram画像.png" width="80"/>
+</a>
+</div>
+<!-- 注意書き -->
+<div class="notice-text">
+  <p>*1■本サービス利用者が、宅配便（宅急便やゆうパック等の宅配便と同様の運送サービスを含む）によって運送される荷物の荷受人になる場合の荷物の受取であれば本サービスを利用することができますが、利用者がECサイトやECモールで購入した商品（＝荷物）の荷受人になる場合における利用を推奨します。ただし、次に掲げる荷物は本サービスにおいて取扱対象外とし、利用者は当該荷物を配送してはならないものとします。本サービスの利用に適さない荷物が受け取りスポットに届いた場合、原則、当社は全てのトリイクスポットでこれら荷物を受取りません。(1)険物、腐敗しやすい物品、生鮮食品、(2)現金、有価証券、貴重品、(3)書状・はがき・小包等の郵便物、(4)荷受人本人のみが受け取らなければならない荷物、(5)受け取ることで荷受人の本人確認等の証明がなされる荷物、(6)法令により取り扱いが制限される物品、(7)宅配便以外の荷物や自分以外の人が荷受取人となる荷物、(8)その他当社が適当でないと判断する物品■トリイクスポットで受け取ることが可能な荷物は、宅配便に適した大きさ（上限サイズ：縦・横・高さの合計が200cm以内）、かつ宅配便に適した重量（30kg以内）に限ります。■トリイク九段下スポットの営業時間は平日8：00～21：00（最終予約枠20：50～）、休日祝日8：00～17：30（最終予約枠は17：20～）とします。■本サービス利用者は、トリイクスポットへ荷物が到着した旨の通知をトリイク公式LINE等で受信した日の翌日から7日以内に、トリイクスポットにて当該荷物の受け取りを完了しなければなりません。<br/>​*2■本サービス利用者は、本WEBページ記載の「利用手順」を漏れなく行うことによって、後日、Amazonギフト券100円分を受け取ることができます。トリイクスポットで正しく荷物を受け取った回数（1日に複数回トリイクスポットに来訪し複数の荷物を受け取った場合は「1回の受け取り」とみなす）に応じて、Amazonギフト券を付与します。■本サービス利用者は、サービス利用後トリイク公式LINE等を通じて届くWEBアンケートに回答することで、Amazonギフト券100円分を追加で受け取ることができます。ただし、同一内容のアンケートを複数回回答し、複数個のAmazonギフト券100円分を受け取ることはできません。■Amazonギフト券は、実施月の受け取り回数に基づき月末締め・翌月中に配布されます。なお、当社都合で配布が早まることがあります。また、配布が遅れる場合は、事前にトリイク公式LINE等でお知らせいたします。<br/>​*3■トリイクスポット来訪日時を予約するためには、トリイク公式LINEアカウント上で会員登録を行う必要があります（所要時間1～3分程度）。会員登録の際は、必ず、本人のフルネームを登録してください。本登録情報と、トリイクスポットに届いた荷物に記載されている荷受人名（ECサイトで商品購入する際に入力する荷受人名）に相違があった場合、トリイクの利用をお断りさせていただくことや、他人の荷物を不正に持ち帰ったと判定されてしまう可能性がありますので正しくフルネームを登録ください。​<br/>*4■2025年6月16日（月）以前や同年8月22日（金）以降にトリイクスポットへ到着する荷物に関しては、トリイクスポットでは受け取りません。■荷物のお届け時間帯を「午前中（8～12時）」と指定できない場合は、時間指定なしでトリイクスポットへ配送してください。ただし、その場合、トリイクスポットへ荷物が到着する日時が想定より遅れる可能性があり、トリイクスポットへの往訪予定日の変更が必要になる可能性がありますのでご了承ください。適宜、トリイク公式LINEの荷物到着通知をご確認ください。■一部のECサイトやショップではお届け日時の指定ができない場合があります。その際は、商品購入手続き終了後に運送企業の案内メールやLINE通知から、日時の指定を行ってください。<br/>*5■荷物に記載のある荷受人名等をもとに、荷物を名前の順等の規則性を有した形でトリイクスポット内のラック（棚）に並べますので、手間少なく自分自身に荷物を見つけることができます。 ■当社は、特定の利用者による盗難やその他の不正取得行為を当社が認定した場合、監視カメラやQRコード認証等によって得た入室者の情報を、被害を受けた利用者や捜査機関または法令の規定に基づき開示が許容された第三者に対し開示することがあります。*6必ず、段ボールに「お名前と電話番号が記載されたシール」が貼られていますので、このシールの文字が識別できるように写真を撮影し、その写真を公式LINE上で当社宛に送信してください。シールのイメージは <a href="https://sites.google.com/view/toriiku-image" target="_blank" style="color: #555; text-decoration: underline;">こちら</a> をクリックし確認してください。</p>
+    
+  <p>本サービスは予告なく変更または終了することがあります。その場合はトリイク公式LINEや予約画面、WEBサイト等で利用者に通知を行います。その他の詳細は以下の「サービス利用規約」「よくある質問」をご確認ください。</p>
+</div>
+    
+<!-- ⑩〜⑫ フッターリンク -->
+<div class="footer-links">
+<a href="https://sites.google.com/view/toriiku--terms-of-service" target="_blank">利用規約</a> |
+<a href="https://sites.google.com/view/toriiku-qa" target="_blank">よくある質問</a> |
+<a href="https://everywill-jp.com/" target="_blank">運営会社</a> |
+<a href="https://everywill-jp.com/privacy/" target="_blank">プライバシーポリシー</a>
+</div>
+<script>
+function copyAddress() {
+  const address = "〒102-0074 東京都千代田区九段南1-5-5-4階トリイク九段下";
+  navigator.clipboard.writeText(address).then(() => {
+    alert("住所をコピーしました！");
+  }).catch(err => {
+    alert("コピーに失敗しました");
+  });
+}
+
+</div></body>
+</html>
