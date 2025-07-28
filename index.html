@@ -706,15 +706,30 @@ display:block;
   margin-top: 8px;
 }
       
- @media screen and (max-width: 768px) {
-    .monitor-text {
-      font-size: 20px;
-      font-weight: bold;
-      line-height: 1.4;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-  }      
+  
+
+  .header-banner-text {
+  font-size: 36px;
+  color: white;
+  margin: 0;
+  font-weight: bold;
+}
+
+.monitor-text {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #864800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .monitor-text {
+    font-size: 20px;
+  }
+}
+
 </style>
 <div class="section slideshow-container" style="padding: 0;">
   <div class="slide fade"><img alt="" class="full" src="./img/slide1.png"/></div>
@@ -1029,13 +1044,13 @@ display:block;
 <section style="background-color: #fff1e6; padding: 30px 0;">
   <div style="max-width: 960px; margin: 0 auto; padding: 0 20px;">
     <div style="background-color: #ff7a00; padding: 10px 20px; width: fit-content; margin: 0 auto;">
-      <h2 style="color: white; font-size: 22px; margin: 0;">今だけ！体験モニター募集</h2>
+      <h2 class="header-banner-text">今だけ！体験モニター募集</h2>
     </div>
 
-    <div style="background-color: #fff; border: 1px solid #ff7a00; padding: 30px 20px; margin-top: 20px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; align-items: center;">
+    <div style="background-color: #fff; border: 1px solid #ff7a00; padding: 30px 20px; margin-top: 20px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; align-items: center; max-width: 800px; margin: 20px auto;">
       <div style="flex: 1 1 400px; min-width: 280px;">
         <div style="text-align: center;">
-          <p class="monitor-text" style="font-size: 20px; font-weight: bold; color: #864800; line-height: 1.5; margin-bottom: 10px;">
+          <p class="monitor-text">
             2025/8/10まで！<br>
             トリイクモニター募集中✨
           </p>
