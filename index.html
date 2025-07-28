@@ -729,8 +729,15 @@ display:block;
     font-size: 20px;
   }
 }
+.header-banner-text {
+  font-size: 36px;
+  color: white;
+  margin: 0;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 768px) {
-  .header-banner h2 {
+  .header-banner-text {
     font-size: 18px;
   }
 }
@@ -1049,9 +1056,9 @@ display:block;
 <section style="background-color: #fff1e6; padding: 30px 0;">
   <div style="max-width: 960px; margin: 0 auto; padding: 0 20px;">
     <div style="background-color: #ff7a00; padding: 10px 20px; width: fit-content; margin: 0 auto;">
-      <h2 class="header-banner-text">今だけ！体験モニター募集</h2>
-    </div>
-
+    <div class="header-banner">
+  <h2 class="header-banner-text">今だけ！体験モニター募集</h2>
+</div>
     <div style="background-color: #fff; border: 1px solid #ff7a00; padding: 30px 20px; margin-top: 20px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; align-items: center; width: 95%; margin: 20px auto;">
       <div style="flex: 1 1 400px; min-width: 280px;">
         <div style="text-align: center;">
