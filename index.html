@@ -763,6 +763,15 @@ display:block;
     font-size: 18px;
   }
 }
+
+@media screen and (min-width: 768px) {
+  #userdata .pcimg {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+}
 </style>
 <div class="section slideshow-container" style="padding: 0;">
   <div class="slide fade"><img alt="" class="full" src="./img/slide1.png"/></div>
@@ -1091,12 +1100,17 @@ display:block;
     <h2>利用者データ</h2>
   </div>
 
-  <div class="pcimg" style="display: flex; justify-content: center; gap: 30px; flex-wrap: nowrap; margin-bottom: 30px;">
-    <img src="./img/データ1.png" alt="利用者データ1" style="width: 48%; height: auto;">
+  <div class="pcimg">
+    <img src="./img/データ1.png" alt="利用者データ1" style="width: 48%; height: auto; margin-right: 2%;">
     <img src="./img/データ2.png" alt="利用者データ2" style="width: 48%; height: auto;">
   </div>
+
+  <div class="spimg">
+    <img src="./img/データ1.png" alt="利用者データ1" style="width: 100%; height: auto; margin-bottom: 20px;">
+    <img src="./img/データ2.png" alt="利用者データ2" style="width: 100%; height: auto;">
   </div>
 </section>
+
 
 <section id = "companyinfo">
 <div class="header-banner">
