@@ -394,27 +394,46 @@ section {
 }
 
 .servicelist {
-    border: 1px solid #B36416;
-    transition: background-color 0.3s ease;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-        -webkit-align-items: center;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 30px;
+  border: 1px solid #B36416;
+  margin-bottom: 50px;
+  transition: background-color .3s ease;
 }
 
 .serviceimg {
-    max-width: 593px;
-    margin-bottom: -7px;
+  flex: 0 0 520px;
+  max-width: 520px;
+  margin-bottom: -7px;
 }
 .serviceimg img {
-    width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .servicetext {
-        padding: 0px 30px 30px;
-    text-align: left;
-    width: calc(100% - 300px);
+  padding: 0 30px 30px;
+  text-align: left;
+  flex: 1 1 0;
+  min-width: 300px;
+  width: auto;
+}
+
+.servicetext img.pointup {
+  display: block;
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+  margin: 14px auto 0;
+}
+
+@media screen and (max-width: 768px) {
+  .servicelist { display: block; gap: 0; }
+  .serviceimg { max-width: 100%; flex: none; }
+  .servicetext img.pointup { max-width: 100%; }
 }
 
 .servicetext h2, .cta-flex h2 {
@@ -899,10 +918,8 @@ display:block;
     <p> トリイクは2025年10月14日から、大阪梅田スポットをオープンします！（福岡小倉も準備中）</p>
   <p>トリイクはいつでも、自分の好きなタイミングで荷物を受取れます!</br>
 さらに、トリイクを利用して荷物を受け取っていただいた方には、利用のたびに、楽天ポイント/アマギフをプレゼント!*2 </p>
-<div style="margin-top:15px; text-align:center;">
-  <img src="./img/ポイントUP.png" alt="ポイントUP" style="max-width:100%; height:auto;">
-</div>
-
+<div>
+  <img src="./img/ポイントUP.png" alt="ポイントUP" class="pointup">
 </div>
 
 
