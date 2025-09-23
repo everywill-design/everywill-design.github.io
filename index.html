@@ -825,24 +825,29 @@ display:block;
     <h2>信頼&実績も、トリイクの魅力!</h2>
   </div>
 
-<div style="display: flex; flex-wrap: wrap; gap: 0; justify-content: flex-start; align-items: flex-start; border: 1px solid #b05a00; padding: 30px; background: white; box-sizing: border-box;">
-  
-  <!-- テキストブロック（左揃え＆縦中央揃え） -->
-  <div style="flex: 1 1 1000px; max-width: 1200px; text-align: left;">
-    <p>■国土交通省の補助対象事業者に採択!(詳しくは
+<!-- コンテナ（置換） -->
+<div style="display: flex; flex-wrap: nowrap; gap: 0; justify-content: flex-start; align-items: flex-start; border: 1px solid #b05a00; padding: 30px; background: white; box-sizing: border-box;">
+
+  <!-- テキスト列（置換） -->
+  <div style="flex: 1 1 auto; min-width: 0; text-align: left;">
+    <p style="margin:0 0 8px;">■国土交通省の補助対象事業者に採択!(詳しくは
       <a href="https://prtimes.jp/main/html/rd/p/000000001.000167534.html" target="_blank" style="text-decoration: underline;">こちら</a>)</p>
-    <p>■日本最大規模のスタートアップアワードで最優秀賞を受賞!(詳しくは
+    <p style="margin:0 0 8px;">■日本最大規模のスタートアップアワードで最優秀賞を受賞!(詳しくは
       <a href="https://prtimes.jp/main/html/rd/p/000000110.000037686.html" target="_blank" style="text-decoration: underline;">こちら</a>)</p>
-    <p>■その他の各種アワード受賞・支援プログラム採択等の実績も多数!(詳しくは
+    <p style="margin:0 0 12px;">■その他の各種アワード受賞・支援プログラム採択等の実績も多数!(詳しくは
       <a href="https://everywill-jp.com/blog/" target="_blank" style="text-decoration: underline;">こちら</a>)</p>
-    <p>2025年8月まで実施した実証実験では、事故0件で無事終了！多くの方にご利用いただきました。<br>
-      あなたのついで行動が、宅配現場の負担軽減にもつながる、新しい物流サービスです。</p>
+    <p style="margin:0;">
+      2025年8月まで実施した実証実験では、事故0件で無事終了！多くの方にご利用いただきました。<br>
+      あなたのついで行動が、宅配現場の負担軽減にもつながる、新しい物流サービスです。
+    </p>
   </div>
 
-<!-- 採択ロゴ画像を先に -->
-<div style="flex: 0 0 420px; max-width: 420px;">
-  <img src="./img/採択案件.png" alt="採択支援先ロゴ"
-       style="display:block; width: 100%; height: auto; border: 1px solid #b05a00; padding: 6px; box-sizing: border-box;">
+  <!-- 画像列（置換） -->
+  <div style="flex: 0 0 420px; max-width: 420px;">
+    <img src="./img/採択案件.png" alt="採択支援先ロゴ"
+         style="display:block; width:100%; height:auto; border:1px solid #b05a00; padding:6px; box-sizing:border-box;">
+  </div>
+
 </div>
 
 <!-- テキストブロック -->
