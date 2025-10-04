@@ -234,9 +234,9 @@
   line-height: 1.6;
   max-width: 900px;
   margin: 0 auto;
-  text-align: left;  /*
+  -  text-align: left;  /*
++  text-align: left;  /* left align */
 }
-
 @media screen and (max-width: 768px) {
   .notice-text {
     font-size: 10px;        /* Smaller and compact on mobile */
@@ -791,6 +791,57 @@ display:block;
     margin-bottom: 30px;
   }
 }
+
+/* 信頼&実績（採択ロゴ）レイアウト */
+.achievements {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #b05a00;
+  padding: 30px;
+  background: #fff;
+  box-sizing: border-box;
+}
+.achievements-text {
+  flex: 1 1 0;
+  min-width: 0;            /* テキストのはみ出し防止 */
+  text-align: left;
+  font-size: 18px;
+  line-height: 1.7;
+}
+.achievements-img {
+  flex: 0 1 420px;         /* 画像は必要に応じて縮む */
+  max-width: 420px;
+}
+.achievements-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #b05a00;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+/* スマホでは縦積み・文字を読みやすく */
+@media (max-width: 768px) {
+  .achievements {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+  }
+  .achievements-text {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .achievements-img {
+    width: 100%;
+    max-width: none;
+    flex: 0 0 auto;
+  }
+}
+  
 </style>
 
 <!-- User Heat Tag -->
@@ -823,12 +874,8 @@ display:block;
 <section id="reward">
   <div class="header-banner">
     <h2>信頼&実績も、トリイクの魅力!</h2>
-  </div>
-
-<!-- コンテナ（置換） -->
-<div style="display: flex; flex-wrap: nowrap; gap: 0; justify-content: flex-start; align-items: center; border: 1px solid #b05a00; padding: 30px; background: white; box-sizing: border-box;">
-  <!-- テキスト列（置換） -->
-  <div style="flex: 1 1 auto; min-width: 0; text-align: left;">
+ <div class="achievements">
+  <div class="achievements-text">
     <p style="margin:0 0 8px;">■国土交通省の補助対象事業者に採択!(詳しくは
       <a href="https://prtimes.jp/main/html/rd/p/000000001.000167534.html" target="_blank" style="text-decoration: underline;">こちら</a>)</p>
     <p style="margin:0 0 8px;">■日本最大規模のスタートアップアワードで最優秀賞を受賞!(詳しくは
@@ -839,6 +886,10 @@ display:block;
       あなたのついで行動が、宅配現場の負担軽減にもつながる、新しい物流サービスです。
     </p>
   </div>
+  <div class="achievements-img">
+    <img src="./img/採択案件.png" alt="採択支援先ロゴ">
+  </div>
+</div>
 
   <!-- 画像列（置換） -->
   <div style="flex: 0 0 420px; max-width: 420px;">
