@@ -851,9 +851,10 @@ display:block;
 
   
 <div class="section slideshow-container" style="padding: 0;">
-  <div class="slide fade"><img alt="" class="full" src="./img/slide1.png"/></div>
-    <div class="slide fade"><img alt="" class="full" src="./img/slide2.png"/></div>
+  <div class="slide fade"><img alt="slide1" class="full" src="https://toriiku-jp.com/img/slide1.png"/></div>
+  <div class="slide fade"><img alt="slide2" class="full" src="https://toriiku-jp.com/img/slide2.png"/></div>
 </div>
+  
 <!-- ヘッダー1 + 説明文 -->
 <section id = "about">
     <div class="header-banner">
@@ -1284,6 +1285,10 @@ display:block;
 let slideIndex = 0;
 showSlides();
 
+<script>
+let slideIndex = 0;
+showSlides();
+
 function showSlides() {
   const slides = document.getElementsByClassName("slide");
   for (let i = 0; i < slides.length; i++) {
@@ -1291,16 +1296,10 @@ function showSlides() {
   }
   slideIndex++;
   if (slideIndex > slides.length) { slideIndex = 1 }
-  const currentSlide = slides[slideIndex - 1];
-  currentSlide.style.display = "block";
-  setTimeout(() => {
-    currentSlide.style.display = "none";
-  }, 5400); // アニメーション終了後に非表示
-  setTimeout(showSlides, 4500); // 次のスライドへ
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 4000); // 4秒ごとに切り替え
 }
-
-
-
 </script>
+
 </div></body>
 </html>
