@@ -23,7 +23,33 @@
     });
   }
 </script>
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17353402160"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'AW-17353402160');
+</script>
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        // Googleサイトクリック
+        document.querySelectorAll('[href*="https://sites.google.com/view/toriiku-pointo/%E3%83%9B%E3%83%BC%E3%83%A0"]').forEach(function (element) {
+            element.addEventListener('click', function () {
+                gtag('event', 'conversion', { 'send_to': 'AW-17353402160/qJ8CCKLUhqkbELDO39JA' });
+            });
+        });
+// LINE公式クリック
+        document.querySelectorAll('[href*="https://toriiku-jp.com/go-to-line?utm_source=lp&utm_medium=organic&utm_campaign=default"]').forEach(function (element) {
+            element.addEventListener('click', function () {
+                gtag('event', 'conversion', { 'send_to': 'AW-17353402160/qJ8CCKLUhqkbELDO39JA' });
+            });
+        });
+    });
+</script>
+  
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow">
 <meta content="YOUR_VERIFICATION_CODE_HERE" name="google-site-verification"/><meta charset="utf-8"/>
