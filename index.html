@@ -903,8 +903,8 @@ display:block;
 .corp-contact-btn {
   display: inline-block;
   padding: 14px 32px;
-  background-color: #FD8200;
-  color: #fff;
+  background-color: #c17320;
+　color: #fff;
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;
@@ -918,10 +918,10 @@ display:block;
 /* ----- スマホ対応 ----- */
 @media screen and (max-width: 768px) {
   .site-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    padding: 10px 15px;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
   }
 
   .site-header-logo img {
@@ -929,10 +929,11 @@ display:block;
   }
 
   .corp-contact-btn {
-    width: 100%;
+    width: auto !important;
     text-align: center;
-    padding: 12px 0;
-    font-size: 16px;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+    white-space: nowrap;
   }
 }
   
