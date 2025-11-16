@@ -877,6 +877,64 @@ display:block;
     flex: 0 0 auto;
   }
 }
+
+/* ---------- ヘッダー部分 ---------- */
+.site-header-wrapper {
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.site-header {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.site-header-logo img {
+  height: 48px; /* 必要あれば調整 */
+  display: block;
+}
+
+/* オレンジの問い合わせボタン */
+.corp-contact-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #FD8200;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  white-space: nowrap;
+}
+
+.corp-contact-btn:hover { opacity: 0.9; }
+
+/* ----- スマホ対応 ----- */
+@media screen and (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 15px;
+  }
+
+  .site-header-logo img {
+    height: 36px;
+  }
+
+  .corp-contact-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 16px;
+  }
+}
   
 </style>
 
@@ -886,6 +944,25 @@ display:block;
 </script>
 <!-- End User Heat Tag -->
 
+<!-- ====== グローバルヘッダー（ロゴ＋法人向けお問合せ） ====== -->
+<div class="site-header-wrapper">
+  <header class="site-header">
+    <div class="site-header-logo">
+      <a href="https://toriiku-jp.com/">
+        <img src="./img/toriiku_logo.png" alt="トリイクロゴ">
+        <!-- ※ロゴ画像名：toriiku_logo.png に変更して保存してください -->
+      </a>
+    </div>
+
+    <a class="corp-contact-btn"
+       href="https://everywill-jp.com/contact/"
+       target="_blank"
+       rel="noopener">
+      法人向けお問合せこちら
+    </a>
+  </header>
+</div>
+<!-- ====== グローバルヘッダーここまで ====== -->
   
 <div class="section slideshow-container" style="padding: 0;">
   <div class="slide fade"><img alt="slide1" class="full" src="https://toriiku-jp.com/img/slide1.png"/></div>
