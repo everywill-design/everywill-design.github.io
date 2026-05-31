@@ -1000,5 +1000,27 @@
 
 
 <script src="js/index.min.js" defer></script>
+
+  <style>
+/* パソコン（画面が広いとき）の設定 */
+@media screen and (min-width: 768px) {
+  .about-tagline-pill {
+    font-size: 1.25rem !important; /* パソコンはしっかり大きく */
+    font-weight: 700 !important;   /* 太字にする */
+    padding: 0.6em 1.8em !important;
+    letter-spacing: 0.05em;
+  }
+}
+
+/* スマホ（画面が狭いとき）の設定 */
+@media screen and (max-width: 767px) {
+  .about-tagline-pill {
+    font-size: 0.95rem !important; /* スマホははみ出さない程よいサイズ */
+    font-weight: 700 !important;   /* 太字にする */
+    padding: 0.4em 1.2em !important;
+  }
+}
+</style>
+  
 </body>
 </html>
