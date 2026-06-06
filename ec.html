@@ -35,6 +35,22 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="css/ec.min.css">
 
+<!-- タブ切り替え用の簡易スタイル調整（必要に応じて外部CSSへ移動してください） -->
+<style>
+  .ec-tab-content {
+    display: none;
+  }
+  .ec-tab-content.is-active {
+    display: block;
+  }
+  /* photo.htmlの仕様に合わせたボタンスタイル調整例 */
+  .ec-toc-list li a.is-active {
+    background-color: #fff; /* アクティブ時の背景色 */
+    font-weight: bold;
+    border: 2px solid #ff6600; /* トリイクのブランドカラー等に合わせる場合 */
+  }
+</style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -96,7 +112,6 @@
       <a href="index.html#security" class="header-nav-pc-link">安心の仕組み</a>
       <a href="index.html#how-to" class="header-nav-pc-link">使い方</a>
       <a href="index.html#voice" class="header-nav-pc-link">利用者の声</a>
-      <a href="index.html#voice" class="header-nav-pc-link">利用者の声</a>
       <a href="index.html#faq" class="header-nav-pc-link">よくある質問</a>
     </nav>
 
@@ -142,326 +157,329 @@
       トリイクの住所をネットショップに入力する方法を、サイトごとに解説します。
     </p>
 
-    <!-- 幅を150pxで均等統一し、中央寄せに修正したナビゲーション -->
+    <!-- photo.htmlを参考にした均等幅・中央寄せの切り替えタブボタン仕様 -->
     <nav class="ec-toc" aria-label="目次" style="text-align: center; padding: 20px 0;">
       <ul class="ec-toc-list" style="display: block; text-align: center; padding: 0; margin: 0; list-style: none;">
         <li style="display: inline-block; width: 150px; margin: 0 8px; float: none;">
-          <a href="#amazon" style="display: block; width: 100%; text-align: center; box-sizing: border-box; padding: 10px 0;">Amazon</a>
+          <a href="javascript:void(0);" class="js-ec-tab-btn is-active" data-target="amazon" style="display: block; width: 100%; text-align: center; box-sizing: border-box; padding: 10px 0;">Amazon</a>
         </li>
         <li style="display: inline-block; width: 150px; margin: 0 8px; float: none;">
-          <a href="#rakuten" style="display: block; width: 100%; text-align: center; box-sizing: border-box; padding: 10px 0;">楽天市場</a>
+          <a href="javascript:void(0);" class="js-ec-tab-btn" data-target="rakuten" style="display: block; width: 100%; text-align: center; box-sizing: border-box; padding: 10px 0;">楽天市場</a>
         </li>
       </ul>
       <div style="clear: both;"></div>
     </nav>
 
-    <!-- Amazon -->
-    <section class="ec-section" id="amazon">
-      <header class="ec-section-head">
-        <h2 class="ec-section-title">
-          Amazon
-          <small>お届け先住所・配送指示の入力方法</small>
-        </h2>
-      </header>
+    <!-- Amazonコンテンツエリア -->
+    <div id="tab-amazon" class="ec-tab-content is-active">
+      <section class="ec-section" id="amazon">
+        <header class="ec-section-head">
+          <h2 class="ec-section-title">
+            Amazon
+            <small>お届け先住所・配送指示の入力方法</small>
+          </h2>
+        </header>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 01</span>
-          <h3 class="ec-step-title">トリイクアプリの「ショップ起動」を押す</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 01</span>
+            <h3 class="ec-step-title">トリイクアプリの「ショップ起動」を押す</h3>
+          </div>
+          <p class="ec-step-desc">
+            トリイクアプリの画面下部にある赤い破線枠の<span class="accent">「ショップ起動」</span>を押します。
+          </p>
+          <img class="ec-step-image" src="img/ec1.webp" alt="STEP 1 トリイクアプリのショップ起動を押す" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          トリイクアプリの画面下部にある赤い破線枠の<span class="accent">「ショップ起動」</span>を押します。
-        </p>
-        <img class="ec-step-image" src="img/ec1.webp" alt="STEP 1 トリイクアプリのショップ起動を押す" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 02</span>
-          <h3 class="ec-step-title">Amazonのボタンを押す</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 02</span>
+            <h3 class="ec-step-title">Amazonのボタンを押す</h3>
+          </div>
+          <p class="ec-step-desc">
+            ショップ起動画面が開いたら、赤い破線枠の<span class="accent">「Amazon」</span>ボタンを押します。
+          </p>
+          <img class="ec-step-image" src="img/ec3.webp" alt="STEP 2 Amazonのボタンを押す" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          ショップ起動画面が開いたら、赤い破線枠の<span class="accent">「Amazon」</span>ボタンを押します。
-        </p>
-        <img class="ec-step-image" src="img/ec3.webp" alt="STEP 2 Amazonのボタンを押す" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 03</span>
-          <h3 class="ec-step-title">ショップに移動する</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 03</span>
+            <h3 class="ec-step-title">ショップに移動する</h3>
+          </div>
+          <p class="ec-step-desc">
+            トリイクアプリから自動的にAmazonの画面へと移動し、赤い破線枠の<span class="accent">「ショップ（ECサイト）を起動」</span>メニューが表示されます[cite: 1, 2]。
+          </p>
+          <img class="ec-step-image" src="img/ec22.webp" alt="STEP 3 ショップに移動する" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          トリイクアプリから自動的にAmazonの画面へと移動し、赤い破線枠の<span class="accent">「ショップ（ECサイト）を起動」</span>メニューが表示されます[cite: 1, 2]。
-        </p>
-        <img class="ec-step-image" src="img/ec22.webp" alt="STEP 3 ショップに移動する" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 04</span>
-          <h3 class="ec-step-title">商品を選び買い物かごに入れて買い物かごを押す</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 04</span>
+            <h3 class="ec-step-title">商品を選び買い物かごに入れて買い物かごを押す</h3>
+          </div>
+          <p class="ec-step-desc">
+            自動的にAmazonへ移動します。購入したい商品を選んで買い物かごに入れたら、画面下部にある赤い破線枠の<span class="accent">買い物かご（カート）アイコン</span>を押します。
+          </p>
+          <img class="ec-step-image" src="img/ec4.webp" alt="STEP 4 商品を選び買い物かごに入れて買い物かごを押す" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          自動的にAmazonへ移動します。購入したい商品を選んで買い物かごに入れたら、画面下部にある赤い破線枠の<span class="accent">買い物かご（カート）アイコン</span>を押します。
-        </p>
-        <img class="ec-step-image" src="img/ec4.webp" alt="STEP 4 商品を選び買い物かごに入れて買い物かごを押す" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 05</span>
-          <h3 class="ec-step-title">レジに進む</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 05</span>
+            <h3 class="ec-step-title">レジに進む</h3>
+          </div>
+          <p class="ec-step-desc">
+            商品の確認ができたら、画面中央にある赤い破線枠の<span class="accent">「レジに進む」</span>ボタンを押します。
+          </p>
+          <img class="ec-step-image" src="img/ec5.webp" alt="STEP 5 レジに進むを押す" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          商品の確認ができたら、画面中央にある赤い破線枠の<span class="accent">「レジに進む」</span>ボタンを押します。
-        </p>
-        <img class="ec-step-image" src="img/ec5.webp" alt="STEP 5 レジに進むを押す" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 06</span>
-          <h3 class="ec-step-title">「お届け先住所を変更」を押す</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 06</span>
+            <h3 class="ec-step-title">「お届け先住所を変更」を押す</h3>
+          </div>
+          <p class="ec-step-desc">
+            注文内容画面に移動したら、お届け先セクション内にある赤い破線枠の<span class="accent">「お届け先住所を変更」</span>を押します。
+          </p>
+          <img class="ec-step-image" src="img/ec6.webp" alt="STEP 6 お届け先住所を変更を押す" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          注文内容画面に移動したら、お届け先セクション内にある赤い破線枠の<span class="accent">「お届け先住所を変更」</span>を押します。
-        </p>
-        <img class="ec-step-image" src="img/ec6.webp" alt="STEP 6 お届け先住所を変更を押す" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 07</span>
-          <h3 class="ec-step-title">新しいお届け先住所を追加する</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 07</span>
+            <h3 class="ec-step-title">新しいお届け先住所を追加する</h3>
+          </div>
+          <p class="ec-step-desc">
+            住所の選択一覧を下にスクロールし、赤い破線枠の<span class="accent">「新しいお届け先住所を追加する」</span>ボタンを押します。
+          </p>
+          <img class="ec-step-image" src="img/ec7.webp" alt="STEP 7 新しいお届け先住所を追加するを押す" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          住所の選択一覧を下にスクロールし、赤い破線枠の<span class="accent">「新しいお届け先住所を追加する」</span>ボタンを押します。
-        </p>
-        <img class="ec-step-image" src="img/ec7.webp" alt="STEP 7 新しいお届け先住所を追加するを押す" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 08</span>
-          <h3 class="ec-step-title">トリイクアプリに戻り、スポットの郵便番号をコピーする</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 08</span>
+            <h3 class="ec-step-title">トリイクアプリに戻り、スポットの郵便番号をコピーする</h3>
+          </div>
+          <p class="ec-step-desc">
+            一度トリイクアプリの画面へ戻り、指定しているスポットが間違いないか確認します。確認後、郵便番号の右側にある赤い破線枠の<span class="accent">コピーボタン</span>を押してコピーします。
+          </p>
+          <img class="ec-step-image" src="img/ec9.webp" alt="STEP 8 トリイクアプリでスポットを確認" width="432" height="583" loading="lazy" decoding="async">
+          <img class="ec-step-image" src="img/ec10.webp" alt="STEP 8 郵便番号をコピー" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          一度トリイクアプリの画面へ戻り、指定しているスポットが間違いないか確認します。確認後、郵便番号の右側にある赤い破線枠の<span class="accent">コピーボタン</span>を押してコピーします。
-        </p>
-        <img class="ec-step-image" src="img/ec9.webp" alt="STEP 8 トリイクアプリでスポットを確認" width="432" height="583" loading="lazy" decoding="async">
-        <img class="ec-step-image" src="img/ec10.webp" alt="STEP 8 郵便番号をコピー" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 09</span>
-          <h3 class="ec-step-title">Amazonの画面に入力・ペーストする</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 09</span>
+            <h3 class="ec-step-title">Amazonの画面に入力・ペーストする</h3>
+          </div>
+          <p class="ec-step-desc">
+            Amazonの入力画面に戻り、先ほどコピーした郵便番号を赤い破線枠の欄にペーストします。同じ手順で、都道府県から住所・建物名まで各項目を順番にすべて入力します。
+          </p>
+          <img class="ec-step-image" src="img/ec8.webp" alt="STEP 9 住所入力画面" width="432" height="583" loading="lazy" decoding="async">
+          <img class="ec-step-image" src="img/ec11.webp" alt="STEP 9 郵便番号のペースト" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          Amazonの入力画面に戻り、先ほどコピーした郵便番号を赤い破線枠の欄にペーストします。同じ手順で、都道府県から住所・建物名まで各項目を順番にすべて入力します。
-        </p>
-        <img class="ec-step-image" src="img/ec8.webp" alt="STEP 9 住所入力画面" width="432" height="583" loading="lazy" decoding="async">
-        <img class="ec-step-image" src="img/ec11.webp" alt="STEP 9 郵便番号のペースト" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 10</span>
-          <h3 class="ec-step-title">「配送指示（置き配含む）」を開く</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 10</span>
+            <h3 class="ec-step-title">「配送指示（置き配含む）」を開く</h3>
+          </div>
+          <p class="ec-step-desc">
+            すべての住所入力が終わったら、住所確定ボタンの上にある赤い破線枠の<span class="accent">「配送指示（置き配含む）」</span>メニューを押します。
+          </p>
+          <img class="ec-step-image" src="img/ec12.webp" alt="STEP 10 配送指示（置き配含む）を押す" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          すべての住所入力が終わったら、住所確定ボタンの上にある赤い破線枠の<span class="accent">「配送指示（置き配含む）」</span>メニューを押します。
-        </p>
-        <img class="ec-step-image" src="img/ec12.webp" alt="STEP 10 配送指示（置き配含む）を押す" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 11</span>
-          <h3 class="ec-step-title">「集合住宅」を選択する</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 11</span>
+            <h3 class="ec-step-title">「集合住宅」を選択する</h3>
+          </div>
+          <p class="ec-step-desc">
+            お届け先種別のオプションが表示されたら、赤い破線枠の<span class="accent">「集合住宅」</span>のタブを押して選択します。
+          </p>
+          <img class="ec-step-image" src="img/ec13.webp" alt="STEP 11 集合住宅を選択" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          お届け先種別のオプションが表示されたら、赤い破線枠の<span class="accent">「集合住宅」</span>のタブを押して選択します。
-        </p>
-        <img class="ec-step-image" src="img/ec13.webp" alt="STEP 11 集合住宅を選択" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 12</span>
-          <h3 class="ec-step-title">営業時間を指定する</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 12</span>
+            <h3 class="ec-step-title">営業時間を指定する</h3>
+          </div>
+          <p class="ec-step-desc">
+            受取スポットの配送可能時間が指定されている場合は、赤い破線枠の<span class="accent">「配達可能時間」</span>メニューを開き、対応する曜日や時間帯を入力・指定します。
+          </p>
+          <img class="ec-step-image" src="img/ec14.webp" alt="STEP 12 配送可能時間を指定" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          受取スポットの配送可能時間が指定されている場合は、赤い破線枠の<span class="accent">「配達可能時間」</span>メニューを開き、対応する曜日や時間帯を入力・指定します。
-        </p>
-        <img class="ec-step-image" src="img/ec14.webp" alt="STEP 12 配送可能時間を指定" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 13</span>
-          <h3 class="ec-step-title">置き配指定で「建物内受付/管理人」を押す</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 13</span>
+            <h3 class="ec-step-title">置き配指定で「建物内受付/管理人」を押す</h3>
+          </div>
+          <p class="ec-step-desc">
+            置き配指定の項目を開き、選択肢の中から赤い破線枠の<span class="accent">「建物内受付/管理人」</span>のチェックボタンを押します。
+          </p>
+          <img class="ec-step-image" src="img/ec16.webp" alt="STEP 13 建物内受付/管理人をチェック" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          置き配指定の項目を開き、選択肢の中から赤い破線枠の<span class="accent">「建物内受付/管理人」</span>のチェックボタンを押します。
-        </p>
-        <img class="ec-step-image" src="img/ec16.webp" alt="STEP 13 建物内受付/管理人をチェック" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 14</span>
-          <h3 class="ec-step-title">「続行」をする</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 14</span>
+            <h3 class="ec-step-title">「続行」をする</h3>
+          </div>
+          <p class="ec-step-desc">
+            配送指示の登録内容を確認し、画面下部の赤い破線枠にある<span class="accent">「続行」</span>ボタンをタップします。
+          </p>
+          <img class="ec-step-image" src="img/ec17.webp" alt="STEP 14 続行を押す" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          配送指示の登録内容を確認し、画面下部の赤い破線枠にある<span class="accent">「続行」</span>ボタンをタップします。
-        </p>
-        <img class="ec-step-image" src="img/ec17.webp" alt="STEP 14 続行を押す" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 15</span>
-          <h3 class="ec-step-title">「この住所を使用」を押して注文を確定する</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 15</span>
+            <h3 class="ec-step-title">「この住所を使用」を押して注文を確定する</h3>
+          </div>
+          <p class="ec-step-desc">
+            元の住所確認画面に戻ったら、赤い破線枠の<span class="accent">「この住所を使用」</span>ボタンを押して確定します。最後に、注文内容画面の赤い破線枠の<span class="accent">「注文を確定する」</span>ボタンを押せば、Amazonでの購入手続きはすべて完了です。
+          </p>
+          <img class="ec-step-image" src="img/ec18.webp" alt="STEP 15 この住所を使用を押す" width="432" height="583" loading="lazy" decoding="async">
+          <img class="ec-step-image" src="img/ec19.webp" alt="STEP 15 注文を確定する" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          元の住所確認画面に戻ったら、赤い破線枠の<span class="accent">「この住所を使用」</span>ボタンを押して確定します。最後に、注文内容画面の赤い破線枠の<span class="accent">「注文を確定する」</span>ボタンを押せば、Amazonでの購入手続きはすべて完了です。
-        </p>
-        <img class="ec-step-image" src="img/ec18.webp" alt="STEP 15 この住所を使用を押す" width="432" height="583" loading="lazy" decoding="async">
-        <img class="ec-step-image" src="img/ec19.webp" alt="STEP 15 注文を確定する" width="432" height="583" loading="lazy" decoding="async">
-      </div>
-    </section>
+      </section>
+    </div>
 
-    <!-- 楽天市場 -->
-    <section class="ec-section" id="rakuten">
-      <header class="ec-section-head">
-        <h2 class="ec-section-title">
-          楽天市場
-          <small>お届け先住所・日時の入力方法</small>
-        </h2>
-      </header>
+    <!-- 楽天市場コンテンツエリア -->
+    <div id="tab-rakuten" class="ec-tab-content">
+      <section class="ec-section" id="rakuten">
+        <header class="ec-section-head">
+          <h2 class="ec-section-title">
+            楽天市場
+            <small>お届け先住所・日時の入力方法</small>
+          </h2>
+        </header>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 01</span>
-          <h3 class="ec-step-title">トリイクアプリの「ショップ起動」を押す</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 01</span>
+            <h3 class="ec-step-title">トリイクアプリの「ショップ起動」を押す</h3>
+          </div>
+          <p class="ec-step-desc">
+            トリイクアプリ画面の下部メニューにある、赤い破線枠の<span class="accent">「ショップ起動」</span>を押します。
+          </p>
+          <img class="ec-step-image" src="img/ec20.webp" alt="STEP 1 トリイクアプリのショップ起動を押す" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          トリイクアプリ画面の下部メニューにある、赤い破線枠の<span class="accent">「ショップ起動」</span>を押します。
-        </p>
-        <img class="ec-step-image" src="img/ec20.webp" alt="STEP 1 トリイクアプリのショップ起動を押す" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 02</span>
-          <h3 class="ec-step-title">楽天市場を選択する</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 02</span>
+            <h3 class="ec-step-title">楽天市場を選択する</h3>
+          </div>
+          <p class="ec-step-desc">
+            ショップ一覧の中から、赤い破線枠の<span class="accent">「楽天市場」</span>のエリアボタンを押します。
+          </p>
+          <img class="ec-step-image" src="img/ec21.webp" alt="STEP 2 楽天市場を選択する" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          ショップ一覧の中から、赤い破線枠の<span class="accent">「楽天市場」</span>のエリアボタンを押します。
-        </p>
-        <img class="ec-step-image" src="img/ec21.webp" alt="STEP 2 楽天市場を選択する" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 03</span>
-          <h3 class="ec-step-title">ショップに移動する</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 03</span>
+            <h3 class="ec-step-title">ショップに移動する</h3>
+          </div>
+          <p class="ec-step-desc">
+            トリイクアプリから自動的に楽天市場の画面へと移動し、赤い破線枠の<span class="accent">「ショップ（ECサイト）を起動」</span>メニューが表示されます。
+          </p>
+          <img class="ec-step-image" src="img/ec22.webp" alt="STEP 3 ショップに移動する" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          トリイクアプリから自動的に楽天市場の画面へと移動し、赤い破線枠の<span class="accent">「ショップ（ECサイト）を起動」</span>メニューが表示されます。
-        </p>
-        <img class="ec-step-image" src="img/ec22.webp" alt="STEP 3 ショップに移動する" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 04</span>
-          <h3 class="ec-step-title">商品を選び買い物かごに入れて買い物かごを押す</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 04</span>
+            <h3 class="ec-step-title">商品を選び買い物かごに入れて買い物かごを押す</h3>
+          </div>
+          <p class="ec-step-desc">
+            楽天市場のトップ画面に切り替わったら、購入したい商品を選んで買い物かご（カート）に入れます。その後、買い物かご画面内の赤い破線枠の<span class="accent">「購入手続き」</span>ボタンを押します。
+          </p>
+          <img class="ec-step-image" src="img/ec23.webp" alt="STEP 4 楽天市場のトップ画面" width="432" height="583" loading="lazy" decoding="async">
+          <img class="ec-step-image" src="img/ec24.webp" alt="STEP 4 買い物かご画面で購入手続きを押す" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          楽天市場のトップ画面に切り替わったら、購入したい商品を選んで買い物かご（カート）に入れます。その後、買い物かご画面内の赤い破線枠の<span class="accent">「購入手続き」</span>ボタンを押します。
-        </p>
-        <img class="ec-step-image" src="img/ec23.webp" alt="STEP 4 楽天市場のトップ画面" width="432" height="583" loading="lazy" decoding="async">
-        <img class="ec-step-image" src="img/ec24.webp" alt="STEP 4 買い物かご画面で購入手続きを押す" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 05</span>
-          <h3 class="ec-step-title">購入手続きのボタンを押す</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 05</span>
+            <h3 class="ec-step-title">購入手続きのボタンを押す</h3>
+          </div>
+          <p class="ec-step-desc">
+            注文内容確認の直前画面に切り替わったら、再度画面中央にある赤い破線枠の<span class="accent">「購入手続き」</span>ボタンを押して進めます。
+          </p>
+          <img class="ec-step-image" src="img/ec25.webp" alt="STEP 5 購入手続きの最終確認ボタンを押す" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          注文内容確認の直前画面に切り替わったら、再度画面中央にある赤い破線枠の<span class="accent">「購入手続き」</span>ボタンを押して進めます。
-        </p>
-        <img class="ec-step-image" src="img/ec25.webp" alt="STEP 5 購入手続きの最終確認ボタンを押す" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 06</span>
-          <h3 class="ec-step-title">「お届け日時」を指定する</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 06</span>
+            <h3 class="ec-step-title">「お届け日時」を指定する</h3>
+          </div>
+          <p class="ec-step-desc">
+            お届け日時指定の画面が表示されたら、日付は<span class="accent">「指定なし」</span>、時間帯は<span class="accent">「午前中」</span>（※ご利用スポットによって時間指定のルールがある場合はその時間）を選択し、赤い破線枠の<span class="accent">「決定する」</span>ボタンを押します。
+          </p>
+          <img class="ec-step-image" src="img/ec26.webp" alt="STEP 6 指定なし・午前中を選択して決定する" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          お届け日時指定の画面が表示されたら、日付は<span class="accent">「指定なし」</span>、時間帯は<span class="accent">「午前中」</span>（※ご利用スポットによって時間指定のルールがある場合はその時間）を選択し、赤い破線枠の<span class="accent">「決定する」</span>ボタンを押します。
-        </p>
-        <img class="ec-step-image" src="img/ec26.webp" alt="STEP 6 指定なし・午前中を選択して決定する" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 07</span>
-          <h3 class="ec-step-title">「お届け先」の【変更】を押す</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 07</span>
+            <h3 class="ec-step-title">「お届け先」の【変更】を押す</h3>
+          </div>
+          <p class="ec-step-desc">
+            注文内容確認画面に戻ったら、お届け先情報の右側にある赤い破線枠の<span class="accent">「変更」</span>を押します。
+          </p>
+          <img class="ec-step-image" src="img/ec27.webp" alt="STEP 7 お届け先の変更を押す" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          注文内容確認画面に戻ったら、お届け先情報の右側にある赤い破線枠の<span class="accent">「変更」</span>を押します。
-        </p>
-        <img class="ec-step-image" src="img/ec27.webp" alt="STEP 7 お届け先の変更を押す" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 08</span>
-          <h3 class="ec-step-title">「別のお届け先に送る」を押す</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 08</span>
+            <h3 class="ec-step-title">「別のお届け先に送る」を押す</h3>
+          </div>
+          <p class="ec-step-desc">
+            お届け先の一覧画面の下部に表示される、赤い破線枠の<span class="accent">「＋ 別のお届け先に送る」</span>を押します。
+          </p>
+          <img class="ec-step-image" src="img/ec28.webp" alt="STEP 8 別のお届け先に送るを押す" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          お届け先の一覧画面の下部に表示される、赤い破線枠の<span class="accent">「＋ 別のお届け先に送る」</span>を押します。
-        </p>
-        <img class="ec-step-image" src="img/ec28.webp" alt="STEP 8 別のお届け先に送るを押す" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 09</span>
-          <h3 class="ec-step-title">楽天市場の郵便番号入力欄までいったら、トリイクアプリに戻る</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 09</span>
+            <h3 class="ec-step-title">楽天市場の郵便番号入力欄までいったら、トリイクアプリに戻る</h3>
+          </div>
+          <p class="ec-step-desc">
+            楽天市場の住所入力画面が表示されたら、スポットの正確な情報をコピーするため、一度赤い破線枠で囲まれたトリイクアプリの住所画面に戻ります。
+          </p>
+          <img class="ec-step-image" src="img/ec29.webp" alt="STEP 9 楽天市場の入力画面を確認" width="432" height="583" loading="lazy" decoding="async">
+          <img class="ec-step-image" src="img/ec30.webp" alt="STEP 9 トリイクアプリの住所コピー画面に戻る" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          楽天市場の住所入力画面が表示されたら、スポットの正確な情報をコピーするため、一度赤い破線枠で囲まれたトリイクアプリの住所画面に戻ります。
-        </p>
-        <img class="ec-step-image" src="img/ec29.webp" alt="STEP 9 楽天市場の入力画面を確認" width="432" height="583" loading="lazy" decoding="async">
-        <img class="ec-step-image" src="img/ec30.webp" alt="STEP 9 トリイクアプリの住所コピー画面に戻る" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 10</span>
-          <h3 class="ec-step-title">住所情報をコピーして、ペーストしていく</h3>
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 10</span>
+            <h3 class="ec-step-title">住所情報をコピーして、ペーストしていく</h3>
+          </div>
+          <p class="ec-step-desc">
+            トリイクアプリ画面で郵便番号の右側にある赤い破線枠の<span class="accent">コピーボタン</span>を押してコピーします。その後、楽天市場の画面に戻り、赤い破線枠の郵便番号入力欄へペースト（貼り付け）します。同様に住所や電話番号もコピー＆ペーストで入力し、赤い破線枠の<span class="accent">「お届け先リストへ登録する」</span>にチェックを入れます。
+          </p>
+          <img class="ec-step-image" src="img/ec31.webp" alt="STEP 10 トリイクアプリから郵便番号をコピー" width="432" height="583" loading="lazy" decoding="async">
+          <img class="ec-step-image" src="img/ec32.webp" alt="STEP 10 郵便番号・住所の入力とお届け先リストへの登録チェック" width="432" height="583" loading="lazy" decoding="async">
         </div>
-        <p class="ec-step-desc">
-          トリイクアプリ画面で郵便番号の右側にある赤い破線枠の<span class="accent">コピーボタン</span>を押してコピーします。その後、楽天市場の画面に戻り、赤い破線枠の郵便番号入力欄へペースト（貼り付け）します。同様に住所や電話番号もコピー＆ペーストで入力し、赤い破線枠の<span class="accent">「お届け先リストへ登録する」</span>にチェックを入れます。
-        </p>
-        <img class="ec-step-image" src="img/ec31.webp" alt="STEP 10 トリイクアプリから郵便番号をコピー" width="432" height="583" loading="lazy" decoding="async">
-        <img class="ec-step-image" src="img/ec32.webp" alt="STEP 10 郵便番号・住所の入力とお届け先リストへの登録チェック" width="432" height="583" loading="lazy" decoding="async">
-      </div>
 
-      <div class="ec-step">
-        <div class="ec-step-head">
-          <span class="ec-step-num">STEP 11</span>
-          <h3 class="ec-step-title">住所を追加登録する</h3>
-        </div>
-        <p class="ec-step-desc">
-          すべての入力内容に間違いがないか最終確認し、画面最下部にある赤い破線枠の<span class="accent">「追加する」</span>ボタンを押して登録します。
+        <div class="ec-step">
+          <div class="ec-step-head">
+            <span class="ec-step-num">STEP 11</span>
+            <h3 class="ec-step-title">住所を追加登録する</h3>
+          </div>
+          <p class="ec-step-desc">
+            すべての入力内容に間違いがないか最終確認し、画面最下部にある赤い破線枠の<span class="accent">「追加する」</span>ボタンを押して登録します。
         </p>
         <img class="ec-step-image" src="img/ec33.webp" alt="STEP 11 登録内容を確認" width="432" height="583" loading="lazy" decoding="async">
         <img class="ec-step-image" src="img/ec34.webp" alt="STEP 11 追加するボタンを押す" width="432" height="583" loading="lazy" decoding="async">
@@ -489,6 +507,7 @@
         <img class="ec-step-image" src="img/ec37.webp" alt="STEP 13 注文を確定するを押す" width="432" height="583" loading="lazy" decoding="async">
       </div>
     </section>
+    </div>
   </main>
 
   <footer class="footer" id="company">
@@ -557,5 +576,32 @@
 </div>
 
 <script src="js/ec.min.js" defer></script>
+
+<!-- photo.htmlと同等の仕様で動くタブ切り替え用のJavaScript -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.js-ec-tab-btn');
+    const tabContents = document.querySelectorAll('.ec-tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // 全てのボタンからis-activeクラスを削除
+        tabButtons.forEach(btn => btn.classList.remove('is-active'));
+        // クリックされたボタンにis-activeクラスを追加
+        this.classList.add('is-active');
+
+        // 全てのコンテンツエリアからis-activeクラスを削除
+        tabContents.forEach(content => content.classList.remove('is-active'));
+        
+        // 対象のコンテンツエリア（tab-amazon または tab-rakuten）を表示
+        const targetId = 'tab-' + this.getAttribute('data-target');
+        const targetContent = document.getElementById(targetId);
+        if (targetContent) {
+          targetContent.classList.add('is-active');
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
