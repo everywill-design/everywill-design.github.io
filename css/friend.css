@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+/* ==========================================
+   friend.html 専用コンポーネントCSS
+   ========================================== */
+
+/* 準備中バッジ */
+.alias-preparing-wrap {
+  text-align: center;
+  margin-top: 8px;
+}
+.badge-preparing {
+  background: var(--c-text-mute);
+  color: var(--c-surface);
+  padding: 4px 24px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-block;
+  letter-spacing: 0.1em;
+}
+
+/* 特典カードレイアウト */
+.friend-rewards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.friend-reward-card {
+  background: var(--c-surface);
+  border: 1.5px solid var(--c-line);
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+}
+.friend-reward-card.is-highlight {
+  border-color: #ffd766;
+  background: #fff8e0;
+}
+.friend-reward-role {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--c-text);
+  margin-bottom: 4px;
+}
+.friend-reward-card.is-highlight .friend-reward-role {
+  color: #FF7A1F;
+}
+.friend-reward-point {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--c-text);
+  margin: 4px 0;
+}
+.friend-reward-point span {
+  font-size: 13px;
+  color: #FF7A1F;
+  margin-left: 2px;
+}
+.friend-reward-condition {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--c-text-sub);
+  margin: 0;
+}
+
+/* 下部画像ギャラリー */
+.friend-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 16px;
+}
+.friend-gallery-box {
+  background: var(--c-surface);
+  border: 1.5px solid var(--c-line);
+  border-radius: 14px;
+  padding: 16px;
+}
+.friend-gallery-box h4 {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--c-text);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* ==========================================
+   PC表示（1100px以上）のレスポンシブ定義
+   ========================================== */
+@media (min-width: 1100px) {
+  .badge-preparing {
+    font-size: 13px;
+    padding: 6px 32px;
+  }
+  .friend-rewards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .friend-reward-card {
+    padding: 24px;
+    border-radius: 16px;
+  }
+  .friend-reward-role {
+    font-size: 15px;
+  }
+  .friend-reward-point {
+    font-size: 32px;
+  }
+  .friend-reward-condition {
+    font-size: 12.5px;
+  }
+  .friend-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
