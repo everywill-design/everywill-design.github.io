@@ -835,34 +835,55 @@
 
   </section>
 
-  <section id="campaign-friend" class="faq" style="background-color: var(--c-bg); border-top: 1px solid var(--c-line); padding-bottom: 0;">
-    <div class="faq-head" style="margin-bottom: 24px;">
-      <span style="display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 0.18em; color: #FF7A1F; border: 1px solid rgba(255,122,31,0.55); padding: 4px 12px; border-radius: 999px; margin-bottom: 12px; background: #fff;">期間限定</span>
-      <h2 class="faq-title">友だち<span class="em">紹介キャンペーン</span></h2>
-    </div>
-    
-    <div style="max-width: 720px; margin: 0 auto; background: var(--c-surface); border-radius: 16px; padding: 24px 20px; box-shadow: 0 4px 16px rgba(0,0,0,0.05); text-align: center; border: 1px solid var(--c-line);">
-      <p style="font-size: 13px; line-height: 1.95; color: var(--c-text-sub); margin-bottom: 24px; text-align: center;">
+  <section id="campaign-friend" class="campaign-section" style="background-color: #fcfcfc; padding: 3rem 1rem 1rem; text-align: center; border-top: 1px solid var(--c-line);">
+    <div style="max-width: 600px; margin: 0 auto; background: #fff; padding: 2rem 1.25rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #f0f0f0;">
+      <span style="background: #ff5a5f; color: #fff; padding: 0.25rem 0.75rem; border-radius: 4px; font-weight: bold; font-size: 0.75rem; display: inline-block; margin-bottom: 0.75rem; letter-spacing: 0.05em;">期間限定</span>
+      <h2 style="font-size: 1.35rem; color: #111; margin: 0 0 0.75rem 0; font-weight: 700; line-height: 1.4; letter-spacing: 0.02em;">友だち紹介キャンペーン</h2>
+      <p style="font-size: 0.875rem; color: #666; margin: 0 0 1.5rem 0; line-height: 1.6; text-align: center; font-weight: 400;">
         トリイクをお友だちに紹介すると、<br>
         紹介したあなたにも、紹介されたお友だちにも<br>
         お得なポイントをプレゼント！
       </p>
-      <a href="friend.html" style="display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 220px; height: 50px; padding: 0 26px; background: var(--c-text); color: #fff; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; border-radius: 999px; transition: opacity 0.2s ease;">
-        <span>キャンペーン詳細を見る</span>
-        <span class="arrow" style="font-size: 14px; font-weight: 300; margin-left: 4px;">→</span>
+      <a href="friend.html" class="campaign-btn-responsive" style="display: inline-block; background: #ff5a5f; color: #fff; padding: 0.85rem 2rem; border-radius: 50px; font-weight: bold; font-size: 0.95rem; text-decoration: none; box-shadow: 0 4px 12px rgba(255, 90, 95, 0.25); transition: all 0.3s;">
+        キャンペーン詳細を見る
       </a>
     </div>
 
+    <!-- PC環境用の文字サイズ・余白の自動レスポンシブ調整用スタイル -->
     <style>
       @media (min-width: 1100px) {
-        #campaign-friend { padding-top: 130px !important; padding-bottom: 60px !important; }
-        #campaign-friend div[style*="max-width: 720px"] { padding: 40px 36px !important; border-radius: 22px !important; max-width: 820px !important; }
-        #campaign-friend p { font-size: 15px !important; line-height: 2.1 !important; }
-        #campaign-friend a { max-width: 300px !important; width: 100% !important; height: 56px !important; font-size: 14px !important; }
+        #campaign-friend {
+          padding-top: 130px !important;
+          padding-bottom: 130px !important;
+        }
+        #campaign-friend div[style*="max-width: 600px"] {
+          max-width: 820px !important;
+          padding: 40px 36px !important;
+          border-radius: 22px !important;
+        }
+        #campaign-friend h2 {
+          font-size: 30px !important;
+          line-height: 1.6 !important;
+          margin-bottom: 14px !important;
+          letter-spacing: 0.04em !important;
+        }
+        #campaign-friend p {
+          font-size: 15px !important;
+          line-height: 2.1 !important;
+          margin-bottom: 24px !important;
+        }
+        .campaign-btn-responsive {
+          max-width: 300px !important;
+          width: 100% !important;
+          height: 56px !important;
+          font-size: 14px !important;
+          line-height: 56px !important;
+          padding: 0 !important;
+        }
       }
     </style>
   </section>
-
+  
   <section class="faq" id="faq" aria-label="よくある質問">
     <div class="faq-head">
       <h2 class="faq-title">
