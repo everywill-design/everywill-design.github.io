@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="index,follow">
+<title>友だち紹介キャンペーン｜トリイク</title>
+<meta name="description" content="トリイクを身近な人に紹介して、お互いにお得なポイントをゲットしよう！友だち紹介キャンペーンの特典内容、参加方法、注意事項についてご案内します。">
+<meta name="keywords" content="トリイク,友だち紹介,キャンペーン,ポイント,匿名配送,荷物受取">
+<meta name="author" content="株式会社Every WiLL">
+<link rel="canonical" href="https://toriiku-jp.com/friend.html">
+<link rel="icon" type="image/webp" href="img/favicon.webp">
+<link rel="apple-touch-icon" href="img/favicon.webp">
+
+<meta property=\"og:type\" content=\"article\">
+<meta property=\"og:site_name\" content=\"トリイク\">
+<meta property=\"og:locale\" content=\"ja_JP\">
+<meta property=\"og:url\" content=\"https://toriiku-jp.com/friend.html\">
+<meta property=\"og:title\" content=\"友だち紹介キャンペーン｜トリイク\">
+<meta property=\"og:description\" content=\"トリイクを紹介した側もされた側もポイントがもらえるお得なキャンペーン実施中！\">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  /* alias.htmlの共通スタイルベース */
+  body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: #333;
+    line-height: 1.7;
+    background-color: #fcfcfc;
+    margin: 0;
+    padding: 0;
+  }
+  .wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+  .header-logo img {
+    height: 32px;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 5rem;
+  }
+  
+  /* キャンペーン固有のデザイン */
+  .campaign-title-area {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .campaign-title-area h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+    margin-top: 0.5rem;
+  }
+  .badge-hot {
+    background: #ff5a5f;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  /* 特典カードエリア */
+  .rewards-grid {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+  .reward-card {
+    flex: 1;
+    background: #fff;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .reward-card.highlight {
+    border-color: #ff5a5f;
+    background: #fffbfb;
+  }
+  .reward-card img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+  }
+  .reward-role {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  .reward-card.highlight .reward-role {
+    color: #ff5a5f;
+  }
+  .reward-point {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #111;
+  }
+  .reward-point span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff5a5f;
+  }
+
+  /* ステップエリア */
+  .section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-left: 5px solid #ff5a5f;
+    padding-left: 0.75rem;
+    margin-bottom: 1.5rem;
+    color: #111;
+  }
+  .steps-list {
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    margin-bottom: 3.5rem;
+  }
+  .step-item {
+    display: flex;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  .step-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 45px;
+    bottom: -25px;
+    width: 2px;
+    background: #eee;
+  }
+  .step-item:last-child {
+    margin-bottom: 0;
+  }
+  .step-number {
+    background: #ff5a5f;
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .step-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #222;
+  }
+  .step-content p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+  }
+
+  /* 注意事項 */
+  .notes-box {
+    background: #f7f7f7;
+    border-radius: 8px;
+    padding: 1.5rem;
+    font-size: 0.85rem;
+    color: #555;
+  }
+  .notes-box ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  .notes-box li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* フッター共通 */
+  .footer {
+    background: #222;
+    color: #fff;
+    padding: 3rem 1.5rem 2rem;
+  }
+  .footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .footer-left h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+  }
+  .footer-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+  }
+  .footer-nav li {
+    margin-bottom: 0.5rem;
+  }
+  .footer-nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .footer-social a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+  .footer-copy {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: #777;
+  }
+
+  /* レスポンシブ対応 */
+  @media screen and (max-width: 768px) {
+    .rewards-grid {
+      flex-direction: column;
+    }
+    .campaign-title-area h1 {
+      font-size: 1.6rem;
+    }
+    .footer-container {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <header class="header">
+    <div class="header-logo">
+      <a href="index.html">
+        <img src="img/logo.webp" alt="トリイク">
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <div class="campaign-title-area">
+      <span class="badge-hot">トリイクをおすすめしよう！</span>
+      <h1>友だち紹介キャンペーン</h1>
+      <p style="color: #666; margin-top: 0.5rem;">あなたにも、お友だちにも、うれしい特典をプレゼント</p>
+    </div>
+
+    <div class="rewards-grid">
+      <div class="reward-card highlight">
+        <p class="reward-role">紹介したあなたに</p>
+        <img src="img/friend01.webp" alt="紹介者向け特典イメージ">
+        <div class="reward-point">500 <span>ポイント</span></div>
+        <p style="font-size: 0.85rem; color: #777; margin-top: 0.5rem;">友だちが初回の荷物受取を完了すると付与されます</p>
+      </div>
+
+      <div class="reward-card">
+        <p class="reward-role">紹介されたお友だちに</p>
+        <img src="img/friend02.webp" alt="被紹介者向け特典イメージ">
+        <div class="reward-point">500 <span>ポイント</span></div>
+        <p style="font-size: 0.85rem; color: #777; margin-top: 0.5rem;">紹介コードを使って新規登録すると即時付与されます</p>
+      </div>
+    </div>
+
+    <section>
+      <h2 class="section-title">キャンペーン参加方法</h2>
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>紹介コードをシェアする</h3>
+            <p>トリイクのマイページ内「友だち紹介」から、あなたの専用紹介コード、または紹介リンクをコピーしてLINEやSNSでシェアします。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>お友だちが新規登録</h3>
+            <p>紹介されたお友だちが、シェアされたリンクまたは紹介コードを入力してトリイクに新規登録を行うと、お友だちにすぐにポイントが付与されます。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>あなたもポイント獲得！</h3>
+            <p>お友だちがトリイクのスポットで「初めてのEC荷物受け取り」を完了すると、あなたにも紹介特典ポイントが自動的に付与されます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">ご注意事項</h2>
+      <div class="notes-box">
+        <ul>
+          <li>紹介される方は、これまでにトリイクに登録したことがない方に限ります（新規ユーザーのみ）。</li>
+          <li>同一人物による複数アカウントの作成・紹介行為が発覚した場合、付与されたポイントは無効となり、アカウントを停止させていただく場合があります。</li>
+          <li>付与されるポイントの有効期限は、付与された日から180日間です。</li>
+          <li>本キャンペーンは予告なく変更または終了する場合があります。あらかじめご了承ください。</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <dl style="margin:0; color:#ccc; font-size:0.9rem;">
+          <dt style="font-weight:bold; color:#fff; margin-bottom:0.5rem;">株式会社Every WiLL</dt>
+          <dd style="margin:0;">運営会社HP: <a href="https://everywill-jp.com/" target="_blank" rel="noopener" style="color:#ff5a5f;">everywill-jp.com</a></dd>
+        </dl>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-social" aria-label="公式SNS" style="margin-bottom:1rem;">
+          <a href="https://x.com/toriiku_1025" target="_blank" rel="noopener" aria-label="X (旧Twitter)">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/toriiku_1025/" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.youtube.com/@toriiku-jp" target="_blank" rel="noopener" aria-label="YouTube">
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <ul class="footer-nav" style="display:flex; gap:1rem; flex-wrap:wrap; margin:0;">
+          <li><a href="terms.html">利用規約</a></li>
+          <li><a href="index.html#faq">よくある質問</a></li>
+          <li><a href="https://everywill-jp.com/" target="_blank" rel="noopener">運営会社</a></li>
+          <li><a href="https://everywill-jp.com/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-copy">© Every WiLL Inc.</p>
+  </footer>
+
+</div>
+
+<script src="js/index.min.js" defer></script>
+</body>
+</html>
