@@ -37,41 +37,56 @@
 
 <style>
   /* ==========================================================================
-     ec.html の「Amazon/楽天」切り替えボタンのデザインを完全移植
+     ec.html からボタン（.ec-toc等）のデザイン構造のみを完全抽出
      ========================================================================== */
-  .ec-nav {
-    display: flex;
-    background: var(--c-line-soft, #f3f3f3);
-    border-radius: 12px;
-    padding: 6px;
-    margin: 24px 0 32px;
+  .ec-toc {
+    text-align: center;
+    padding: 20px 0;
   }
-  .ec-nav-btn {
-    flex: 1;
-    height: 48px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--c-text-sub, #555555);
+  .ec-toc-list {
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .ec-toc-list li {
+    display: inline-block;
+    width: 150px;
+    margin: 0 8px;
+    float: none;
+  }
+  .ec-toc-list li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 0;
+    background-color: #f5f5f5;
+    color: #333;
+    border: 2px solid #ccc;
     border-radius: 8px;
-    transition: background 0.2s ease, color 0.2s ease;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
   }
-  .ec-nav-btn.is-active {
-    background: var(--c-accent, #FF7A1F);
+  .ec-toc-list li a.is-active {
+    background-color: #ff6f00; /* アクティブ時のトリイクオレンジ */
     color: #fff;
+    border-color: #ff6f00;
+    font-weight: bold;
   }
 
   /* タブ切り替え用のセクション表示制御 */
   .photo-section {
     display: none;
   }
-  .photo-section.active {
+  .photo-section.is-active {
     display: block;
   }
 
-  /* PC版（横幅1100px以上）で白枠の幅を960pxに完全固定（ガタつき防止） */
+  /* PC版（横幅1100px以上）でボタン切り替え時に白枠の横幅がガタガタ変動するのを防ぐ固定設定 */
   @media (min-width: 1100px) {
     main.photo {
       width: 100% !important;
@@ -81,13 +96,6 @@
       background: #ffffff !important;
       border-radius: 18px !important;
       box-shadow: 0 6px 40px rgba(0,0,0,0.04) !important;
-    }
-    .ec-nav {
-      margin: 32px 0 48px;
-    }
-    .ec-nav-btn {
-      font-size: 15px;
-      height: 54px;
     }
   }
 </style>
@@ -173,20 +181,26 @@
       トリイクスポット<br>
       <span class="em">ご利用ガイド</span>
     </h1>
-    <p class="photo-lead" style="padding: 0 15px;">
+    <p class="photo-lead" style="padding: 0 15px; margin-bottom: 10px;">
       知りたい手順のボタンをタップすると、詳しい流れが表示されます。
     </p>
 
-    <!-- ec.html と全く同じデザイン構造の切り替えボタン -->
-    <nav class="ec-nav">
-      <button type="button" class="ec-nav-btn is-active" onclick="switchGuide('nyushitsu')">入室方法</button>
-      <button type="button" class="ec-nav-btn" onclick="switchGuide('denpyo')">伝票提出</button>
+    <!-- ec.html と全く同じコード設計に落とし込んだナビゲーション部 -->
+    <nav class="ec-toc" aria-label="目次">
+      <ul class="ec-toc-list">
+        <li>
+          <a href="javascript:void(0);" class="js-ec-tab-btn is-active" data-target="nyushitsu">入室方法</a>
+        </li>
+        <li>
+          <a href="javascript:void(0);" class="js-ec-tab-btn" data-target="denpyo">伝票提出</a>
+        </li>
+      </ul>
     </nav>
 
     <!-- ==========================================
       TAB 1: 入室方法
     =========================================== -->
-    <div id="guide-nyushitsu" class="photo-section active">
+    <div id="tab-nyushitsu" class="photo-section is-active">
       <!-- STEP 01 -->
       <div class="photo-step">
         <div class="photo-step-head">
@@ -227,7 +241,7 @@
     <!-- ==========================================
       TAB 2: 伝票提出
     =========================================== -->
-    <div id="guide-denpyo" class="photo-section">
+    <div id="tab-denpyo" class="photo-section">
       <!-- STEP 01 -->
       <div class="photo-step">
         <div class="photo-step-head">
@@ -271,7 +285,7 @@
           <h2 class="photo-step-title">提出して完了</h2>
         </div>
         <p class="photo-step-desc">
-          撮影した写真を確認し、問題がなければ<span class="accent">「提出する」ボタン</span>を押すと手続きが完了します。
+          撮影した写真を確認し、問題がなければ<span class="accent">「提出する']ボタン</span>を押すと手続きが完了します。
         </p>
         <img class="photo-step-image" src="img/pic7.webp" alt="伝票提出 STEP 4 提出して完了" width="508" height="715" loading="lazy" decoding="async">
       </div>
@@ -344,26 +358,27 @@
 
 </div>
 
-<!-- タブ切り替え用のスクリプト（クラス名を ec.html の仕様に合わせました） -->
+<!-- ec.htmlに記述されていたタブ切り替え用JavaScriptロジックを完全移送 -->
 <script>
-function switchGuide(type) {
-  // すべてのセクションを非表示にする
-  document.getElementById('guide-nyushitsu').classList.remove('active');
-  document.getElementById('guide-denpyo').classList.remove('active');
-  
-  // すべてのボタンのアクティブ状態を解除
-  const buttons = document.querySelectorAll('.ec-nav-btn');
-  buttons.forEach(btn => btn.classList.remove('is-active'));
-  
-  // 選択されたセクションとボタンをアクティブにする
-  if (type === 'nyushitsu') {
-    document.getElementById('guide-nyushitsu').classList.add('active');
-    buttons[0].classList.add('is-active');
-  } else if (type === 'denpyo') {
-    document.getElementById('guide-denpyo').classList.add('active');
-    buttons[1].classList.add('is-active');
-  }
-}
+  document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.js-ec-tab-btn');
+    const tabContents = document.querySelectorAll('.photo-section');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        tabButtons.forEach(btn => btn.classList.remove('is-active'));
+        this.classList.add('is-active');
+
+        tabContents.forEach(content => content.classList.remove('is-active'));
+        
+        const targetId = 'tab-' + this.getAttribute('data-target');
+        const targetContent = document.getElementById(targetId);
+        if (targetContent) {
+          targetContent.classList.add('is-active');
+        }
+      });
+    });
+  });
 </script>
 
 <script src="js/photo.min.js" defer></script>
