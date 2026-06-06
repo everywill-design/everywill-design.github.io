@@ -36,33 +36,34 @@
 <link rel="stylesheet" href="css/photo.min.css">
 
 <style>
-  /* 分割表示・タブ切り替え用のスタイル調整 */
-  .guide-toggle-buttons {
+  /* ==========================================================================
+     ec.html の「Amazon/楽天」切り替えボタンのデザインを完全移植
+     ========================================================================== */
+  .ec-nav {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 25px auto 35px;
-    padding: 0 15px;
+    background: var(--c-line-soft, #f3f3f3);
+    border-radius: 12px;
+    padding: 6px;
+    margin: 24px 0 32px;
   }
-  .guide-btn {
+  .ec-nav-btn {
     flex: 1;
-    max-width: 200px;
-    padding: 12px 10px;
-    background-color: #f5f5f5;
-    color: #333;
-    border: 2px solid #ccc;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--c-text-sub, #555555);
     border-radius: 8px;
-    font-size: 0.95rem;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
   }
-  .guide-btn.active {
-    background-color: #ff6f00;
+  .ec-nav-btn.is-active {
+    background: var(--c-accent, #FF7A1F);
     color: #fff;
-    border-color: #ff6f00;
   }
+
+  /* タブ切り替え用のセクション表示制御 */
   .photo-section {
     display: none;
   }
@@ -70,7 +71,7 @@
     display: block;
   }
 
-  /* PC版（横幅1100px以上）で切り替え時に白枠の幅が変動しないよう固定する設定 */
+  /* PC版（横幅1100px以上）で白枠の幅を960pxに完全固定（ガタつき防止） */
   @media (min-width: 1100px) {
     main.photo {
       width: 100% !important;
@@ -80,6 +81,13 @@
       background: #ffffff !important;
       border-radius: 18px !important;
       box-shadow: 0 6px 40px rgba(0,0,0,0.04) !important;
+    }
+    .ec-nav {
+      margin: 32px 0 48px;
+    }
+    .ec-nav-btn {
+      font-size: 15px;
+      height: 54px;
     }
   }
 </style>
@@ -169,11 +177,11 @@
       知りたい手順のボタンをタップすると、詳しい流れが表示されます。
     </p>
 
-    <!-- タブ切り替えボタン -->
-    <div class="guide-toggle-buttons">
-      <button type="button" class="guide-btn active" onclick="switchGuide('nyushitsu')">入室方法</button>
-      <button type="button" class="guide-btn" onclick="switchGuide('denpyo')">伝票提出</button>
-    </div>
+    <!-- ec.html と全く同じデザイン構造の切り替えボタン -->
+    <nav class="ec-nav">
+      <button type="button" class="ec-nav-btn is-active" onclick="switchGuide('nyushitsu')">入室方法</button>
+      <button type="button" class="ec-nav-btn" onclick="switchGuide('denpyo')">伝票提出</button>
+    </nav>
 
     <!-- ==========================================
       TAB 1: 入室方法
@@ -336,7 +344,7 @@
 
 </div>
 
-<!-- タブ切り替え用のスクリプト -->
+<!-- タブ切り替え用のスクリプト（クラス名を ec.html の仕様に合わせました） -->
 <script>
 function switchGuide(type) {
   // すべてのセクションを非表示にする
@@ -344,16 +352,16 @@ function switchGuide(type) {
   document.getElementById('guide-denpyo').classList.remove('active');
   
   // すべてのボタンのアクティブ状態を解除
-  const buttons = document.querySelectorAll('.guide-btn');
-  buttons.forEach(btn => btn.classList.remove('active'));
+  const buttons = document.querySelectorAll('.ec-nav-btn');
+  buttons.forEach(btn => btn.classList.remove('is-active'));
   
   // 選択されたセクションとボタンをアクティブにする
   if (type === 'nyushitsu') {
     document.getElementById('guide-nyushitsu').classList.add('active');
-    buttons[0].classList.add('active');
+    buttons[0].classList.add('is-active');
   } else if (type === 'denpyo') {
     document.getElementById('guide-denpyo').classList.add('active');
-    buttons[1].classList.add('active');
+    buttons[1].classList.add('is-active');
   }
 }
 </script>
