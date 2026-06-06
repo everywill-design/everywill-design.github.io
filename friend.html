@@ -13,12 +13,12 @@
 <link rel="icon" type="image/webp" href="img/favicon.webp">
 <link rel="apple-touch-icon" href="img/favicon.webp">
 
-<meta property=\"og:type\" content=\"article\">
-<meta property=\"og:site_name\" content=\"トリイク\">
-<meta property=\"og:locale\" content=\"ja_JP\">
-<meta property=\"og:url\" content=\"https://toriiku-jp.com/friend.html\">
-<meta property=\"og:title\" content=\"友だち紹介キャンペーン｜トリイク\">
-<meta property=\"og:description\" content=\"トリイクを紹介した側もされた側もポイントがもらえるお得なキャンペーン実施中！\">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="トリイク">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://toriiku-jp.com/friend.html">
+<meta property="og:title" content="友だち紹介キャンペーン｜トリイク">
+<meta property="og:description" content="トリイクを紹介した側もされた側もポイントがもらえるお得なキャンペーン実施中！">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
@@ -62,6 +62,7 @@
     font-weight: 700;
     color: #111;
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   .badge-hot {
     background: #ff5a5f;
@@ -71,6 +72,17 @@
     font-size: 0.85rem;
     font-weight: bold;
     display: inline-block;
+  }
+  .badge-preparing {
+    background: #999;
+    color: #fff;
+    padding: 0.4rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 0.75rem;
+    letter-spacing: 0.1em;
   }
   
   /* 特典カードエリア */
@@ -90,18 +102,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   .reward-card.highlight {
     border-color: #ff5a5f;
     background: #fffbfb;
-  }
-  .reward-card img {
-    width: 100%;
-    max-width: 220px;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    object-fit: cover;
   }
   .reward-role {
     font-size: 1.1rem;
@@ -113,9 +118,10 @@
     color: #ff5a5f;
   }
   .reward-point {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: #111;
+    margin: 0.5rem 0;
   }
   .reward-point span {
     font-size: 1.2rem;
@@ -131,6 +137,7 @@
     padding-left: 0.75rem;
     margin-bottom: 1.5rem;
     color: #111;
+    margin-top: 3.5rem;
   }
   .steps-list {
     background: #fff;
@@ -180,6 +187,41 @@
     margin: 0;
     color: #666;
     font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .step-content strong {
+    color: #ff5a5f;
+  }
+
+  /* 下部画像ギャラリーエリア */
+  .how-to-images {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+  .image-box {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+  }
+  .image-box h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  .image-box img {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   }
 
   /* 注意事項 */
@@ -212,10 +254,6 @@
     flex-wrap: wrap;
     gap: 2rem;
   }
-  .footer-left h4 {
-    margin: 0 0 1rem 0;
-    font-size: 1.2rem;
-  }
   .footer-nav {
     list-style: none;
     padding: 0;
@@ -243,7 +281,7 @@
 
   /* レスポンシブ対応 */
   @media screen and (max-width: 768px) {
-    .rewards-grid {
+    .rewards-grid, .how-to-images {
       flex-direction: column;
     }
     .campaign-title-area h1 {
@@ -272,59 +310,88 @@
     <div class="campaign-title-area">
       <span class="badge-hot">トリイクをおすすめしよう！</span>
       <h1>友だち紹介キャンペーン</h1>
-      <p style="color: #666; margin-top: 0.5rem;">あなたにも、お友だちにも、うれしい特典をプレゼント</p>
+      <div><span class="badge-preparing">準備中</span></div>
     </div>
 
+    <!-- 特典内容（紹介された側の初回受取がトリガーであることを明記） -->
     <div class="rewards-grid">
+      <!-- 紹介者側 -->
       <div class="reward-card highlight">
         <p class="reward-role">紹介したあなたに</p>
-        <img src="img/friend01.webp" alt="紹介者向け特典イメージ">
-        <div class="reward-point">500 <span>ポイント</span></div>
-        <p style="font-size: 0.85rem; color: #777; margin-top: 0.5rem;">友だちが初回の荷物受取を完了すると付与されます</p>
+        <div class="reward-point">- <span>ポイント</span></div>
+        <p style="font-size: 0.85rem; color: #777; margin-top: 0.5rem;">紹介されたお友だちが初回の荷物受取を完了すると入ります</p>
       </div>
 
+      <!-- 被紹介者側 -->
       <div class="reward-card">
         <p class="reward-role">紹介されたお友だちに</p>
-        <img src="img/friend02.webp" alt="被紹介者向け特典イメージ">
-        <div class="reward-point">500 <span>ポイント</span></div>
-        <p style="font-size: 0.85rem; color: #777; margin-top: 0.5rem;">紹介コードを使って新規登録すると即時付与されます</p>
+        <div class="reward-point">- <span>ポイント</span></div>
+        <p style="font-size: 0.85rem; color: #777; margin-top: 0.5rem;">ご自身で初回の荷物受取（トリイクスポット利用）を完了すると入ります</p>
       </div>
     </div>
 
+    <!-- キャンペーン参加方法（条件を「お友だちの初回受取完了時」に修正） -->
     <section>
       <h2 class="section-title">キャンペーン参加方法</h2>
       <div class="steps-list">
         <div class="step-item">
           <div class="step-number">1</div>
           <div class="step-content">
-            <h3>紹介コードをシェアする</h3>
-            <p>トリイクのマイページ内「友だち紹介」から、あなたの専用紹介コード、または紹介リンクをコピーしてLINEやSNSでシェアします。</p>
+            <h3>紹介コードをお友だちに送る</h3>
+            <p>トリイクのマイページ内「紹介コード」の項目から、あなたの専用紹介コードをコピーしてお友だちにシェアします。</p>
           </div>
         </div>
         <div class="step-item">
           <div class="step-number">2</div>
           <div class="step-content">
-            <h3>お友だちが新規登録</h3>
-            <p>紹介されたお友だちが、シェアされたリンクまたは紹介コードを入力してトリイクに新規登録を行うと、お友だちにすぐにポイントが付与されます。</p>
+            <h3>お友だちが登録時にコードを入力</h3>
+            <p>紹介されたお友だちが、新規会員登録の画面にある「紹介コード」欄にコードを入力してトリイクの会員登録を完了させます。</p>
           </div>
         </div>
         <div class="step-item">
           <div class="step-number">3</div>
           <div class="step-content">
-            <h3>あなたもポイント獲得！</h3>
-            <p>お友だちがトリイクのスポットで「初めてのEC荷物受け取り」を完了すると、あなたにも紹介特典ポイントが自動的に付与されます。</p>
+            <h3>お友だちがスポットで荷物を受け取る</h3>
+            <p>紹介されたお友だちが、トリイクスポットを利用して<strong>初めての荷物受け取り（送り状写真の提出まで）を完了</strong>させます。</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>紹介した側・された側の双方に入る！</h3>
+            <p>お友だちの初回受け取り完了がシステムに反映されると、<strong>紹介したあなたと、紹介されたお友だちの双方に</strong>紹介特典ポイントが同時に付与されます。</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- 紹介コードの確認・入力方法画像（手順の下部に配置） -->
+    <section>
+      <h2 class="section-title">紹介コードの確認・入力方法</h2>
+      <div class="how-to-images">
+        <!-- 紹介者側 (01) -->
+        <div class="image-box">
+          <h3>【紹介する方】コードの確認方法</h3>
+          <img src="img/friend01.webp" alt="マイページの紹介コード画面">
+          <p style="font-size: 0.85rem; color: #666; margin-top: 0.75rem; text-align: left;">マイページの下部にある「紹介コード」から、自身のコードを確認・コピーできます。</p>
+        </div>
+        <!-- 被紹介者側 (02) -->
+        <div class="image-box">
+          <h3>【紹介された方】コードの入力方法</h3>
+          <img src="img/friend02.webp" alt="新規登録時の紹介コード入力画面">
+          <p style="font-size: 0.85rem; color: #666; margin-top: 0.75rem; text-align: left;">新規会員登録の画面にある「紹介コード」の欄に、受け取ったコードを入力して「適用」を押してください。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 注意事項 -->
     <section>
       <h2 class="section-title">ご注意事項</h2>
       <div class="notes-box">
         <ul>
-          <li>紹介される方は、これまでにトリイクに登録したことがない方に限ります（新規ユーザーのみ）。</li>
-          <li>同一人物による複数アカウントの作成・紹介行為が発覚した場合、付与されたポイントは無効となり、アカウントを停止させていただく場合があります。</li>
-          <li>付与されるポイントの有効期限は、付与された日から180日間です。</li>
+          <li>紹介される方は、これまでにトリイクに登録・ご利用したことがない方に限ります（新規ユーザー様限定）。</li>
+          <li>紹介コードを入力して会員登録しただけでは、双方ともにポイントは付与されません。紹介されたお友だちがトリイクスポットでの最初の荷物受け取りを完了することが付与条件となります。</li>
+          <li>同一人物による複数アカウントの作成や、架空の紹介行為など、不正が発覚した場合はすべてのポイントを無効とし、アカウントを停止させていただく場合があります。</li>
           <li>本キャンペーンは予告なく変更または終了する場合があります。あらかじめご了承ください。</li>
         </ul>
       </div>
