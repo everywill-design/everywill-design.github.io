@@ -1069,8 +1069,7 @@
 
 <script src="js/index.min.js" defer></script>
 
-  <style>
-    
+<style>
 /* パソコン（画面が広いとき）の設定 */
 @media screen and (min-width: 768px) {
   .about-tagline-pill {
@@ -1080,13 +1079,13 @@
     letter-spacing: 0.05em;
   }
   
-  /* PC版だけでドライバーの画像を400pxに制限して中央に寄せる設定 */
+  /* 土台のレイアウトを壊さず、画像そのものだけを一回り小さく収める設定 */
   .crisis-visual img {
-    max-width: 400px !important;
+    max-width: 420px !important; /* ★ここの数値を変更すれば、PC版の画像サイズを自由に微調整できます */
     width: 100% !important;
     height: auto !important;
-    margin: 0 auto !important;
-    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 
@@ -1099,6 +1098,5 @@
   }
 }
 </style>
-  
 </body>
 </html>
