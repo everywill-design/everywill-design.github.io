@@ -47,28 +47,12 @@
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--c-text);
-    margin-bottom: 14px;
+    margin-bottom: 24px; /* バッジ削除に伴い下部マージンを調整 */
     text-align: left;
   }
   .friend-page-title .em {
     background: linear-gradient(transparent 70%, rgba(255,190,80,0.4) 70%);
     padding: 0 2px;
-  }
-  
-  /* 準備中バッジ */
-  .friend-preparing-wrap {
-    text-align: center;
-    margin: 16px 0 24px;
-  }
-  .friend-badge-preparing {
-    background: var(--c-text-mute);
-    color: var(--c-surface);
-    padding: 4px 24px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 700;
-    display: inline-block;
-    letter-spacing: 0.1em;
   }
   
   /* リード文 */
@@ -115,6 +99,10 @@
     line-height: 1.2;
     color: var(--c-text);
     margin: 6px 0;
+  }
+  /* 「500」をオレンジ色にするスタイル */
+  .friend-reward-point .orange-text {
+    color: #FF7A1F;
   }
   .friend-reward-point span {
     font-size: 13px;
@@ -300,10 +288,6 @@
       友だち<span class="em">紹介キャンペーン</span>
     </h1>
     
-    <div class="friend-preparing-wrap">
-      <span class="friend-badge-preparing">準備中</span>
-    </div>
-    
     <p class="friend-page-lead">
       トリイクを身近な人に紹介して、お互いにお得なポイントをゲットしよう！キャンペーンのご案内です。
     </p>
@@ -313,13 +297,13 @@
       <!-- 紹介した側 -->
       <div class="friend-reward-card is-highlight">
         <p class="friend-reward-role">紹介したあなたに</p>
-        <div class="friend-reward-point">500<span>ポイント</span></div>
+        <div class="friend-reward-point"><span class="orange-text">500</span><span>ポイント</span></div>
         <p class="friend-reward-condition">紹介されたお友だちが初回の荷物受取を完了すると入ります。</p>
       </div>
       <!-- 紹介された側 -->
       <div class="friend-reward-card">
         <p class="friend-reward-role">紹介されたお友だちに</p>
-        <div class="friend-reward-point">500<span>ポイント</span></div>
+        <div class="friend-reward-point"><span class="orange-text">500</span><span>ポイント</span></div>
         <p class="friend-reward-condition">ご自身で初回の荷物受取（トリイクスポット利用）を完了すると入ります。</p>
       </div>
     </div>
@@ -449,7 +433,7 @@
 
         <ul class="footer-notes">
           <li>※1 付与ポイントはスポット・利用回数により異なります</li>
-          <li>※2 デジコは株式会社DIGITALIO提供のサービスです</li>
+          <li>※2 デジコは株式会社DIGITALIO提供の service です</li>
         </ul>
       </div>
     </div>
