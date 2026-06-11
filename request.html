@@ -21,81 +21,116 @@
 <link rel="stylesheet" href="css/ec.min.css">
 
 <style>
-  /* ec.html / トリイク共通のトンマナを維持・補完するためのスタイル */
-  .request-hero {
-    background: #fff;
-    padding: 60px 20px 40px;
-    text-align: center;
-    border-bottom: 1px solid #f0f0f0;
+  /* スマホ実機で横幅が縮まないように100%フルサイズ化する上書き設定 */
+  body {
+    background-color: #ffffff;
   }
-  .request-title {
-    font-size: 28px;
-    font-weight: 700;
-    color: #333;
-    line-height: 1.4;
-    margin-bottom: 20px;
+  .device {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden;
   }
-  .request-title .em {
-    color: #ff6600; /* トリイクオレンジ */
-  }
-  .request-lead {
-    font-size: 15px;
-    color: #666;
-    max-width: 600px;
+  
+  /* メインコンテンツエリアのサイズ・余白調整 */
+  .request-main-area {
+    width: 100%;
+    max-width: 640px; /* スマホ・PC双方で見やすい最大幅 */
     margin: 0 auto;
+    padding: 40px 20px 80px;
+    box-sizing: border-box;
+  }
+
+  .request-hero-box {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  .request-brand-label {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff6600;
+    margin-bottom: 5px;
+    letter-spacing: 0.1em;
+  }
+  .request-main-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #333333;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+  .request-main-title .em-orange {
+    color: #ff6600;
+    display: block;
+    margin-top: 4px;
+  }
+  .request-lead-text {
+    font-size: 15px;
+    color: #555555;
     line-height: 1.8;
     text-align: left;
   }
-  .request-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 40px 20px 80px;
+  .request-lead-text p {
+    margin-bottom: 12px;
   }
-  .request-card {
-    background: #fff;
-    border-radius: 12px;
+  .request-lead-text p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* カード型リンク要素 */
+  .request-action-card {
+    background: #ffffff;
+    border-radius: 16px;
     padding: 30px 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     text-align: center;
-    border: 1px solid #eef0f2;
+    border: 1px solid #f2f4f6;
+    margin-top: 30px;
   }
-  .request-time-badge {
+  .request-time-tag {
     display: inline-block;
-    background-color: #fff3eb;
+    background-color: #fff5ed;
     color: #ff6600;
-    padding: 6px 16px;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
     margin-bottom: 20px;
   }
-  .request-cta-btn {
+
+  /* トリイク公式ロゴカラーに合わせたクリーンなボタンスタイル */
+  .request-submit-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: #ff6600;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
+    background: linear-gradient(135deg, #ff8822 0%, #ff6600 100%); /* トリイク公式オレンジに準拠 */
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
     text-decoration: none;
-    padding: 16px 24px;
+    padding: 16px 20px;
     border-radius: 50px;
     transition: all 0.2s ease;
-    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.2);
     margin: 0 auto 15px;
-    max-width: 400px;
-    border: none;
-    cursor: pointer;
+    max-width: 340px;
+    width: 100%;
+    box-sizing: border-box;
   }
-  .request-cta-btn:hover {
-    background-color: #e65500;
+  .request-submit-btn:hover {
+    background: linear-gradient(135deg, #ff9933 0%, #e65500 100%);
     transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(255, 102, 0, 0.4);
+    box-shadow: 0 6px 14px rgba(255, 102, 0, 0.25);
   }
-  .request-sub-notice {
-    font-size: 12px;
-    color: #999;
+  .request-submit-btn:active {
+    transform: translateY(1px);
+  }
+  .request-notice-small {
+    font-size: 11px;
+    color: #999999;
   }
 </style>
 </head>
@@ -103,6 +138,7 @@
 
 <div class="device">
 
+  <!-- 既存共通ヘッダー -->
   <header class="header">
     <a href="index.html" class="header-logo" aria-label="トリイク">
       <img src="img/logo.webp" alt="トリイク" width="1000" height="298" loading="eager" decoding="async">
@@ -130,6 +166,7 @@
     </div>
   </header>
 
+  <!-- 既存ハンバーガーメニュー -->
   <nav class="menu" id="js-menu" aria-hidden="true">
     <button class="menu-close" id="js-menu-close" aria-label="メニューを閉じる"></button>
     <div class="menu-inner">
@@ -153,34 +190,36 @@
     </div>
   </nav>
 
-  <main class="ec">
-    <div class="request-hero">
-      <h1 class="request-title">
-        「ここにあったら便利なのに…」<br><span class="em">を教えてください！</span>
+  <!-- メインリクエストコンテンツ（実機最適化版） -->
+  <main class="request-main-area">
+    <div class="request-hero-box">
+      <span class="request-brand-label">＼ トリイク ／</span>
+      <h1 class="request-main-title">
+        「ここにあったら便利なのに…」<span class="em-orange">を教えてください！</span>
       </h1>
-      <div class="request-lead">
-        <p>トリイクは、これからどんどん拠点を増やしていきます.
-        </p>
-        <p style="margin-top: 10px;">あなたの「ここにあると助かる！」という声をぜひお聞かせください。<br>新しくスポットができたときは、LINEですぐにお知らせします。</p>
+      <div class="request-lead-text">
+        <p>トリイクは、これからどんどん拠点を増やしていきます💡</p>
+        <p>あなたの「ここにあると助かる！」という声をぜひお聞かせください📥</p>
+        <p>ご希望のエリアに新しくスポットができたときは、LINEですぐにお知らせします。</p>
       </div>
     </div>
 
-    <div class="request-container">
-      <div class="request-card">
-        <div class="request-time-badge">
-          <i class="fa-regular fa-clock"></i> 回答目安：約1分
-        </div>
-        
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeI9dX-HfPJW13mNbbATTIQ66yg2MLpWxm_Tp2j2RtSJDLRwQ/viewform?usp=publish-editor" class="request-cta-btn">
-          <span>設置場所をリクエストする（無料）</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
-        
-        <p class="request-sub-notice">※ボタンを押すと入力画面へ移動します</p>
+    <div class="request-action-card">
+      <div class="request-time-tag">
+        <i class="fa-regular fa-clock" aria-hidden="true"></i> 回答目安：約1分
       </div>
+      
+      <!-- Googleフォームリンクボタン（ロゴカラー準拠） -->
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeI9dX-HfPJW13mNbbATTIQ66yg2MLpWxm_Tp2j2RtSJDLRwQ/viewform?usp=publish-editor" class="request-submit-btn">
+        <span>設置場所をリクエストする（無料）</span>
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+      
+      <p class="request-notice-small">※ボタンを押すと外部の入力画面（Googleフォーム）へ移動します</p>
     </div>
   </main>
 
+  <!-- 既存共通フッター -->
   <footer class="footer" id="company">
     <div class="footer-toB">
       <span class="footer-toB-tag">店舗・SC向け</span>
@@ -248,7 +287,6 @@
 
 <script src="js/ec.min.js" defer></script>
 <script>
-  // ハンバーガーメニュー用の標準スクリプト（既存サイト互換用）
   document.addEventListener('DOMContentLoaded', function() {
     const toggle = document.getElementById('js-menu-toggle');
     const menu = document.getElementById('js-menu');
