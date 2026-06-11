@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="index,follow">
+<title>設置場所リクエスト受付中｜トリイク</title>
+<meta name="description" content="トリイクの受取スポットの設置場所リクエスト受付ページです。「ここにあったら便利なのに…」というあなたの声をお聞かせください。">
+<meta name="keywords" content="トリイク,置き配スポット,設置場所リクエスト,要望">
+<meta name="author" content="株式会社Every WiLL">
+<link rel="canonical" href="https://toriiku-jp.com/request.html">
+<link rel="icon" type="image/webp" href="img/favicon.webp">
+<link rel="apple-touch-icon" href="img/favicon.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/ec.min.css">
+
+<style>
+  /* ec.html / トリイク共通のトンマナを維持・補完するためのスタイル */
+  .request-hero {
+    background: #fff;
+    padding: 60px 20px 40px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .request-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  .request-title .em {
+    color: #ff6600; /* トリイクオレンジ */
+  }
+  .request-lead {
+    font-size: 15px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+    text-align: left;
+  }
+  .request-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+  }
+  .request-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    text-align: center;
+    border: 1px solid #eef0f2;
+  }
+  .request-time-badge {
+    display: inline-block;
+    background-color: #fff3eb;
+    color: #ff6600;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .request-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 16px 24px;
+    border-radius: 50px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
+    margin: 0 auto 15px;
+    max-width: 400px;
+    border: none;
+    cursor: pointer;
+  }
+  .request-cta-btn:hover {
+    background-color: #e65500;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(255, 102, 0, 0.4);
+  }
+  .request-sub-notice {
+    font-size: 12px;
+    color: #999;
+  }
+</style>
+</head>
+<body>
+
+<div class="device">
+
+  <header class="header">
+    <a href="index.html" class="header-logo" aria-label="トリイク">
+      <img src="img/logo.webp" alt="トリイク" width="1000" height="298" loading="eager" decoding="async">
+    </a>
+
+    <nav class="header-nav-pc" aria-label="グローバルナビゲーション">
+      <a href="index.html#issue" class="header-nav-pc-link">宅配の社会問題</a>
+      <a href="index.html#about" class="header-nav-pc-link">トリイクとは</a>
+      <a href="index.html#features" class="header-nav-pc-link">3つの特徴</a>
+      <a href="index.html#points" class="header-nav-pc-link">ポイント還元</a>
+      <a href="index.html#security" class="header-nav-pc-link">安心の仕組み</a>
+      <a href="index.html#how-to" class="header-nav-pc-link">使い方</a>
+      <a href="index.html#voice" class="header-nav-pc-link">利用者の声</a>
+      <a href="index.html#faq" class="header-nav-pc-link">よくある質問</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://line.me/R/ti/p/@638ddwpp" target="_blank" rel="noopener" class="header-cta">
+        <img src="img/LINE_APP_iOS.webp" alt="" class="line-icon" width="1000" height="1000" loading="eager" decoding="async">
+        <span>無料で会員登録</span>
+      </a>
+      <button class="hamburger" id="js-menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="js-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="menu" id="js-menu" aria-hidden="true">
+    <button class="menu-close" id="js-menu-close" aria-label="メニューを閉じる"></button>
+    <div class="menu-inner">
+      <ul class="menu-list">
+        <li class="menu-item"><a href="index.html#issue" class="menu-link"><span class="num">01</span><span class="menu-link-label">宅配の社会問題</span><span class="arrow">→</span></a></li>
+        <li class="menu-item"><a href="index.html#about" class="menu-link"><span class="num">02</span><span class="menu-link-label">トリイクとは</span><span class="arrow">→</span></a></li>
+        <li class="menu-item"><a href="index.html#features" class="menu-link"><span class="num">03</span><span class="menu-link-label">3つの特徴</span><span class="arrow">→</span></a></li>
+        <li class="menu-item"><a href="index.html#points" class="menu-link"><span class="num">04</span><span class="menu-link-label">ポイント還元</span><span class="arrow">→</span></a></li>
+        <li class="menu-item"><a href="index.html#security" class="menu-link"><span class="num">05</span><span class="menu-link-label">安心の仕組み</span><span class="arrow">→</span></a></li>
+        <li class="menu-item"><a href="index.html#how-to" class="menu-link"><span class="num">06</span><span class="menu-link-label">使い方</span><span class="arrow">→</span></a></li>
+        <li class="menu-item"><a href="index.html#voice" class="menu-link"><span class="num">07</span><span class="menu-link-label">利用者の声</span><span class="arrow">→</span></a></li>
+        <li class="menu-item"><a href="index.html#faq" class="menu-link"><span class="num">08</span><span class="menu-link-label">よくある質問</span><span class="arrow">→</span></a></li>
+      </ul>
+      <a href="https://line.me/R/ti/p/@638ddwpp" target="_blank" rel="noopener" class="menu-cta">
+        <span class="menu-cta-inner">
+          <img src="img/LINE_APP_iOS.webp" alt="" class="line-icon" width="1000" height="1000" loading="lazy" decoding="async">
+          <span>無料で会員登録</span>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="ec">
+    <div class="request-hero">
+      <h1 class="request-title">
+        「ここにあったら便利なのに…」<br><span class="em">を教えてください！</span>
+      </h1>
+      <div class="request-lead">
+        <p>トリイクは、これからどんどん拠点を増やしていきます💡</p>
+        <p style="margin-top: 10px;">あなたの「ここにあると助かる！」という声をぜひお聞かせください📥 お住まいの近くにスポットができたとき、すぐにお知らせします。</p>
+      </div>
+    </div>
+
+    <div class="request-container">
+      <div class="request-card">
+        <div class="request-time-badge">
+          <i class="fa-regular fa-clock"></i> 回答目安：約1分
+        </div>
+        
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeI9dX-HfPJW13mNbbATTIQ66yg2MLpWxm_Tp2j2RtSJDLRwQ/viewform?usp=publish-editor" class="request-cta-btn">
+          <span>設置場所をリクエストする（無料）</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        
+        <p class="request-sub-notice">※ボタンを押すと外部の入力画面（Googleフォーム）へ移動します</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer" id="company">
+    <div class="footer-toB">
+      <span class="footer-toB-tag">店舗・SC向け</span>
+      <h2 class="footer-toB-title">
+        未利用スペースに<br>
+        <span class="em">スポットを設置</span>しませんか？
+      </h2>
+      <p class="footer-toB-desc">
+        1.5坪以上の室内ならどこにでも設置可能。これからどんどん拠点を増やしていきます。<br>
+        お気軽にお問い合わせください。
+      </p>
+      <a href="https://retail.toriiku-jp.com/" target="_blank" rel="noopener" class="footer-toB-btn">
+        <span>詳しくはこちら</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-company">
+        <dl class="footer-company-table">
+          <dt>会社名</dt>
+          <dd>株式会社Every WiLL</dd>
+          <dt>代表取締役</dt>
+          <dd>須藤俊明</dd>
+          <dt>所在地</dt>
+          <dd>〒169-0051<br>東京都新宿区西早稲田二丁目22番3号</dd>
+          <dt>取引銀行</dt>
+          <dd>みずほ銀行／りそな銀行／<br>GMOあおぞらネット銀行</dd>
+          <dt>HP</dt>
+          <dd><a href="https://everywill-jp.com/" target="_blank" rel="noopener">everywill-jp.com</a></dd>
+        </dl>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-social" aria-label="公式SNS">
+          <a href="https://x.com/toriiku_1025" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (旧Twitter)">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/toriiku_1025/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.youtube.com/@toriiku-jp" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <ul class="footer-nav">
+          <li><a href="terms.html">利用規約</a></li>
+          <li><a href="index.html#faq">よくある質問</a></li>
+          <li><a href="https://everywill-jp.com/" target="_blank" rel="noopener">運営会社</a></li>
+          <li><a href="https://everywill-jp.com/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a></li>
+        </ul>
+
+        <ul class="footer-notes">
+          <li>※1 付与ポイントはスポット・利用回数により異なります</li>
+          <li>※2 デジコは株式会社DIGITALIO提供のサービスです</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-copy">© Every WiLL Inc.</p>
+  </footer>
+
+</div>
+
+<script src="js/ec.min.js" defer></script>
+<script>
+  // ハンバーガーメニュー用の標準スクリプト（既存サイト互換用）
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggle = document.getElementById('js-menu-toggle');
+    const menu = document.getElementById('js-menu');
+    const close = document.getElementById('js-menu-close');
+    
+    if(toggle && menu) {
+      toggle.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        menu.setAttribute('aria-hidden', expanded);
+      });
+    }
+    if(close && menu && toggle) {
+      close.addEventListener('click', function() {
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.setAttribute('aria-hidden', 'true');
+      });
+    }
+  });
+</script>
+</body>
+</html>
