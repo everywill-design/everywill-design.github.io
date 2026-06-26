@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="index,follow">
+<title>公式LINEお引越しキャンペーン｜トリイク</title>
+<meta name="description" content="トリイク公式LINEがお引越し！新アカウントへの登録＆会員登録（eKYC完了）でアマギフ総額200名様に抽選プレゼント！さらに9月の新サービス情報も。">
+<meta name="keywords" content="トリイク,公式LINE,お引越し,キャンペーン,Amazonギフト券,アマギフ,ポイ活">
+<meta name="author" content="株式会社Every WiLL">
+<link rel="canonical" href="https://toriiku-jp.com/line-notice.html">
+<link rel="icon" type="image/webp" href="img/favicon.webp">
+<link rel="apple-touch-icon" href="img/favicon.webp">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="トリイク">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://toriiku-jp.com/line-notice.html">
+<meta property="og:title" content="公式LINEお引越しキャンペーン｜トリイク">
+<meta property="og:description" content="新アカウントへの登録＆会員登録でアマギフ総額200名様に抽選プレゼント！">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/index.min.css">
+
+<style>
+  /* ========================================================
+     トリイクお引越しキャンペーンLP 専用スタイリング
+     ======================================================== */
+  
+  :root {
+    --c-surface: #ffffff;
+    --c-text: #111111;
+    --c-text-sub: #555555;
+    --c-line: #e0e0e0;
+    --c-line-soft: #f0f0f0;
+    --c-accent: #FF7A1F;
+    --c-accent-bg: #fffbf0;
+    --c-accent-border: #ffd766;
+  }
+
+  .friend-main-content {
+    flex: 1;
+    padding: 32px 22px 48px;
+    background: var(--c-surface);
+  }
+  
+  /* タイトル装飾 */
+  .friend-page-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--c-text);
+    margin-bottom: 24px;
+    text-align: left;
+  }
+  .friend-page-title .important-badge {
+    display: inline-block;
+    background: #ff3b30;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    vertical-align: middle;
+  }
+  .friend-page-title .em {
+    background: linear-gradient(transparent 70%, rgba(255,122,31,0.2) 70%);
+    padding: 0 2px;
+  }
+  
+  /* リード文 */
+  .friend-page-lead {
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--c-text-sub);
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--c-line);
+    margin-bottom: 32px;
+  }
+  
+  /* 賞品目玉エリア（ガツンと目立たせるデザイン） */
+  .gift-headline {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--c-text);
+    margin-bottom: 16px;
+  }
+  .gift-headline span {
+    color: #ff3b30;
+    font-size: 20px;
+  }
+  .friend-rewards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .friend-reward-card {
+    background: var(--c-surface);
+    border: 2px solid var(--c-line);
+    border-radius: 16px;
+    padding: 24px 16px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+    position: relative;
+    overflow: hidden;
+  }
+  .friend-reward-card.is-highlight {
+    border-color: var(--c-accent-border);
+    background: var(--c-accent-bg);
+  }
+
+  .friend-reward-role {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff3b30;
+    margin-bottom: 8px;
+  }
+  .friend-reward-card.is-highlight .friend-reward-role {
+    color: var(--c-accent);
+  }
+  .friend-reward-point {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ff3b30;
+    margin: 8px 0;
+    letter-spacing: -0.03em;
+  }
+  .friend-reward-card.is-highlight .friend-reward-point {
+    color: var(--c-accent);
+  }
+  .friend-reward-point span {
+    font-size: 18px;
+    color: var(--c-text);
+    margin-left: 2px;
+    font-weight: 700;
+  }
+  .friend-reward-condition {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--c-text);
+    margin: 4px 0 0 0;
+    background: rgba(0,0,0,0.04);
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 999px;
+  }
+
+  /* 締切 */
+  .campaign-limit-box {
+    background: #f7f7f7;
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--c-text);
+    margin-bottom: 36px;
+    border: 1px dashed #ff3b30;
+  }
+  .campaign-limit-box span {
+    color: #ff3b30;
+  }
+
+  /* セクション構造 */
+  .friend-section {
+    margin-bottom: 40px;
+  }
+  .friend-section-head {
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--c-text);
+  }
+  .friend-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--c-text);
+  }
+
+  /* ステップブロック */
+  .friend-step-block {
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px dashed var(--c-line);
+  }
+  .friend-step-block:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .friend-step-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .friend-step-num {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 54px;
+    height: 22px;
+    padding: 0 10px;
+    background: #111;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    border-radius: 999px;
+  }
+  .friend-step-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--c-text);
+    letter-spacing: 0.02em;
+  }
+  .friend-step-desc {
+    font-size: 12.5px;
+    line-height: 1.95;
+    color: var(--c-text-sub);
+    margin: 0;
+  }
+  .friend-step-desc .em {
+    color: var(--c-text);
+    font-weight: 700;
+  }
+  .friend-step-desc .accent {
+    color: var(--c-accent);
+    font-weight: 700;
+  }
+
+  /* STEP03内 画像設置用の追加スタイル */
+  .step-image-container {
+    background: #fafafa;
+    border: 1px solid var(--c-line);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 14px;
+    text-align: center;
+    max-width: 400px;
+  }
+  .step-image-caption {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--c-text);
+    margin: 0 0 12px 0;
+  }
+  .step-status-img {
+    width: 100%;
+    height: auto;
+    max-width: 260px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  /* 新サービス枠 */
+  .new-service-box {
+    background: var(--c-accent-bg);
+    border: 1.5px solid var(--c-accent-border);
+    border-radius: 14px;
+    padding: 24px 20px;
+    margin-top: 16px;
+  }
+  .new-service-tag {
+    display: inline-block;
+    background: var(--c-accent);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+  .new-service-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--c-text);
+    line-height: 1.5;
+    margin-bottom: 14px;
+  }
+  .new-service-desc {
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--c-text-sub);
+    margin: 0;
+  }
+
+  /* 詳細条件ボックス */
+  .friend-gallery-note {
+    background: var(--c-surface);
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--c-text-sub);
+    border: 1px solid var(--c-line);
+  }
+  .condition-highlight-box {
+    background: #fff8f8;
+    border-left: 4px solid #ff3b30;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 14px;
+  }
+  .condition-highlight-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ff3b30;
+    margin: 0 0 4px 0;
+  }
+  .condition-highlight-text {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--c-text);
+    margin: 0;
+  }
+
+  /* LINE CTAボタン */
+  .main-cta-area {
+    margin: 24px 0 32px;
+    text-align: center;
+  }
+  .main-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 400px;
+    background: #06C755;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(6,199,85,0.25);
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  .main-cta-button:hover {
+    background: #05b34c;
+    transform: translateY(-2px);
+  }
+  .main-cta-button i {
+    font-size: 20px;
+  }
+  .main-cta-subtext {
+    font-size: 11px;
+    color: var(--c-text-sub);
+    margin-top: 8px;
+  }
+
+  /* ステップ内配置用の小ぶりなCTAボタン */
+  .step-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #06C755;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    margin-top: 12px;
+    box-shadow: 0 4px 12px rgba(6,199,85,0.15);
+  }
+  .step-cta-button:hover {
+    background: #05b34c;
+  }
+
+  /* ========================================================
+     PC表示レスポンシブ（1100px以上）
+     ======================================================== */
+  @media (min-width: 1100px) {
+    .friend-main-content {
+      max-width: 960px;
+      margin: 56px auto 80px;
+      padding: 64px 80px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 6px 40px rgba(0,0,0,0.04);
+    }
+    .friend-page-title { font-size: 26px; }
+    .friend-rewards-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .friend-reward-card {
+      padding: 36px 24px;
+    }
+    .friend-reward-role { font-size: 18px; }
+    .friend-reward-point { font-size: 56px; }
+    .friend-reward-condition { font-size: 15px; }
+    .friend-section-title { font-size: 18px; }
+    .new-service-box { padding: 32px; }
+    .new-service-title { font-size: 18px; }
+    .new-service-desc { font-size: 14px; }
+    .friend-gallery-note { padding: 20px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="device">
+
+  <header class="header">
+    <a href="index.html" class="header-logo" aria-label="トリイク">
+      <img src="img/logo.webp" alt="トリイク" width="1000" height="298" loading="eager" decoding="async">
+    </a>
+    <div class="header-actions">
+      <a href="https://line.me/R/ti/p/@301wzhhp?oat__id=6771964" target="_blank" rel="noopener" class="header-cta">
+        <img src="img/LINE_APP_iOS.webp" alt="" class="line-icon" width="1000" height="1000" loading="eager" decoding="async">
+        <span>新LINEに登録</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="friend-main-content">
+    
+    <h1 class="friend-page-title">
+      <span class="important-badge">【重要】トリイクから大切</span><br>
+      公式LINEアカウントお引越しキャンペーン
+    </h1>
+    
+    <p class="friend-page-lead">
+      いつもトリイクを応援いただき、ありがとうございます。この度、より使いやすく便利なサービスをお届けするため、公式LINEアカウントが新しくお引越しすることになりました。<br><br>
+      過去に旧アカウントで会員登録していただいた方も、新しいアカウントから再度ご登録いただくことでキャンペーンへのエントリーとなります。お手数をおかけいたしますが、ぜひ新アカウントへの移行をお願いします！
+    </p>
+
+    <h3 class="gift-headline">新アカウント登録＆会員登録で<br>Amazonギフト券を<span>合計200名様</span>に抽選プレゼント！</h3>
+    
+    <div class="friend-rewards-grid">
+      <div class="friend-reward-card is-highlight">
+        <p class="friend-reward-role">🎁 抽選で50名様</p>
+        <p class="friend-reward-point">1,000<span>円分</span></p>
+        <p class="friend-reward-condition">Amazonギフト券</p>
+      </div>
+      <div class="friend-reward-card">
+        <p class="friend-reward-role">🎁 抽選で150名様</p>
+        <p class="friend-reward-point">500<span>円分</span></p>
+        <p class="friend-reward-condition">Amazonギフト券</p>
+      </div>
+    </div>
+
+    <div class="campaign-limit-box">
+      プレゼント応募締め切り：<span>2026年7月10日（金）23:59まで！</span>
+    </div>
+
+    <div class="main-cta-area">
+      <a href="https://line.me/R/ti/p/@301wzhhp?oat__id=6771964" target="_blank" rel="noopener" class="main-cta-button">
+        <i class="fa-brands fa-line"></i>
+        <span>【10秒で完了！】新アカウントはこちら</span>
+      </a>
+      <p class="main-cta-subtext">※外部サイト（LINE）へ遷移します</p>
+    </div>
+
+    <section class="friend-section">
+      <header class="friend-section-head">
+        <h2 class="friend-section-title">キャンペーン参加方法</h2>
+      </header>
+
+      <div class="friend-step-block">
+        <div class="friend-step-head">
+          <span class="friend-step-num">STEP 01</span>
+          <h3 class="friend-step-title">新アカウントを友だち追加</h3>
+        </div>
+        <p class="friend-step-desc">
+          上記の「新アカウントはこちら」リンクから、新しいトリイク公式LINEを友だち追加してください。
+        </p>
+        <div>
+          <a href="https://line.me/R/ti/p/@301wzhhp?oat__id=6771964" target="_blank" rel="noopener" class="step-cta-button">
+            <i class="fa-brands fa-line"></i>
+            <span>【10秒で完了！】新アカウントはこちら</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="friend-step-block">
+        <div class="friend-step-head">
+          <span class="friend-step-num">STEP 02</span>
+          <h3 class="friend-step-title">メニューから「会員登録」を完了する</h3>
+        </div>
+        <p class="friend-step-desc">
+          新しいLINEアカウントのトーク画面下部にある<span class="em">「メニュー」</span>から会員登録を行ってください。<br>
+          <span class="accent">※過去に登録済みの方も、再度こちらからご登録いただくことでエントリー完了となります。</span>
+        </p>
+      </div>
+
+      <div class="friend-step-block">
+        <div class="friend-step-head">
+          <span class="friend-step-num">STEP 03</span>
+          <h3 class="friend-step-title">エントリー完了！</h3>
+        </div>
+        <p class="friend-step-desc">
+          会員登録（eKYC本人確認）が完了した時点で自動的に応募となります。
+        </p>
+        <div class="step-image-container">
+          <p class="step-image-caption">【確認用】登録完了後のマイページ画面イメージ</p>
+          <img class="step-status-img" src="img/line-notice.webp" alt="トリイク マイページ画面イメージ" width="400" height="500" loading="lazy" decoding="async">
+          <div class="friend-gallery-note" style="margin-top: 10px; font-size: 11px; text-align: left; border: none; padding: 0;">
+            ※eKYC（本人確認）の審査が完了すると、新アカウントのメニューからこちらのマイページがご確認いただけるようになります。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="friend-section">
+      <header class="friend-section-head">
+        <h2 class="friend-section-title">【重大発表】国交省の補助対象事業に採択決定！</h2>
+      </header>
+      
+      <div class="new-service-box">
+        <span class="new-service-tag">2026年9月リリース予定</span>
+        <h3 class="new-service-title">おうちで誰でも気軽にポイ活！自宅で使える【新サービス】が誕生予定</h3>
+        <p class="new-service-desc">
+          トリイクは今年度も皆様の応援のおかげで、<span class="em" style="font-weight:700;">国土交通省の補助対象事業に採択</span>が決定いたしました！<br><br>
+          これに伴い、9月より「自宅での荷物受け取り時」にポイントがもらえる新サービスがスタート予定です。これまでのスポット受け取りに加え、ご自宅でも簡単に、誰でもスキマ時間でポイ活ができるようになります！<br><br>
+          新サービスの具体的な使い方やリリース限定のお得な情報は、お引越し先の「新しい公式LINEアカウント」で案内いたします。情報を見逃さないために、今すぐ新アカウントの友だち登録をしてお待ちください！
+        </p>
+      </div>
+    </section>
+
+    <section class="friend-section">
+      <header class="friend-section-head">
+        <h2 class="friend-section-title">キャンペーン適用の詳細条件について</h2>
+      </header>
+      
+      <div class="friend-gallery-note">
+        <div class="condition-highlight-box">
+          <h4 class="condition-highlight-title">⚠️ 会員登録の定義について（重要）</h4>
+          <p class="condition-highlight-text">
+            本キャンペーンにおける「会員登録」とは、情報入力だけでなく、<span class="em" style="font-weight:700; color:#ff3b30;">「eKYC（本人確認）」の手続きが完全に完了した状態</span>を指します。不備などで確認が未完了の場合は、抽選の対象外となりますのでご注意ください。
+          </p>
+        </div>
+        
+        <ul style="margin: 16px 0 0 0; padding-left: 18px; list-style-type: disc;">
+          <li style="margin-bottom: 8px;">これまでにトリイクをご利用いただいていた既存ユーザー様も、新しいLINEアカウントでの再登録（eKYC完了）をしていただくことでキャンペーンの抽選対象（エントリー）となります。</li>
+          <li style="margin-bottom: 8px;">同一人物による複数アカウントでの不正応募と判断された場合、当選を無効とさせていただう場合がございます。</li>
+          <li>※当選発表は7月上旬頃、会員登録いただいたメールアドレス宛への当選メッセージ（ギフトコード送付）をもって代えさせていただきます。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="friend-section">
+      <header class="friend-section-head">
+        <h2 class="friend-section-title">ご注意事項</h2>
+      </header>
+      <div class="friend-gallery-note" style="background: var(--c-line-soft); font-size: 11.5px; border: none; padding: 16px 20px;">
+        <ul style="margin: 0; padding-left: 14px; list-style-type: disc;">
+          <li style="margin-bottom: 6px;">本キャンペーンの内容は予告なく変更または終了する場合があります。あらかじめご了承ください。</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="company">
+    <div class="footer-main">
+      <div class="footer-company">
+        <dl class="footer-company-table">
+          <dt>会社名</dt>
+          <dd>株式会社Every WiLL</dd>
+          <dt>代表取締役</dt>
+          <dd>須藤俊明</dd>
+          <dt>所在地</dt>
+          <dd>〒169-0051<br>東京都新宿区西早稲田二丁目22番3号</dd>
+          <dt>取引銀行</dt>
+          <dd>みずほ銀行／りそな銀行／<br>GMOあおぞらネット銀行</dd>
+          <dt>HP</dt>
+          <dd><a href="https://everywill-jp.com/" target="_blank" rel="noopener">everywill-jp.com</a></dd>
+        </dl>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-social" aria-label="公式SNS">
+          <a href="https://x.com/toriiku_1025" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (旧Twitter)">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/toriiku_1025/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.youtube.com/@toriiku-jp" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <ul class="footer-nav">
+          <li><a href="terms.html">利用規約</a></li>
+          <li><a href="index.html#faq">よくある質問</a></li>
+          <li><a href="https://everywill-jp.com/" target="_blank" rel="noopener">運営会社</a></li>
+          <li><a href="https://everywill-jp.com/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a></li>
+        </ul>
+
+        <ul class="footer-notes">
+          <li>※1 付与ポイントはスポット・利用回数により異なります</li>
+          <li>※2 デジコは株式会社DIGITALIO提供の service です</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-copy">© Every WiLL Inc.</p>
+  </footer>
+
+</div>
+
+<script src="js/index.min.js" defer></script>
+</body>
+</html>
