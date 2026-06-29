@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="index,follow">
+<title>購入商品のURLコピペ方法例｜トリイク</title>
+<meta name="description" content="Amazon、楽天市場、Qoo10、Yahoo!ショッピングで購入した商品のURLをスマートフォンで簡単にコピーしてアンケートに貼り付ける方法を画像付きで解説。">
+<meta name="keywords" content="トリイク,Amazon,楽天市場,Qoo10,Yahoo!ショッピング,URLコピー,アンケート,コピペ方法">
+<meta name="author" content="株式会社Every WiLL">
+<link rel="canonical" href="https://toriiku-jp.com/eccopy.html">
+<link rel="icon" type="image/webp" href="img/favicon.webp">
+<link rel="apple-touch-icon" href="img/favicon.webp">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="トリイク">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://toriiku-jp.com/eccopy.html">
+<meta property="og:title" content="購入商品のURLコピペ方法例｜トリイク">
+<meta property="og:description" content="Amazon、楽天市場、Qoo10、Yahoo!ショッピングで購入した商品のURLをスマートフォンで簡単にコピーしてアンケートに貼り付ける方法を画像付きで解説。">
+<meta property="og:image" content="https://toriiku-jp.com/img/favicon.webp">
+<meta property="og:image:alt" content="購入商品のURLコピペ方法例｜トリイク">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="購入商品のURLコピペ方法例｜トリイク">
+<meta name="twitter:description" content="Amazon、楽天市場、Qoo10、Yahoo!ショッピングで購入した商品のURLをスマートフォンで簡単にコピーしてアンケートに貼り付ける方法を画像付きで解説。">
+<meta name="twitter:image" content="https://toriiku-jp.com/img/favicon.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="preload" as="image" href="img/Amazon_1.webp" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/ec.min.css">
+
+<style>
+  .ec-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 15px 10px;
+    padding: 0;
+    list-style: none;
+    border-bottom: 2px solid #e0e0e0;
+  }
+  .ec-tab-btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px 4px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #666;
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-right: 2px;
+  }
+  .ec-tab-btn:last-child {
+    margin-right: 0;
+  }
+  .ec-tab-btn.is-active {
+    background: #ffffff;
+    color: #ff5a5f;
+    border-color: #e0e0e0;
+    border-bottom: 2px solid #ffffff;
+    margin-bottom: -2px;
+    position: relative;
+    z-index: 1;
+  }
+  .ec-section {
+    display: none;
+  }
+  .ec-section.is-active {
+    display: block;
+  }
+  /* ボタンサイズをコンパクトに微調整しました */
+  .ec-history-btn {
+    display: inline-block;
+    width: auto;
+    min-width: 240px;
+    margin: 12px 0;
+    padding: 10px 20px;
+    background-color: #ff5a5f;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  .ec-history-btn:hover {
+    background-color: #e04f53;
+    transform: translateY(-1px);
+  }
+  .ec-history-btn i {
+    margin-right: 6px;
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://toriiku-jp.com/#organization",
+      "name": "株式会社Every WiLL",
+      "alternateName": "EVERYWILL Inc.",
+      "url": "https://everywill-jp.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://toriiku-jp.com/img/logo.webp",
+        "width": 1000,
+        "height": 298
+      },
+      "sameAs": ["https://everywill-jp.com/"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://toriiku-jp.com/eccopy.html#webpage",
+      "url": "https://toriiku-jp.com/eccopy.html",
+      "name": "購入商品のURLコピペ方法例｜トリイク",
+      "description": "Amazon、楽天市場、Qoo10、Yahoo!ショッピングで購入した商品のURLをスマートフォンでコピーする方法を解説します。",
+      "inLanguage": "ja-JP",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://toriiku-jp.com/#website",
+        "url": "https://toriiku-jp.com/",
+        "name": "トリイク",
+        "publisher": { "@id": "https://toriiku-jp.com/#organization" }
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div class="device">
+
+  <header class="header">
+    <a href="index.html" class="header-logo" aria-label="トリイク">
+      <img src="img/logo.webp" alt="トリイク" width="1000" height="298" loading="eager" decoding="async">
+    </a>
+
+    <nav class="header-nav-pc" aria-label="グローバルナビゲーション">
+      <a href="index.html#issue" class="header-nav-pc-link">宅配の社会問題</a>
+      <a href="index.html#about" class="header-nav-pc-link">トリイクとは</a>
+      <a href="index.html#features" class="header-nav-pc-link">3つの特徴</a>
+      <a href="index.html#points" class="header-nav-pc-link">ポイント還元</a>
+      <a href="index.html#security" class="header-nav-pc-link">安心の仕組み</a>
+      <a href="index.html#how-to" class="header-nav-pc-link">使い方</a>
+      <a href="index.html#voice" class="header-nav-pc-link">利用者の声</a>
+      <a href="index.html#faq" class="header-nav-pc-link">よくある質問</a>
+    </nav>
+
+    <div class="header-actions">
+      <a href="https://line.me/R/ti/p/@638ddwpp" target="_blank" rel="noopener" class="header-cta">
+        <img src="img/LINE_APP_iOS.webp" alt="" class="line-icon" width="1000" height="1000" loading="eager" decoding="async">
+        <span>無料で会員登録</span>
+      </a>
+      <button class="hamburger" id="js-menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="js-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="menu" id="js-menu" aria-hidden="true">
+    <button class="menu-close" id="js-menu-close" aria-label="メニューを閉じる"></button>
+    <div class="menu-inner">
+      <ul class="menu-list">
+        <li class="menu-item"><a href="index.html#issue" class="menu-link"><span class="num">01</span><span class="menu-link-label">宅配の社会問題</span><span class="arrow">→</span></a></li>
+        <li class="menu-item"><a href="index.html#about" class="menu-link"><span class="num">02</span><span class="menu-link-label">トリイクとは</span><span class="arrow">→</span></a></li>
+        <li class="menu-item"><a href="index.html#features" class="menu-link"><span class="num">03</span><span class="menu-link-label">3つの特徴</span><span class="arrow">→</span></a></li>
+        <li class="menu-item"><a href="index.html#points" class="menu-link"><span class="num">04</span><span class="menu-link-label">ポイント還元</span><span class="arrow">→</span></a></li>
+        <li class="menu-item"><a href="index.html#security" class="menu-link"><span class="num">05</span><span class="menu-link-label">安心の仕組み</span><span class="arrow">→</span></a></li>
+        <li class="menu-item"><a href="index.html#how-to" class="menu-link"><span class="num">06</span><span class="menu-link-label">使い方</span><span class="arrow">→</span></a></li>
+        <li class="menu-item"><a href="index.html#voice" class="menu-link"><span class="num">07</span><span class="menu-link-label">利用者の声</span><span class="arrow">→</span></a></li>
+        <li class="menu-item"><a href="index.html#faq" class="menu-link"><span class="num">08</span><span class="menu-link-label">よくある質問</span><span class="arrow">→</span></a></li>
+      </ul>
+      <a href="https://line.me/R/ti/p/@638ddwpp" target="_blank" rel="noopener" class="menu-cta">
+        <span class="menu-cta-inner">
+          <img src="img/LINE_APP_iOS.webp" alt="" class="line-icon" width="1000" height="1000" loading="lazy" decoding="async">
+          <span>無料で会員登録</span>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="ec">
+    <h1 class="ec-title">
+      購入商品の<br><span class="em">URLコピペ方法例</span>
+    </h1>
+    <p class="ec-lead">
+      トリイクをご利用いただきありがとうございます！<br>
+      アンケートに入力する商品URLのコピー手順を解説します。<br>
+      スマートフォンからでも、簡単なステップでコピーして貼り付けることができます。
+    </p>
+
+    <ul class="ec-tabs">
+      <li class="ec-tab-btn is-active" data-tab="amazon">Amazon</li>
+      <li class="ec-tab-btn" data-tab="rakuten">楽天市場</li>
+      <li class="ec-tab-btn" data-tab="qoo10">Qoo10</li>
+      <li class="ec-tab-btn" data-tab="yahoo">Yahoo!</li>
+    </ul>
+
+    <section class="ec-section is-active" id="amazon" style="margin-top: 30px;">
+      <header class="ec-section-head">
+        <h2 class="ec-section-title">
+          Amazon
+          <small>商品URLのコピー方法</small>
+        </h2>
+      </header>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 01</span>
+          <h3 class="ec-step-title">注文履歴を開く</h3>
+        </div>
+        <p class="ec-step-desc">
+          まずは下記のボタンからAmazonの「注文履歴」画面を開きます。
+        </p>
+        <div style="text-align: center;">
+          <a href="https://www.amazon.co.jp/gp/css/order-history?ref_=nav_orders_first" target="_blank" rel="noopener" class="ec-history-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>Amazonの注文履歴を開く
+          </a>
+        </div>
+      </div>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 02</span>
+          <h3 class="ec-step-title">該当の商品をタップする</h3>
+        </div>
+        <p class="ec-step-desc">
+          注文履歴の一覧が表示されたら、今回アンケートを回答する<span class="accent">「購入した商品（テキストまたは画像）」</span>をタップして、商品の詳細ページを開きます。
+        </p>
+        <img class="ec-step-image" src="img/Amazon_1.5.webp" alt="STEP 02 Amazonの注文履歴から該当の商品をタップする" width="432" height="540" loading="lazy" decoding="async">
+      </div>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 03</span>
+          <h3 class="ec-step-title">「シェア」ボタンを押す</h3>
+        </div>
+        <p class="ec-step-desc">
+          商品詳細ページが開いたら、画面内にある赤い破線枠の<span class="accent">「シェア」</span>アイコンを押します。
+        </p>
+        <img class="ec-step-image" src="img/Amazon_1.webp" alt="STEP 03 Amazonの商品ページ上のシェアボタンを押す" width="432" height="540" loading="lazy" decoding="async">
+      </div>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 04</span>
+          <h3 class="ec-step-title">「リンクをコピー」を押す</h3>
+        </div>
+        <p class="ec-step-desc">
+          メニューが表示されたら、赤い破線枠の<span class="accent">「コピー」</span>ボタンを押します。これでコピーは完了です！アンケート画面の入力欄に貼り付けてください。
+        </p>
+        <img class="ec-step-image" src="img/Amazon_2.webp" alt="STEP 04 Amazonのシェアメニューからコピーを押す" width="432" height="540" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section class="ec-section" id="rakuten" style="margin-top: 30px;">
+      <header class="ec-section-head">
+        <h2 class="ec-section-title">
+          楽天市場
+          <small>商品URLのコピー方法</small>
+        </h2>
+      </header>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 01</span>
+          <h3 class="ec-step-title">購入履歴を開く</h3>
+        </div>
+        <p class="ec-step-desc">
+          まずは下記のボタンから楽天市場の「購入履歴」画面を開きます。
+        </p>
+        <div style="text-align: center;">
+          <a href="https://order.my.rakuten.co.jp/purchase-history/order-list?l-id=pc_header_func_ph" target="_blank" rel="noopener" class="ec-history-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>楽天市場の購入履歴を開く
+          </a>
+        </div>
+      </div>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 02</span>
+          <h3 class="ec-step-title">商品名をタップする</h3>
+        </div>
+        <p class="ec-step-desc">
+          購入履歴の一覧から、該当商品の<span class="accent">「商品名（テキストリンク）」</span>をタップして、商品詳細ページへと進みます。
+        </p>
+        <img class="ec-step-image" src="img/trakuten_1.5.webp" alt="STEP 02 楽天市場の購入履歴から商品名をタップする" width="432" height="540" loading="lazy" decoding="async">
+      </div>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 03</span>
+          <h3 class="ec-step-title">「シェア」ボタンを押す</h3>
+        </div>
+        <p class="ec-step-desc">
+          商品詳細ページが開いたら、画面内にある赤い破線枠の<span class="accent">「シェア」</span>アイコンを押します。
+        </p>
+        <img class="ec-step-image" src="img/rakuten_1.webp" alt="STEP 03 楽天市場の商品ページ上のシェアボタンを押す" width="432" height="540" loading="lazy" decoding="async">
+      </div>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 04</span>
+          <h3 class="ec-step-title">「リンクをコピー」を押す</h3>
+        </div>
+        <p class="ec-step-desc">
+          メニューが表示されたら、赤い破線枠の<span class="accent">「コピー（四角が重なったマーク）」</span>ボタンを押します。これでコピーは完了です！アンケート画面の入力欄に貼り付けてください。
+        </p>
+        <img class="ec-step-image" src="img/rakuten_2.webp" alt="STEP 04 楽天市場のシェアメニューからコピーを押す" width="432" height="540" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section class="ec-section" id="qoo10" style="margin-top: 30px;">
+      <header class="ec-section-head">
+        <h2 class="ec-section-title">
+          Qoo10
+          <small>商品URLのコピー方法</small>
+        </h2>
+      </header>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 01</span>
+          <h3 class="ec-step-title">購入履歴を開く</h3>
+        </div>
+        <p class="ec-step-desc">
+          まずは下記のボタンからQoo10の「購入履歴」画面を開きます。
+        </p>
+        <div style="text-align: center;">
+          <a href="https://www.qoo10.jp/gmkt.inc/My/OrderContractList.aspx" target="_blank" rel="noopener" class="ec-history-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>Qoo10の購入履歴を開く
+          </a>
+        </div>
+      </div>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 02</span>
+          <h3 class="ec-step-title">商品画像をタップする</h3>
+        </div>
+        <p class="ec-step-desc">
+          購入履歴の一覧から、該当商品の<span class="accent">「商品画像または商品名」</span>をタップして、商品詳細ページへと進みます。
+        </p>
+        <img class="ec-step-image" src="img/Qoo10_1.5.webp" alt="STEP 02 Qoo10の購入履歴から該当の商品をタップする" width="432" height="540" loading="lazy" decoding="async">
+      </div>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 03</span>
+          <h3 class="ec-step-title">「シェア」ボタンを押す</h3>
+        </div>
+        <p class="ec-step-desc">
+          商品詳細ページが開いたら、画面下部にある赤い破線枠の<span class="accent">「シェア」</span>アイコンを押します。
+        </p>
+        <img class="ec-step-image" src="img/Qoo10_1.webp" alt="STEP 03 Qoo10の商品ページ下のシェアボタンを押す" width="432" height="540" loading="lazy" decoding="async">
+      </div>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 04</span>
+          <h3 class="ec-step-title">「リンクコピー」を押す</h3>
+        </div>
+        <p class="ec-step-desc">
+          メニューが表示されたら、右下にある赤い破線枠の<span class="accent">「リンクコピー」</span>ボタンを押します。これでコピーは完了です！アンケート画面の入力欄に貼り付けてください。
+        </p>
+        <img class="ec-step-image" src="img/Qoo10_2.webp" alt="STEP 04 Qoo10のシェアメニューからリンクコピーを押す" width="432" height="540" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <section class="ec-section" id="yahoo" style="margin-top: 30px;">
+      <header class="ec-section-head">
+        <h2 class="ec-section-title">
+          Yahoo!ショッピング
+          <small>商品URLのコピー方法</small>
+        </h2>
+      </header>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 01</span>
+          <h3 class="ec-step-title">注文履歴を開く</h3>
+        </div>
+        <p class="ec-step-desc">
+          まずは下記のボタンからYahoo!ショッピングの「注文履歴」画面を開きます。
+        </p>
+        <div style="text-align: center;">
+          <a href="https://odhistory.shopping.yahoo.co.jp/order-history/list" target="_blank" rel="noopener" class="ec-history-btn">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>Yahoo!の注文履歴を開く
+          </a>
+        </div>
+      </div>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 02</span>
+          <h3 class="ec-step-title">商品名をタップする</h3>
+        </div>
+        <p class="ec-step-desc">
+          注文履歴の一覧から、該当商品の<span class="accent">「商品名（テキスト）」</span>をタップして、商品の詳細ページを開きます。
+        </p>
+        <img class="ec-step-image" src="img/yahoos_1.5.webp" alt="STEP 02 Yahoo!ショッピングの注文履歴から商品名をタップする" width="432" height="540" loading="lazy" decoding="async">
+      </div>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 03</span>
+          <h3 class="ec-step-title">画面右上にある「シェア」ボタンを押す</h3>
+        </div>
+        <p class="ec-step-desc">
+          商品詳細ページが開いたら、画面右上にある赤い破線枠の<span class="accent">「シェア」</span>アイコンを押します。
+        </p>
+        <img class="ec-step-image" src="img/yahoos_1.webp" alt="STEP 03 Yahoo!ショッピングの商品ページ右上にあるシェアボタンを押す" width="432" height="540" loading="lazy" decoding="async">
+      </div>
+
+      <div class="ec-step">
+        <div class="ec-step-head">
+          <span class="ec-step-num">STEP 04</span>
+          <h3 class="ec-step-title">「リンクをコピー」を押す</h3>
+        </div>
+        <p class="ec-step-desc">
+          画面下部にメニューが表示されたら、一番下にある赤い破線枠の<span class="accent">「リンクをコピー」</span>ボタンを押します。これでコピーは完了です！アンケート画面の入力欄に貼り付けてください。
+        </p>
+        <img class="ec-step-image" src="img/yahoos_2.webp" alt="STEP 04 Yahoo!ショッピングのメニューからリンクをコピーを押す" width="432" height="540" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <div style="margin: 60px 20px 40px; text-align: center;">
+      <p style="font-size: 16px; line-height: 1.6; color: #000000; font-weight: bold; margin: 0;">
+        コピーしたURLをアンケートに貼り付けてください。
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="footer" style="text-align: center;">
+    <div class="footer-main" style="padding-top: 0; display: block;">
+      <div class="footer-right" style="margin-top: 0; padding-top: 20px; float: none; width: 100%;">
+        
+        <div class="footer-social" aria-label="公式SNS" style="display: flex; justify-content: center; align-items: center; gap: 12px; margin: 0 auto 20px;">
+          <a href="https://line.me/R/ti/p/@638ddwpp" target="_blank" rel="noopener" class="footer-social-link" aria-label="LINE" style="background-color: #2cb432; color: #fff; margin: 0;">
+            <i class="fa-brands fa-line" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/toriiku_1025/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram" style="margin: 0;">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.youtube.com/@toriiku-jp" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube" style="margin: 0;">
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <ul class="footer-nav" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; list-style: none; padding: 0; margin: 0 auto;">
+          <li><a href="terms.html">利用規約</a></li>
+          <li><a href="index.html#faq">よくある質問</a></li>
+          <li><a href="https://everywill-jp.com/" target="_blank" rel="noopener">運営会社</a></li>
+          <li><a href="https://everywill-jp.com/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-copy" style="text-align: center; margin-top: 20px; padding: 0;">&copy; Every WiLL Inc.</p>
+  </footer>
+
+</div>
+
+<script src="js/ec.min.js" defer></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.querySelectorAll('.ec-tab-btn');
+  const sections = document.querySelectorAll('.ec-section');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      // すべてのタブからis-activeを削除
+      tabs.forEach(t => t.classList.remove('is-active'));
+      // すべてのセクションからis-activeを削除
+      sections.forEach(s => s.classList.remove('is-active'));
+
+      // クリックされたタブにis-activeを追加
+      this.classList.add('is-active');
+      // 対応するセクションを表示
+      const targetId = this.getAttribute('data-tab');
+      document.getElementById(targetId).classList.add('is-active');
+    });
+  });
+});
+</script>
+
+</body>
+</html>
