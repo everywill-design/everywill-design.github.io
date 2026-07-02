@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="index,follow">
+<title>友だち紹介キャンペーン｜トリイク</title>
+<meta name="description" content="トリイクを身近な人に紹介して、お互いにお得なポイントをゲットしよう！友だち紹介キャンペーンの特典内容、参加方法、注意事項についてご案内します。">
+<meta name="keywords" content="トリイク,友だち紹介,キャンペーン,ポイント,匿名配送,荷物受取">
+<meta name="author" content="株式会社Every WiLL">
+<link rel="canonical" href="https://toriiku-jp.com/friend.html">
+<link rel="icon" type="image/webp" href="img/favicon.webp">
+<link rel="apple-touch-icon" href="img/favicon.webp">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="トリイク">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://toriiku-jp.com/friend.html">
+<meta property="og:title" content="友だち紹介キャンペーン｜トリイク">
+<meta property="og:description" content="トリイクを紹介した側もされた側もポイントがもらえるお得なキャンペーン実施中！">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/index.min.css">
+
+<style>
+  /* ========================================================
+     friend.html 独立型レイアウト・デザイン補正スタイル
+     ======================================================== */
+  
+  /* メイン囲み（既存の崩れをリセットして再構築） */
+  .friend-main-content {
+    flex: 1;
+    padding: 32px 22px 48px;
+    background: var(--c-surface);
+  }
+  
+  /* タイトル装飾 */
+  .friend-page-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--c-text);
+    margin-bottom: 24px; /* バッジ削除に伴い下部マージンを調整 */
+    text-align: left;
+  }
+  .friend-page-title .em {
+    background: linear-gradient(transparent 70%, rgba(255,190,80,0.4) 70%);
+    padding: 0 2px;
+  }
+  
+  /* リード文 */
+  .friend-page-lead {
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--c-text-sub);
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--c-line);
+    margin-bottom: 32px;
+  }
+  
+  /* 特典ふたつのグリッド */
+  .friend-rewards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 16px; /* 追加メッセージ配置のため元の36pxから調整 */
+  }
+  .friend-reward-card {
+    background: var(--c-surface);
+    border: 1.5px solid var(--c-line);
+    border-radius: 14px;
+    padding: 20px 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+  }
+  .friend-reward-card.is-highlight {
+    border-color: #ffd766;
+    background: #fffbf0;
+  }
+  .friend-reward-role {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--c-text-sub);
+    margin-bottom: 4px;
+  }
+  .friend-reward-card.is-highlight .friend-reward-role {
+    color: #FF7A1F;
+  }
+  .friend-reward-point {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--c-text);
+    margin: 6px 0;
+  }
+  /* 「500」をオレンジ色にするスタイル */
+  .friend-reward-point .orange-text {
+    color: #FF7A1F;
+  }
+  .friend-reward-point span {
+    font-size: 13px;
+    color: #FF7A1F;
+    margin-left: 3px;
+    font-weight: 700;
+  }
+  .friend-reward-condition {
+    font-size: 11.5px;
+    line-height: 1.6;
+    color: var(--c-text-sub);
+    margin: 0;
+  }
+
+  /* 追加アンケートボーナス案内エリアのスタイル */
+  .friend-reward-bonus-note {
+    background: #f7f9fa;
+    border: 1px solid var(--c-line);
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--c-text);
+    margin-bottom: 36px;
+    text-align: center;
+  }
+  .friend-reward-bonus-note i {
+    color: #FF7A1F;
+    margin-right: 4px;
+  }
+  .friend-reward-bonus-sub {
+    display: block;
+    font-size: 11px;
+    color: var(--c-text-sub);
+    margin-top: 4px;
+  }
+
+  /* セクション見出し構造 */
+  .friend-section {
+    margin-bottom: 40px;
+  }
+  .friend-section-head {
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--c-text);
+  }
+  .friend-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--c-text);
+  }
+
+  /* ご利用手順（ステップブロック） */
+  .friend-step-block {
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px dashed var(--c-line);
+  }
+  .friend-step-block:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .friend-step-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .friend-step-num {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 54px;
+    height: 22px;
+    padding: 0 10px;
+    background: #111;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    border-radius: 999px;
+  }
+  .friend-step-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--c-text);
+    letter-spacing: 0.02em;
+  }
+  .friend-step-desc {
+    font-size: 12.5px;
+    line-height: 1.95;
+    color: var(--c-text-sub);
+    margin: 0;
+  }
+  .friend-step-desc .em {
+    color: var(--c-text);
+    font-weight: 700;
+  }
+  .friend-step-desc .accent {
+    color: #FF7A1F;
+    font-weight: 700;
+  }
+
+  /* 下部画像ギャラリー（01, 02画像用） */
+  .friend-gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 16px;
+  }
+  .friend-gallery-box {
+    background: #fafafa;
+    border: 1.5px solid var(--c-line);
+    border-radius: 14px;
+    padding: 18px 14px;
+  }
+  .friend-gallery-box h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--c-text);
+    margin: 0 0 14px 0;
+    text-align: center;
+  }
+  .friend-gallery-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 320px;
+    margin: 0 auto 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  }
+  .friend-gallery-note {
+    background: var(--c-surface);
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 11.5px;
+    line-height: 1.8;
+    color: var(--c-text-sub);
+    border: 1px solid var(--c-line-soft);
+  }
+
+  /* ========================================================
+     PC表示（1100px以上）デスクトップ用レスポンシブ
+     ======================================================== */
+  @media (min-width: 1100px) {
+    .friend-main-content {
+      max-width: 960px;
+      margin: 56px auto 80px;
+      padding: 64px 80px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 6px 40px rgba(0,0,0,0.04);
+    }
+    .friend-rewards-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .friend-reward-card {
+      padding: 32px 24px;
+      border-radius: 16px;
+    }
+    .friend-reward-role { font-size: 14px; }
+    .friend-reward-point { font-size: 34px; }
+    .friend-reward-condition { font-size: 13px; }
+    
+    .friend-reward-bonus-note {
+      margin-bottom: 48px;
+      padding: 18px;
+      font-size: 13.5px;
+    }
+
+    .friend-gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .friend-gallery-box {
+      padding: 24px;
+    }
+    .friend-gallery-box h4 { font-size: 14px; margin-bottom: 18px; }
+    .friend-gallery-note { padding: 16px; font-size: 12.5px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="device">
+
+  <header class="header">
+    <a href="index.html" class="header-logo" aria-label="トリイク">
+      <img src="img/logo.webp" alt="トリイク" width="1000" height="298" loading="eager" decoding="async">
+    </a>
+    <div class="header-actions">
+      <a href="https://lin.ee/TZGo9WHf" target="_blank" rel="noopener" class="header-cta">
+        <img src="img/LINE_APP_iOS.webp" alt="" class="line-icon" width="1000" height="1000" loading="eager" decoding="async">
+        <span>無料で会員登録</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="friend-main-content">
+    
+    <h1 class="friend-page-title">
+      友だち<span class="em">紹介キャンペーン</span>
+    </h1>
+    
+    <p class="friend-page-lead">
+      トリイクを身近な人に紹介して、お互いにお得なポイントをゲットしよう！キャンペーンのご案内です。
+    </p>
+
+    <div class="friend-rewards-grid">
+      <div class="friend-reward-card is-highlight">
+        <p class="friend-reward-role">紹介したあなたに</p>
+         <span style="font-size:56px; color:#FF7A1F; font-weight:700;">500</span><span>ポイント</span>
+        <p class="friend-reward-condition">紹介されたお友だちが初回の荷物受取を完了すると入ります。</p>
+      </div>
+      <div class="friend-reward-card">
+        <p class="friend-reward-role">紹介されたお友だちに</p>
+       <span style="font-size:56px; color:#FF7A1F; font-weight:700;">500</span><span>ポイント</span>
+        <p class="friend-reward-condition">ご自身で初回の荷物受取（トリイクスポット利用）を完了すると入ります。</p>
+      </div>
+    </div>
+
+    <div class="friend-reward-bonus-note">
+      <strong><i class="fa-solid fa-circle-plus"></i>さらに、初回利用後にLINEで届くアンケート（必須・任意）に回答すると、さらにポイントが加算されます！</strong>
+      <span class="friend-reward-bonus-sub">※獲得できるアンケートポイント数は、ご利用になる拠点（店舗）によって異なります。</span>
+    </div>
+
+    <section class="friend-section">
+      <header class="friend-section-head">
+        <h2 class="friend-section-title">キャンペーン参加方法</h2>
+      </header>
+
+      <div class="friend-step-block">
+        <div class="friend-step-head">
+          <span class="friend-step-num">STEP 01</span>
+          <h3 class="friend-step-title">紹介コードをお友だちに送る</h3>
+        </div>
+        <p class="friend-step-desc">
+          トリイク公式LINEのマイページ内にある<span class="em">「紹介コード」</span>の項目から、ご自身の専用紹介コードをコピーしてお友だちにシェアします。
+        </p>
+      </div>
+
+      <div class="friend-step-block">
+        <div class="friend-step-head">
+          <span class="friend-step-num">STEP 02</span>
+          <h3 class="friend-step-title">お友だちが登録時にコードを入力</h3>
+        </div>
+        <p class="friend-step-desc">
+          紹介されたお友だちが、新規会員登録の画面にある<span class="accent">「紹介コード」欄</span>にコードを入力してトリイクの会員登録を完了させます。
+        </p>
+      </div>
+
+      <div class="friend-step-block">
+        <div class="friend-step-head">
+          <span class="friend-step-num">STEP 03</span>
+          <h3 class="friend-step-title">お友だちがスポットで荷物を受け取る</h3>
+        </div>
+        <p class="friend-step-desc">
+          紹介されたお友だちが、近くのトリイクスポットを利用して<span class="em">初めての荷物受け取り（送り状写真の提出まで）</span>を完了させます。
+        </p>
+      </div>
+
+      <div class="friend-step-block">
+        <div class="friend-step-head">
+          <span class="friend-step-num">STEP 04</span>
+          <h3 class="friend-step-title">紹介した側・された側の双方に入る！</h3>
+        </div>
+        <p class="friend-step-desc">
+          お友だちの初回受け取り完了データが確認されると、<span class="accent">紹介したあなたと、紹介されたお友だちの「双方」に</span>紹介特典ポイントが同時に付与されます。
+        </p>
+      </div>
+    </section>
+
+    <section class="friend-section">
+      <header class="friend-section-head">
+        <h2 class="friend-section-title">紹介コードの確認・入力方法</h2>
+      </header>
+      
+      <div class="friend-gallery-grid">
+        <div class="friend-gallery-box">
+          <h4>【紹介する方】コードの確認方法</h4>
+          <img class="friend-gallery-img" src="img/friend01.webp" alt="マイページの紹介コード画面" width="437" height="562" loading="lazy" decoding="async">
+          <div class="friend-gallery-note">マイページの下部にある「紹介コード」から、ご自身のコードを確認・コピーできます。</div>
+        </div>
+        <div class="friend-gallery-box">
+          <h4>【紹介された方】コードの入力方法</h4>
+          <img class="friend-gallery-img" src="img/friend02.webp" alt="新規登録時の紹介コード入力画面" width="438" height="553" loading="lazy" decoding="async">
+          <div class="friend-gallery-note">新規会員登録の画面にある「紹介コード」の項目に、受け取ったコードを入力して「適用」ボタンを押してください。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="friend-section">
+      <header class="friend-section-head">
+        <h2 class="friend-section-title">ご注意事項</h2>
+      </header>
+      <div class="friend-gallery-note" style="background: var(--c-line-soft); font-size: 11.5px; border: none; padding: 16px 20px;">
+        <ul style="margin: 0; padding-left: 14px; list-style-type: disc;">
+          <li style="margin-bottom: 6px;">本紹介キャンペーンの500ポイントは、モニターキャンペーン（事前エントリー）との併用はできません。</li>
+          <li style="margin-bottom: 6px;">紹介される方は、これまでにトリイクに登録・ご利用したことがない方に限ります（新規ユーザー様限定）。</li>
+          <li style="margin-bottom: 6px;">紹介コードを入力して会員登録を完了した時点では、双方ともにポイントは付与されません。紹介されたお友だちがトリイクスポットでの最初の荷物受け取りを完了することが必須条件となります。</li>
+          <li style="margin-bottom: 6px;">同一人物による複数アカウントの作成や、架空のデータを用いた紹介行為など、不正が発覚した場合はすべてのポイントを無効とし、アカウントを停止させていただく場合があります。</li>
+          <li>本キャンペーンの内容は予告なく変更または終了する場合があります。あらかじめご了承ください。</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="company">
+    <div class="footer-main">
+      <div class="footer-company">
+        <dl class="footer-company-table">
+          <dt>会社名</dt>
+          <dd>株式会社Every WiLL</dd>
+          <dt>代表取締役</dt>
+          <dd>須藤俊明</dd>
+          <dt>所在地</dt>
+          <dd>〒169-0051<br>東京都新宿区西早稲田二丁目22番3号</dd>
+          <dt>取引銀行</dt>
+          <dd>みずほ銀行／りそな銀行／<br>GMOあおぞらネット銀行</dd>
+          <dt>HP</dt>
+          <dd><a href="https://everywill-jp.com/" target="_blank" rel="noopener">everywill-jp.com</a></dd>
+        </dl>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-social" aria-label="公式SNS">
+          <a href="https://x.com/toriiku_1025" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (旧Twitter)">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/toriiku_1025/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.youtube.com/@toriiku-jp" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <ul class="footer-nav">
+          <li><a href="terms.html">利用規約</a></li>
+          <li><a href="index.html#faq">よくある質問</a></li>
+          <li><a href="https://everywill-jp.com/" target="_blank" rel="noopener">運営会社</a></li>
+          <li><a href="https://everywill-jp.com/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a></li>
+        </ul>
+
+        <ul class="footer-notes">
+          <li>※1 付与ポイントはスポット・利用回数により異なります</li>
+          <li>※2 デジコは株式会社DIGITALIO提供の service です</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-copy">© Every WiLL Inc.</p>
+  </footer>
+
+</div>
+
+<script src="js/index.min.js" defer></script>
+</body>
+</html>
