@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="noindex,nofollow"> <title>【初回限定】トリイクお試しモニター募集｜1,000円分ポイント支給</title>
+<meta name="description" content="トリイクを初めてご利用いただく方限定のモニター募集。利用体験とアンケート回答で1,000円分のポイントを支給いたします。">
+<meta name="author" content="株式会社Every WiLL">
+<link rel="canonical" href="https://toriiku-jp.com/monitor.html">
+<link rel="icon" type="image/webp" href="img/favicon.webp">
+<link rel="apple-touch-icon" href="img/favicon.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/index.min.css">
+
+<style>
+  /* ========================================================
+     トリイクお試しモニター募集LP 専用スタイリング
+     ======================================================== */
+  :root {
+    --c-surface: #ffffff;
+    --c-text: #111111;
+    --c-text-sub: #555555;
+    --c-line: #e0e0e0;
+    --c-line-soft: #f0f0f0;
+    --c-accent: #FF7A1F;
+    --c-accent-bg: #fffbf0;
+    --c-accent-border: #ffd766;
+  }
+
+  .friend-main-content {
+    flex: 1;
+    padding: 32px 22px 48px;
+    background: var(--c-surface);
+  }
+  
+  /* タイトル装飾 */
+  .friend-page-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--c-text);
+    margin-bottom: 24px;
+    text-align: left;
+  }
+  .friend-page-title .important-badge {
+    display: inline-block;
+    background: #ff3b30;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    vertical-align: middle;
+  }
+  
+  /* リード文 */
+  .friend-page-lead {
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--c-text-sub);
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--c-line);
+    margin-bottom: 32px;
+  }
+  
+  /* トリイクとは？（サービス説明エリア） */
+  .about-toriiku-box {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 36px;
+    border: 1px solid var(--c-line);
+  }
+  .about-toriiku-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--c-text);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .about-toriiku-title i {
+    color: var(--c-accent);
+  }
+  .about-toriiku-desc {
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--c-text-sub);
+    margin: 0 0 14px 0;
+  }
+  .about-toriiku-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--c-accent);
+    text-decoration: underline;
+  }
+
+  /* 報酬表示ボックスエリア */
+  .friend-rewards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .friend-reward-card {
+    background: var(--c-accent-bg);
+    border: 2px solid var(--c-accent-border);
+    border-radius: 16px;
+    padding: 24px 16px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+  }
+  .friend-reward-role {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--c-accent);
+    margin-bottom: 4px;
+  }
+  .friend-reward-point {
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ff3b30;
+    margin: 8px 0;
+    letter-spacing: -0.03em;
+  }
+  .friend-reward-point span {
+    font-size: 18px;
+    color: var(--c-text);
+    margin-left: 2px;
+    font-weight: 700;
+  }
+  .friend-reward-condition {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--c-text);
+    margin: 4px 0 0 0;
+    background: rgba(255,122,31,0.1);
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 999px;
+  }
+
+  /* セクション構造 */
+  .friend-section {
+    margin-bottom: 40px;
+  }
+  .friend-section-head {
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--c-text);
+  }
+  .friend-section-title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--c-text);
+  }
+
+  /* ステップブロック */
+  .friend-step-block {
+    margin-bottom: 28px;
+    padding-bottom: 24px;
+    border-bottom: 1px dashed var(--c-line);
+  }
+  .friend-step-block:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .friend-step-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .friend-step-num {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 54px;
+    height: 22px;
+    padding: 0 10px;
+    background: #111;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    border-radius: 999px;
+  }
+  .friend-step-title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--c-text);
+  }
+  .friend-step-desc {
+    font-size: 12.5px;
+    line-height: 1.95;
+    color: var(--c-text-sub);
+    margin: 0;
+  }
+  .friend-step-desc .em {
+    color: #ff3b30;
+    font-weight: 700;
+  }
+  .friend-step-desc .accent {
+    color: var(--c-accent);
+    font-weight: 700;
+  }
+
+  /* ステップ内画像コンテナ */
+  .step-image-container {
+    background: #fafafa;
+    border: 1px solid var(--c-line);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 14px;
+    text-align: center;
+    max-width: 400px;
+  }
+  .step-image-caption {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--c-text);
+    margin: 0 0 12px 0;
+  }
+  .step-status-img {
+    width: 100%;
+    height: auto;
+    max-width: 240px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  /* 詳細条件ボックス */
+  .friend-gallery-note {
+    background: var(--c-surface);
+    border-radius: 10px;
+    padding: 14px;
+    font-size: 12px;
+    line-height: 1.8;
+    color: var(--c-text-sub);
+    border: 1px solid var(--c-line);
+  }
+  .condition-highlight-box {
+    background: #fff8f8;
+    border-left: 4px solid #ff3b30;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 14px;
+  }
+  .condition-highlight-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #ff3b30;
+    margin: 0 0 4px 0;
+  }
+  .condition-highlight-text {
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--c-text);
+    margin: 0;
+  }
+
+  /* エントリー・CTAボタン */
+  .main-cta-area {
+    margin: 32px 0 40px;
+    text-align: center;
+  }
+  .main-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 400px;
+    background: #FF7A1F;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px 24px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(255,122,31,0.25);
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  .main-cta-button:hover {
+    background: #e66a19;
+    transform: translateY(-2px);
+  }
+  .main-cta-subtext {
+    font-size: 11px;
+    color: var(--c-text-sub);
+    margin-top: 8px;
+  }
+
+  /* ========================================================
+     PC表示レスポンシブ（1100px以上）
+     ======================================================== */
+  @media (min-width: 1100px) {
+    .friend-main-content {
+      max-width: 960px;
+      margin: 56px auto 80px;
+      padding: 64px 80px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 6px 40px rgba(0,0,0,0.04);
+    }
+    .friend-page-title { font-size: 26px; }
+    .friend-reward-card { max-width: 500px; margin: 0 auto; }
+    .friend-section-title { font-size: 18px; }
+    .friend-gallery-note { padding: 20px; font-size: 13px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="device">
+
+  <header class="header">
+    <a href="index.html" class="header-logo" aria-label="トリイク">
+      <img src="img/logo.webp" alt="トリイク" width="1000" height="298" loading="eager" decoding="async">
+    </a>
+    <div class="header-actions">
+      <a href="https://line.me/R/ti/p/@301wzhhp?oat__id=6771964" target="_blank" rel="noopener" class="header-cta">
+        <img src="img/LINE_APP_iOS.webp" alt="" class="line-icon" width="1000" height="1000" loading="eager" decoding="async">
+        <span>新LINEに登録</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="friend-main-content">
+    
+    <h1 class="friend-page-title">
+      <span class="important-badge">限定案内</span><br>
+      【初めての方限定】トリイクお試しモニター募集
+    </h1>
+    
+    <p class="friend-page-lead">
+      いつもトリイクに関心をお寄せいただきありがとうございます。<br>
+      この度、まだトリイクをご利用いただいたことがない方を対象に、実際のサービス体験と品質向上のためのフィードバックを目的とした「お試しモニター」を募集いたします。<br>
+      所定のステップを完了し、アンケートにご回答いただいた方に、調査協力の謝礼としてポイントを支給いたします。
+    </p>
+
+    <div class="about-toriiku-box">
+      <h2 class="about-toriiku-title"><i class="fa-solid fa-circle-info"></i>トリイクとは？</h2>
+      <p class="about-toriiku-desc">
+        トリイクは、ネットショッピングで購入した荷物を、自宅ではなくお近くの「トリイクスポット（提携店舗や施設）」で仕事帰りや買い物のついでに受け取れる、新しい荷物受取サービスです。再配達の手間をなくし、あなたのペースで便利に荷物を受け取ることができます。
+      </p>
+      <a href="https://toriiku-jp.com/index.html" target="_blank" rel="noopener" class="about-toriiku-link">
+        トリイクの公式WEBサイトで詳細を見る <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+    </div>
+
+    <div class="friend-rewards-grid">
+      <div class="friend-reward-card">
+        <p class="friend-reward-role">📋 モニター協力謝礼</p>
+        <p class="friend-reward-point">1,000<span>円分</span></p>
+        <p class="friend-reward-condition">トリイクポイント支給</p>
+      </div>
+    </div>
+
+    <div class="main-cta-area">
+      <a href="https://app.toriiku-jp.com/monitor_entry" target="_blank" rel="noopener" class="main-cta-button">
+        <span>モニターエントリーはこちら</span>
+      </a>
+      <p class="main-cta-subtext">※エントリーページへ遷移します</p>
+    </div>
+
+    <section class="friend-section">
+      <header class="friend-section-head">
+        <h2 class="friend-section-title">モニター実施の手順</h2>
+      </header>
+
+      <div class="friend-step-block">
+        <div class="friend-step-head">
+          <span class="friend-step-num">STEP 01</span>
+          <h3 class="friend-step-title">モニターエントリー</h3>
+        </div>
+        <p class="friend-step-desc">
+          本ページ内のリンクからモニターへのエントリーを行ってください。<br>
+          <span style="color: #ff3b30; font-weight: 700;">※エントリー完了後、新規登録画面が表示されます。</span>
+        </p>
+        <div class="step-image-container">
+          <p class="step-image-caption">エントリー完了後の画面イメージ</p>
+          <img class="step-status-img" src="img/monitor.webp" alt="エントリー完了・新規登録画面イメージ" width="400" height="500" loading="lazy" decoding="async">
+        </div>
+      </div>
+
+      <div class="friend-step-block">
+        <div class="friend-step-head">
+          <span class="friend-step-num">STEP 02</span>
+          <h3 class="friend-step-title">トリイク公式LINEを友だち登録</h3>
+        </div>
+        <p class="friend-step-desc">
+          トリイク公式LINEアカウントを友だち追加してください。
+        </p>
+      </div>
+
+      <div class="friend-step-block">
+        <div class="friend-step-head">
+          <span class="friend-step-num">STEP 03</span>
+          <h3 class="friend-step-title">トリイク会員登録</h3>
+        </div>
+        <p class="friend-step-desc">
+          トリイクの会員登録を完了させてください。<br>
+          <span class="em">※「モニターエントリーから48時間以内に会員登録」、もしくは「会員登録から48時間以内のモニターエントリー」が必須条件となります。</span>
+        </p>
+      </div>
+
+      <div class="friend-step-block">
+        <div class="friend-step-head">
+          <span class="friend-step-num">STEP 04</span>
+          <h3 class="friend-step-title">ネットショッピングで受取場所を指定</h3>
+        </div>
+        <p class="friend-step-desc">
+          普段お使いのネットショップ（Amazon、楽天市場など）で商品を購入する際、お届け先住所に「トリイクスポットの住所」を指定します。
+        </p>
+      </div>
+
+      <div class="friend-step-block">
+        <div class="friend-step-head">
+          <span class="friend-step-num">STEP 05</span>
+          <h3 class="friend-step-title">スポットで受取 ＆ 伝票を撮影</h3>
+        </div>
+        <p class="friend-step-desc">
+          指定したスポットに荷物が届いたら、受け取りを行います。<br>
+          受け取った荷物の<span class="accent">「伝票（送り状）」を写真で撮影し、トリイクへ提出</span>してください。<br>
+          <span class="em">※モニターエントリー後「2週間以内」にトリイク利用し、伝票提出とアンケート回答まで完了する必要があります。</span>
+        </p>
+      </div>
+
+      <div class="friend-step-block">
+        <div class="friend-step-head">
+          <span class="friend-step-num">STEP 06</span>
+          <h3 class="friend-step-title">モニターアンケートへの回答</h3>
+        </div>
+        <p class="friend-step-desc">
+          トリイク利用後に送られてくる、モニター専用のアンケートよりご回答をお願いします。
+        </p>
+      </div>
+
+      <div class="friend-step-block">
+        <div class="friend-step-head">
+          <span class="friend-step-num">STEP 07</span>
+          <h3 class="friend-step-title">1,000円分ポイント支給</h3>
+        </div>
+        <p class="friend-step-desc">
+          アンケート回答の確認が取れ次第、アカウントへ1,000円分のポイントを支給いたします。<br><br>
+          <span class="accent">💡 モニター終了後のご利用について</span><br>
+          本モニター実施後は、2回目以降も通常通りトリイクをご利用いただけます。
+        </p>
+      </div>
+    </section>
+
+    <div class="main-cta-area">
+      <a href="https://app.toriiku-jp.com/monitor_entry" target="_blank" rel="noopener" class="main-cta-button">
+        <span>モニターエントリーを行う</span>
+      </a>
+    </div>
+
+    <section class="friend-section">
+      <header class="friend-section-head">
+        <h2 class="friend-section-title">モニター適用の詳細条件・注意事項</h2>
+      </header>
+      
+      <div class="friend-gallery-note">
+        <div class="condition-highlight-box">
+          <h4 class="condition-highlight-title">⚠️ 事前エントリーの必須について（重要）</h4>
+          <p class="condition-highlight-text">
+            トリイクスポットで荷物を受取った後に、事後でエントリーをされた場合は「本モニターの対象外」となります。必ず受取・利用前にエントリーを完了させてください。
+          </p>
+        </div>
+        
+        <ul style="margin: 16px 0 0 0; padding-left: 18px; list-style-type: disc;">
+          <li style="margin-bottom: 8px;">本モニターへのご参加はおひとり様1回限りの適用となります。</li>
+          <li style="margin-bottom: 8px;">ネットショップ等で購入いただく商品の金額に指定（下限・上限）はありません。</li>
+          <li style="margin-bottom: 8px;">複数のトリイクアカウントを作成し、複数回にわたり本モニターを利用することを禁止します。違反が発覚した場合は、ポイントの支給は一切いたしません。</li>
+          <li style="margin-bottom: 8px;">トリイクのご利用に際しては、弊社の<a href="terms.html" style="color: var(--c-accent); text-decoration: underline;">[利用規約]</a>を必ず遵守してください。</li>
+          <li>本モニター概要は予告なく、内容の変更または終了する場合があります。あらかじめご了承ください。</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="company">
+    <div class="footer-main">
+      <div class="footer-company">
+        <dl class="footer-company-table">
+          <dt>会社名</dt>
+          <dd>株式会社Every WiLL</dd>
+          <dt>代表取締役</dt>
+          <dd>須藤俊明</dd>
+          <dt>所在地</dt>
+          <dd>〒169-0051<br>東京都新宿区西早稲田二丁目22番3号</dd>
+          <dt>取引銀行</dt>
+          <dd>みずほ銀行／りそな銀行／<br>GMOあおぞらネット銀行</dd>
+          <dt>HP</dt>
+          <dd><a href="https://everywill-jp.com/" target="_blank" rel="noopener">everywill-jp.com</a></dd>
+        </dl>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-social" aria-label="公式SNS">
+          <a href="https://x.com/toriiku_1025" target="_blank" rel="noopener" class="footer-social-link" aria-label="X (旧Twitter)">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/toriiku_1025/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.youtube.com/@toriiku-jp" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+            <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <ul class="footer-nav">
+          <li><a href="terms.html">利用規約</a></li>
+          <li><a href="index.html#faq">よくある質問</a></li>
+          <li><a href="https://everywill-jp.com/" target="_blank" rel="noopener">運営会社</a></li>
+          <li><a href="https://everywill-jp.com/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a></li>
+        </ul>
+
+        <ul class="footer-notes">
+          <li>※1 付与ポイントはスポット・利用回数により異なります</li>
+          <li>※2 デジコは株式会社DIGITALIO提供の service です</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="footer-copy">© Every WiLL Inc.</p>
+  </footer>
+
+</div>
+
+<script src="js/index.min.js" defer></script>
+</body>
+</html>
