@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="format-detection" content="telephone=no">
+<meta name="robots" content="index,follow">
+<title>自宅deトリイク｜受け取るたび、ちょっと得する。｜トリイク</title>
+<meta name="description" content="届いた荷物の伝票を撮って送るだけ。手渡しでも置き配でも、いつもの受け取りがポイントに変わる「自宅deトリイク」。会員登録・利用は無料です。">
+<meta name="keywords" content="自宅deトリイク,トリイク,再配達,置き配,ポイント,宅配,PayPay,Amazonギフトカード">
+<meta name="author" content="株式会社Every WiLL">
+<link rel="canonical" href="https://toriiku-jp.com/home/">
+<link rel="icon" type="image/webp" href="../img/favicon.webp">
+<link rel="apple-touch-icon" href="../img/favicon.webp">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="トリイク">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://toriiku-jp.com/home/">
+<meta property="og:title" content="自宅deトリイク｜受け取るたび、ちょっと得する。">
+<meta property="og:description" content="届いた荷物の伝票を撮って送るだけ。手渡しでも置き配でも、いつもの受け取りがポイントに変わる「自宅deトリイク」。">
+<meta property="og:image" content="https://toriiku-jp.com/img/favicon.webp">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="自宅deトリイク｜受け取るたび、ちょっと得する。">
+<meta name="twitter:description" content="届いた荷物の伝票を撮って送るだけ。手渡しでも置き配でも、いつもの受け取りがポイントに変わる「自宅deトリイク」。">
+<meta name="twitter:image" content="https://toriiku-jp.com/img/favicon.webp">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://toriiku-jp.com/#organization",
+      "name": "株式会社Every WiLL",
+      "alternateName": "EVERYWILL Inc.",
+      "url": "https://everywill-jp.com/",
+      "logo": { "@type": "ImageObject", "url": "https://toriiku-jp.com/img/logo.webp", "width": 1000, "height": 298 },
+      "sameAs": ["https://everywill-jp.com/"]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://toriiku-jp.com/home/#webpage",
+      "url": "https://toriiku-jp.com/home/",
+      "name": "自宅deトリイク｜受け取るたび、ちょっと得する。",
+      "description": "届いた荷物の伝票を撮って送るだけ。手渡しでも置き配でも、いつもの受け取りがポイントに変わる「自宅deトリイク」。",
+      "inLanguage": "ja-JP",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://toriiku-jp.com/#website",
+        "url": "https://toriiku-jp.com/",
+        "name": "トリイク",
+        "publisher": { "@id": "https://toriiku-jp.com/#organization" }
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://toriiku-jp.com/" },
+          { "@type": "ListItem", "position": 2, "name": "自宅deトリイク", "item": "https://toriiku-jp.com/home/" }
+        ]
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  /* ==========================================================
+     仮スタイル（ドラフト）
+     本番は既存サイトの css/point.min.css 相当のクラス体系に合わせて
+     制作会社側で正式なCSSに差し替えてください。
+     配色・書体はトリイク本体サイトのトーン（Noto Sans JP／白ベース／
+     アクセントに温かみのあるオレンジ）を踏襲した仮のものです。
+  ========================================================== */
+  :root{
+    --accent:#FF6B35;
+    --accent-dark:#E8511F;
+    --ink:#1A1A1A;
+    --ink-sub:#5C5C5C;
+    --line:#E5E2DD;
+    --bg-soft:#FAF8F5;
+    --radius:16px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",sans-serif;
+    color:var(--ink);
+    background:#fff;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .device{max-width:1200px;margin:0 auto;}
+
+  /* header（トリイク本体と共通コンポーネント） */
+  .header{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 24px;border-bottom:1px solid var(--line);
+    position:sticky;top:0;background:#fff;z-index:50;
+  }
+  .header-logo img{height:28px;width:auto;}
+  .header-nav-pc{display:none;gap:24px;font-size:13px;}
+  @media(min-width:900px){.header-nav-pc{display:flex;}}
+  .header-nav-pc-link{text-decoration:none;color:var(--ink-sub);}
+  .header-nav-pc-link:hover{color:var(--accent);}
+  .header-cta{
+    display:flex;align-items:center;gap:8px;
+    background:var(--accent);color:#fff;text-decoration:none;
+    padding:10px 18px;border-radius:999px;font-size:13px;font-weight:700;
+    white-space:nowrap;
+  }
+  .line-icon{width:18px;height:18px;border-radius:4px;}
+  .hamburger{display:none;}
+
+  /* breadcrumb（トリイク本体 → 自宅deトリイクの回遊導線） */
+  .breadcrumb{
+    font-size:12px;color:var(--ink-sub);padding:12px 24px 0;
+  }
+  .breadcrumb a{text-decoration:underline;}
+
+  /* section共通 */
+  .section{padding:64px 24px;}
+  .section-alt{background:var(--bg-soft);}
+  .eyebrow{
+    font-size:12px;letter-spacing:.08em;color:var(--accent-dark);
+    font-weight:700;text-align:center;margin-bottom:12px;
+  }
+  .section-title{
+    font-size:26px;font-weight:800;text-align:center;line-height:1.5;
+    margin:0 0 28px;
+  }
+
+  /* ① ファーストビュー */
+  .fv{
+    padding:56px 24px 48px;text-align:center;
+  }
+  .fv-title{
+    font-size:34px;font-weight:800;line-height:1.4;margin:0 0 16px;
+  }
+  .fv-lead{
+    font-size:15px;color:var(--ink-sub);max-width:520px;margin:0 auto 28px;
+  }
+  .fv-image{
+    max-width:640px;margin:0 auto 28px;border-radius:var(--radius);
+    background:linear-gradient(135deg,#FFE7DB,#FFF3EC);
+    aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;
+    color:#C97A54;font-size:13px;
+  }
+  .cta-group{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  .cta-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:12px 22px;border-radius:999px;font-size:13px;font-weight:700;
+    text-decoration:none;border:1px solid var(--line);color:var(--ink);
+  }
+  .cta-btn--primary{background:var(--accent);border-color:var(--accent);color:#fff;}
+
+  /* ② ポイ活疲れブロック */
+  .tired-title{
+    font-size:22px;font-weight:800;text-align:center;margin:0 0 32px;
+  }
+  .tired-grid{
+    display:grid;grid-template-columns:1fr;gap:16px;max-width:960px;margin:0 auto 24px;
+  }
+  @media(min-width:768px){.tired-grid{grid-template-columns:repeat(3,1fr);}}
+  .tired-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:24px 16px;text-align:center;
+  }
+  .tired-card-icon{
+    width:56px;height:56px;border-radius:12px;background:var(--bg-soft);
+    margin:0 auto 14px;display:flex;align-items:center;justify-content:center;
+    color:var(--ink-sub);font-size:11px;
+  }
+  .tired-card-text{font-size:13px;color:var(--ink-sub);margin:0;}
+  .tired-note{
+    max-width:640px;margin:0 auto;background:var(--bg-soft);border-radius:999px;
+    text-align:center;padding:16px 24px;font-size:14px;font-weight:700;
+  }
+
+  /* ③ かんたん3ステップ */
+  .steps{
+    display:grid;grid-template-columns:1fr;gap:20px;max-width:960px;margin:0 auto;
+  }
+  @media(min-width:768px){.steps{grid-template-columns:repeat(3,1fr);}}
+  .step-card{text-align:center;}
+  .step-num{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:28px;height:28px;border-radius:50%;background:var(--accent);
+    color:#fff;font-size:12px;font-weight:700;margin-bottom:12px;
+  }
+  .step-visual{
+    aspect-ratio:4/3;border-radius:var(--radius);background:var(--bg-soft);
+    margin-bottom:14px;
+  }
+  .step-title{font-size:15px;font-weight:700;margin:0 0 6px;}
+  .step-desc{font-size:12.5px;color:var(--ink-sub);margin:0;}
+
+  /* ④ 荷物が届くたび、得する。 */
+  .life{
+    display:grid;grid-template-columns:1fr;gap:24px;max-width:960px;margin:0 auto;align-items:center;
+  }
+  @media(min-width:768px){.life{grid-template-columns:1fr 1fr;}}
+  .life-visual{
+    aspect-ratio:1/1;border-radius:var(--radius);
+    background:linear-gradient(160deg,#FFF3EC,#FFE0CC);
+  }
+  .life-copy-title{font-size:22px;font-weight:800;margin:0 0 14px;line-height:1.5;}
+  .life-copy-text{font-size:14px;color:var(--ink-sub);margin:0;}
+
+  /* ⑤ FAQ */
+  .faq-list{max-width:720px;margin:0 auto;}
+  .faq-item{
+    border-bottom:1px solid var(--line);padding:18px 4px;
+  }
+  .faq-q{
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:14px;font-weight:700;cursor:pointer;
+  }
+  .faq-q .arrow{color:var(--accent);}
+  .faq-a{font-size:13px;color:var(--ink-sub);margin-top:10px;display:none;}
+  .faq-item.is-open .faq-a{display:block;}
+
+  /* ⑥ クロージング */
+  .closing{
+    text-align:center;padding:72px 24px;background:var(--ink);color:#fff;
+    border-radius:var(--radius);margin:0 24px 64px;
+  }
+  .closing-title{font-size:24px;font-weight:800;margin:0 0 28px;}
+  .closing .cta-btn{border-color:rgba(255,255,255,.3);color:#fff;}
+  .closing .cta-btn--primary{background:var(--accent);border-color:var(--accent);}
+
+  /* footer（本体サイトと共通） */
+  .footer-toB{
+    background:var(--bg-soft);padding:48px 24px;text-align:center;
+  }
+  .footer-toB-tag{
+    display:inline-block;font-size:11px;font-weight:700;color:var(--accent-dark);
+    border:1px solid var(--accent);border-radius:999px;padding:4px 12px;margin-bottom:12px;
+  }
+  .footer-toB-title{font-size:18px;font-weight:800;margin:0 0 12px;}
+  .footer-toB-desc{font-size:12.5px;color:var(--ink-sub);margin:0 0 20px;}
+  .footer-toB-btn{
+    display:inline-flex;align-items:center;gap:8px;padding:10px 20px;
+    border-radius:999px;background:var(--ink);color:#fff;text-decoration:none;font-size:13px;
+  }
+  .footer-main{
+    display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;
+    padding:40px 24px;font-size:12.5px;color:var(--ink-sub);
+  }
+  .footer-company-table{margin:0;}
+  .footer-company-table dt{font-weight:700;color:var(--ink);margin-top:10px;}
+  .footer-company-table dd{margin:2px 0 0;}
+  .footer-social{display:flex;gap:14px;margin-bottom:16px;}
+  .footer-nav{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-direction:column;gap:6px;}
+  .footer-nav a{text-decoration:none;}
+  .footer-notes{list-style:none;padding:0;margin:0;font-size:11px;color:#999;}
+  .footer-copy{text-align:center;font-size:11px;color:#999;padding-bottom:24px;}
+</style>
+</head>
+<body>
+
+<div class="device">
+
+  <!-- ============ header（本体サイトと共通コンポーネント） ============ -->
+  <header class="header">
+    <a href="../index.html" class="header-logo" aria-label="トリイク">
+      <img src="../img/logo.webp" alt="トリイク" width="1000" height="298" loading="eager" decoding="async">
+    </a>
+    <nav class="header-nav-pc" aria-label="グローバルナビゲーション">
+      <a href="#tired" class="header-nav-pc-link">ポイ活疲れの方へ</a>
+      <a href="#steps" class="header-nav-pc-link">使い方</a>
+      <a href="#life" class="header-nav-pc-link">受け取り方</a>
+      <a href="#faq" class="header-nav-pc-link">よくある質問</a>
+      <a href="../index.html" class="header-nav-pc-link">トリイクスポットもあります →</a>
+    </nav>
+    <div class="header-actions">
+      <a href="https://lin.ee/TZGo9WHf" target="_blank" rel="noopener" class="header-cta">
+        <img src="../img/LINE_APP_iOS.webp" alt="" class="line-icon" width="1000" height="1000" loading="eager" decoding="async">
+        <span>無料で会員登録</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- 本体サイトからの回遊を意識したパンくず -->
+  <p class="breadcrumb"><a href="../index.html">トリイク</a> ／ 自宅deトリイク</p>
+
+  <!-- ============ ① ファーストビュー ============ -->
+  <main>
+    <section class="fv">
+      <h1 class="fv-title">受け取るたび、<br>ちょっと得する。</h1>
+      <p class="fv-lead">
+        面倒な手続きは一切なし。届いた荷物の伝票を撮って送るだけ。<br>
+        手渡しでも、置き配でも。いつもの受け取りが、そのままポイントに。
+      </p>
+      <div class="fv-image" aria-hidden="true">[ FVビジュアル：荷物受け取り〜伝票撮影のシーン ]</div>
+      <div class="cta-group">
+        <a href="#" class="cta-btn cta-btn--primary">App Storeで入手</a>
+        <a href="#" class="cta-btn">Google Playで入手</a>
+        <a href="https://lin.ee/TZGo9WHf" target="_blank" rel="noopener" class="cta-btn">LINEで会員登録</a>
+      </div>
+    </section>
+
+    <!-- ============ ② ポイ活疲れブロック ============ -->
+    <section class="section section-alt" id="tired">
+      <p class="eyebrow">今すぐできる、はじめの一歩</p>
+      <h2 class="tired-title">"貯める"ために、<br class="sp-only">がんばるのは、もう終わりにしませんか？</h2>
+      <div class="tired-grid">
+        <div class="tired-card">
+          <div class="tired-card-icon">絵</div>
+          <p class="tired-card-text">買い物しないと貯まらない</p>
+        </div>
+        <div class="tired-card">
+          <div class="tired-card-icon">絵</div>
+          <p class="tired-card-text">ゲームやアンケートに時間を取られる</p>
+        </div>
+        <div class="tired-card">
+          <div class="tired-card-icon">絵</div>
+          <p class="tired-card-text">結果、いつのまにか使わなくなる</p>
+        </div>
+      </div>
+      <p class="tired-note">追加の手間はゼロ、もう手元に届いている荷物だけでOK。</p>
+    </section>
+
+    <!-- ============ ③ かんたん3ステップ ============ -->
+    <section class="section" id="steps">
+      <p class="eyebrow">使い方</p>
+      <h2 class="section-title">かんたん3ステップ</h2>
+      <div class="steps">
+        <div class="step-card">
+          <span class="step-num">1</span>
+          <div class="step-visual" aria-hidden="true"></div>
+          <p class="step-title">送り状を撮る</p>
+          <p class="step-desc">手渡しでも置き配でも、受け取った荷物の送り状をパシャッと1枚</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">2</span>
+          <div class="step-visual" aria-hidden="true"></div>
+          <p class="step-title">ポイントが貯まる</p>
+          <p class="step-desc">撮るだけでOK。難しい入力やアンケートは不要</p>
+        </div>
+        <div class="step-card">
+          <span class="step-num">3</span>
+          <div class="step-visual" aria-hidden="true"></div>
+          <p class="step-title">交換する</p>
+          <p class="step-desc">PayPay・Amazonギフトなど、好きな交換先へ</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ④ 荷物が届くたび、得する。 ============ -->
+    <section class="section section-alt" id="life">
+      <div class="life">
+        <div class="life-visual" aria-hidden="true"></div>
+        <div>
+          <p class="eyebrow" style="text-align:left;">貯めたポイントの使い道</p>
+          <h2 class="life-copy-title">荷物が届くたび、<br>得する。</h2>
+          <p class="life-copy-text">
+            対面でも、置き配でも。今日届いたその荷物が、<br>
+            気づけばポイントに変わっている。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ⑤ よくある質問 ============ -->
+    <section class="section" id="faq">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="section-title">よくある質問</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <p class="faq-q">利用は無料ですか？ <span class="arrow">＋</span></p>
+          <p class="faq-a">会員登録・利用ともに無料です。伝票の写真を送るだけでポイントが貯まります。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">個人情報や写真データは、どのように扱われますか？ <span class="arrow">＋</span></p>
+          <p class="faq-a">送り状の写真はポイント判定のみに利用し、第三者に開示されることはありません。詳細は利用規約をご確認ください。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">どんな受け取り方でも対象になりますか？（手渡し・置き配どちらもOK） <span class="arrow">＋</span></p>
+          <p class="faq-a">はい。手渡し・置き配・宅配ボックスなど、受け取り方法を問わずご利用いただけます。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">ポイントはいつ・いくらもらえますか？ <span class="arrow">＋</span></p>
+          <p class="faq-a">送り状写真の提出後、原則2日以内に付与されます。金額は物流負荷低減への貢献度（再配達・置き配・配送指定の有無等）に応じて変動します。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-q">退会はすぐにできますか？ <span class="arrow">＋</span></p>
+          <p class="faq-a">はい。公式LINEからいつでも退会手続きが可能です。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ⑥ クロージング ============ -->
+    <section class="closing">
+      <h2 class="closing-title">いつもの受け取りを、<br>得に変えよう。</h2>
+      <div class="cta-group">
+        <a href="#" class="cta-btn cta-btn--primary">App Storeで入手</a>
+        <a href="#" class="cta-btn">Google Playで入手</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ footer（本体サイトと共通コンポーネント） ============ -->
+  <footer class="footer" id="company">
+    <div class="footer-toB">
+      <span class="footer-toB-tag">店舗・SC向け</span>
+      <h2 class="footer-toB-title">未利用スペースにスポットを設置しませんか？</h2>
+      <p class="footer-toB-desc">
+        1.5坪以上の室内ならどこにでも設置可能。これからどんどんスポットを増やしていきます。<br>
+        お気軽にお問い合わせください。
+      </p>
+      <a href="https://retail.toriiku-jp.com/" target="_blank" rel="noopener" class="footer-toB-btn">
+        <span>詳しくはこちら</span><span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-company">
+        <dl class="footer-company-table">
+          <dt>会社名</dt><dd>株式会社Every WiLL</dd>
+          <dt>代表取締役</dt><dd>須藤俊明</dd>
+          <dt>所在地</dt><dd>〒169-0051<br>東京都新宿区西早稲田二丁目22番3号</dd>
+          <dt>取引銀行</dt><dd>みずほ銀行／りそな銀行／<br>GMOあおぞらネット銀行</dd>
+          <dt>HP</dt><dd><a href="https://everywill-jp.com/" target="_blank" rel="noopener">everywill-jp.com</a></dd>
+        </dl>
+      </div>
+      <div class="footer-right">
+        <div class="footer-social" aria-label="公式SNS">
+          <a href="https://x.com/toriiku_1025" target="_blank" rel="noopener" aria-label="X（旧Twitter）"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/toriiku_1025/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.youtube.com/@toriiku-jp" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="../terms.html">利用規約</a></li>
+          <li><a href="#faq">よくある質問</a></li>
+          <li><a href="https://everywill-jp.com/" target="_blank" rel="noopener">運営会社</a></li>
+          <li><a href="https://everywill-jp.com/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">© Every WiLL Inc.</p>
+  </footer>
+
+</div>
+
+<script>
+  // FAQ アコーディオン（仮実装）
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    item.querySelector('.faq-q').addEventListener('click', function(){
+      item.classList.toggle('is-open');
+    });
+  });
+</script>
+</body>
+</html>
