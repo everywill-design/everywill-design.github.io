@@ -7,9 +7,11 @@
 .mc{background:#fff;border-radius:14px;padding:20px 18px}
 .mc b{display:block;font-size:17px;margin:0 0 8px;color:var(--or)}
 .mc p{margin:0;font-size:14px;line-height:1.8;color:#4B4B4B}
+.mean .h2s{margin:-12px 0 24px;font-size:16px;color:#4B4B4B;font-weight:700}
 .mean .note{margin:20px 0 0}
 @media(max-width:820px){
   .mean h2{font-size:20px}
   .mg{grid-template-columns:1fr;gap:12px}
   .lead2{font-size:14px}
+  .mean .h2s{font-size:14px;margin:-8px 0 18px}
 }
