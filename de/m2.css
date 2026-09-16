@@ -15,3 +15,7 @@
   .lead2{font-size:14px}
   .mean .h2s{font-size:14px;margin:-8px 0 18px}
 }
+
+/* 住所の注意書き */
+.warn{display:inline-block;margin-top:6px;color:var(--ord);font-weight:700;font-size:13.5px;line-height:1.7}
+@media(max-width:560px){ .warn{font-size:12.5px} }
