@@ -1,6 +1,7 @@
 /* 社会のためになる */
 .lead2{margin:10px 0 0;font-size:15px;line-height:1.7;color:#4B4B4B}
 .lead2 b{color:var(--or)}
+.lead2 .big{display:inline-block;margin-top:6px;font-size:17px;font-weight:900}
 .mean{padding:40px 0 42px;background:#FFF8F1}
 .mean h2{text-align:center;font-size:24px;line-height:1.5;margin:0 0 22px}
 .mg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
@@ -13,6 +14,7 @@
   .mean h2{font-size:20px}
   .mg{grid-template-columns:1fr;gap:12px}
   .lead2{font-size:14px}
+  .lead2 .big{font-size:15px}
   .mean .h2s{font-size:14px;margin:-8px 0 18px}
 }
 
