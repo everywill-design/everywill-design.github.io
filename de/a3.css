@@ -1,0 +1,25 @@
+/* ①②着地ページ用の追加スタイル（m.cssは触らない） */
+.appbtns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.appbtns img{height:52px;width:auto}
+.hero .appbtns{justify-content:flex-start}
+@media(max-width:899px){ .hero .appbtns{justify-content:center} .appbtns img{height:46px} }
+.ptbox{max-width:760px;margin:0 auto;border:2px solid var(--line);border-radius:18px;padding:22px 20px;background:#fff}
+.ptl{list-style:none;margin:0;padding:0}
+.ptl li{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+ border-bottom:1px dashed var(--line);padding:11px 2px;font-size:15px}
+.ptl li:last-child{border-bottom:none}
+.ptl li b{color:var(--or);font-weight:900;font-size:19px;white-space:nowrap;font-family:Arial,sans-serif}
+.ptl li b i{font-style:normal;font-size:13px;color:var(--ink);margin-left:2px}
+.exg{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.exg span{background:#FFF8F1;border:1px solid var(--line);border-radius:999px;
+ padding:7px 16px;font-size:13.5px;font-weight:700;color:var(--ink)}
+.rank{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:18px;font-size:12.5px;color:var(--sub)}
+.rank i{font-style:normal;background:#fff;border:1px solid var(--line);border-radius:8px;padding:5px 9px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:1000px;margin:0 auto}
+.tc{border:2px solid var(--line);border-radius:18px;padding:24px 20px;background:#fff}
+.tc .tag{display:inline-block;background:var(--or);color:#fff;font-size:12px;font-weight:800;
+ border-radius:999px;padding:5px 14px;margin-bottom:12px}
+.tc h3{font-size:19px;line-height:1.5;margin:0 0 8px}
+.tc p{font-size:14px;color:var(--sub);line-height:1.8;margin:0}
+.tc .btn{margin-top:16px;font-size:15px;padding:13px 26px;width:auto}
+@media(max-width:760px){ .two{grid-template-columns:1fr;gap:12px} .tc .btn{width:100%} }
