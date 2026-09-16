@@ -97,3 +97,21 @@ footer p{margin-top:8px}
  .fl li{flex-direction:row}
  .badges .qr{display:none}
 }
+
+/* 追加（v2） */
+.hd-r{display:flex;align-items:center;gap:16px}
+.lnk{font-size:13.5px;font-weight:700;text-decoration:none;color:var(--ink);border-bottom:2px solid var(--or);padding-bottom:2px;white-space:nowrap}
+.lnk2{color:var(--ord);font-weight:700;text-decoration:underline}
+.btn-step{margin-top:14px;font-size:15px;padding:12px 24px;width:auto}
+.btn.ghost{background:#fff;color:var(--ord);border:2px solid var(--or);box-shadow:none}
+.btn.ghost:hover{background:#FFF3E8}
+.btn.line{background:#06C755;box-shadow:0 4px 14px rgba(6,199,85,.28)}
+.btn.line:hover{background:#05A648}
+@media(max-width:899px){
+ .lnk{font-size:12px}
+ .hd-r{gap:10px}
+ .btn-step{width:100%;max-width:none;text-align:center}
+}
+@media(max-width:420px){
+ .hd-r .lnk{display:none}
+}
