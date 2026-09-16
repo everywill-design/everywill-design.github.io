@@ -37,3 +37,9 @@
     [0.5,0.9].forEach(function(t){ if(p>=t && !hit[t]){ hit[t]=1; ev('scroll', Math.round(t*100)+'%'); } });
   },{passive:true});
 })();
+// 固定バーはスクロールしてから出す
+(function(){
+  function f(){ var b=document.querySelector('.fixbar'); if(!b) return;
+    if(window.scrollY>640) b.classList.add('on'); else b.classList.remove('on'); }
+  document.addEventListener('DOMContentLoaded',function(){ f(); window.addEventListener('scroll',f,{passive:true}); });
+})();
