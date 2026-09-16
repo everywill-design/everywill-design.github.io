@@ -30,12 +30,12 @@ h1 em{font-style:normal;color:var(--or)}
 .mini{margin-top:12px;font-size:13px;color:var(--sub)}
 .hero-p img{border-radius:20px;box-shadow:0 14px 40px rgba(35,26,20,.12);width:100%}
 /* 実績 */
-.awards{padding:52px 0}
-.ah{font-size:clamp(20px,3.4vw,28px);font-weight:900;text-align:center;margin-bottom:26px}
-.aw{display:grid;grid-template-columns:1fr;gap:18px;justify-items:center}
-.aw img{max-width:330px;width:100%}
+.awards{padding:26px 0 18px}
+.ah{font-size:clamp(15px,2.2vw,18px);font-weight:900;text-align:center;margin-bottom:14px;color:var(--sub)}
+.aw{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;justify-items:center;align-items:center}
+.aw img{max-width:230px;width:100%}
 /* 手順 */
-.flow{background:var(--cream);padding:52px 0}
+.flow{background:var(--cream);padding:44px 0 48px}
 h2{font-size:clamp(21px,3.6vw,30px);font-weight:900;text-align:center;margin-bottom:28px}
 .fl{list-style:none;max-width:680px;margin:0 auto}
 .fl li{display:flex;gap:18px;padding:0 0 26px;position:relative}
@@ -115,7 +115,7 @@ footer p{margin-top:8px}
 }
 
 /* メディアロゴの横スライド（v3） */
-.mq{padding:26px 0 30px;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.mq{padding:14px 0 18px;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
 .mq-t{text-align:center;font-size:12px;letter-spacing:.14em;font-weight:800;color:var(--sub);margin-bottom:16px}
 .mq-w{overflow:hidden;width:100%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
@@ -186,16 +186,16 @@ h2 em{font-style:normal;color:var(--or)}
 .fixbar.on{opacity:1;transform:none;pointer-events:auto}
 
 /* 悩み（サービスサイトの型） */
-.worry{padding:52px 0 46px;background:#F7F7F7}
+.worry{padding:40px 0 34px;background:#F7F7F7}
 .wl{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:940px;margin:0 auto}
 .wp{text-align:center}
-.wp img{background:#fff;border-radius:16px;width:100%;height:auto;aspect-ratio:300/200;object-fit:contain;padding:14px}
+.wp img{background:#fff;border-radius:14px;width:100%;height:auto;aspect-ratio:300/170;object-fit:contain;padding:10px}
 .wp span{display:block;margin-top:10px;font-size:14px;line-height:1.7;color:var(--ink)}
-.arw{text-align:center;color:#231A14;font-size:26px;margin:30px 0 6px;line-height:1}
+.arw{text-align:center;color:#231A14;font-size:22px;margin:22px 0 4px;line-height:1}
 .solve{text-align:center;font-size:clamp(20px,3.6vw,30px);font-weight:900}
 .solve em{font-style:normal;color:var(--or)}
 /* 3つの特徴 */
-.feat{padding:52px 0}
+.feat{padding:40px 0 44px}
 .fg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1000px;margin:0 auto}
 .fc{border:1px solid var(--line);border-radius:18px;padding:24px 20px;background:#fff}
 .no{display:inline-block;color:var(--or);font-weight:900;font-size:20px;font-family:Arial,sans-serif;
@@ -216,4 +216,11 @@ h2 em{font-style:normal;color:var(--or)}
  .wp span{font-size:13px}
  .fg{grid-template-columns:1fr;gap:12px}
  .fc{padding:20px 18px}
+}
+/* 実績帯を小さく（冒頭で場所を取らない） */
+.mq-t{font-size:11.5px}
+@media(max-width:700px){
+ .aw{grid-template-columns:repeat(3,1fr);gap:6px}
+ .aw img{max-width:120px}
+ .awards{padding:20px 0 12px}
 }
