@@ -5,7 +5,7 @@
   var camp=q.get('camp')||q.get('utm_campaign')||'';
   var v=(q.get('v')||'a').toLowerCase();
   var owner=(camp==='owner-check');
-  var utm={}; ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){ if(q.get(k)) utm[k]=q.get(k); });
+  var utm={}; ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','src'].forEach(function(k){ if(q.get(k)) utm[k]=q.get(k); });
   utm.v=v;
   var sid=null; try{ sid=sessionStorage.getItem('tb_sid'); if(!sid){ sid=Math.random().toString(36).slice(2)+Date.now().toString(36); sessionStorage.setItem('tb_sid',sid);} }catch(e){ sid='na'; }
   var ref=''; try{ ref=document.referrer||''; }catch(e){}
