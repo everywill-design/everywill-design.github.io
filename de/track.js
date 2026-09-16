@@ -43,3 +43,18 @@
     if(window.scrollY>640) b.classList.add('on'); else b.classList.remove('on'); }
   document.addEventListener('DOMContentLoaded',function(){ f(); window.addEventListener('scroll',f,{passive:true}); });
 })();
+// 住所をコピー
+(function(){
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.getElementById('copyBtn'), a=document.getElementById('addr');
+    if(!b||!a) return;
+    b.addEventListener('click',function(){
+      var t=a.innerText.replace(/\n/g,' ').trim();
+      function done(){ b.textContent='コピーしました'; b.classList.add('done');
+        setTimeout(function(){ b.textContent='この住所をコピー'; b.classList.remove('done'); },2000); }
+      if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(done,function(){}); }
+      else { var e=document.createElement('textarea'); e.value=t; document.body.appendChild(e); e.select();
+        try{ document.execCommand('copy'); done(); }catch(x){} document.body.removeChild(e); }
+    });
+  });
+})();
