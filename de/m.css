@@ -95,4 +95,5 @@ footer p{margin-top:8px}
  .btn{width:100%;max-width:420px}
  .hd .btn-sm{width:auto}
  .fl li{flex-direction:row}
+ .badges .qr{display:none}
 }
