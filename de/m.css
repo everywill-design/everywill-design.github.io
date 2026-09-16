@@ -115,3 +115,21 @@ footer p{margin-top:8px}
 @media(max-width:420px){
  .hd-r .lnk{display:none}
 }
+
+/* メディアロゴの横スライド（v3） */
+.mq{padding:26px 0 30px;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.mq-t{text-align:center;font-size:12px;letter-spacing:.14em;font-weight:800;color:var(--sub);margin-bottom:16px}
+.mq-w{overflow:hidden;width:100%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+ mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq-r{display:flex;align-items:center;gap:40px;width:max-content;animation:mqf 28s linear infinite}
+.mq-r img{height:44px;width:auto;opacity:.85;filter:grayscale(1)}
+@keyframes mqf{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.mq-r{animation:none}}
+@media(max-width:899px){.mq-r{gap:26px}.mq-r img{height:34px}}
+
+.sub-lnk{margin-top:10px;font-size:13.5px}
+
+/* サブCTA（v5） */
+.btn2{background:#fff;color:var(--ord);border:2px solid var(--or);box-shadow:none;margin-top:14px}
+.btn2:hover{background:#FFF3E8}
+@media(max-width:899px){.btn2{width:100%;max-width:420px}}
