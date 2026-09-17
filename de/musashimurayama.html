@@ -150,8 +150,16 @@
 (function(){
   var ua=navigator.userAgent||'';
   var and=/Android/i.test(ua);
-  var url=and?'https://play.google.com/store/apps/details?id=com.toriiku.app':'https://apps.apple.com/jp/app/apple-store/id6785268481';
-  Array.prototype.forEach.call(document.querySelectorAll('.js-app'),function(a){a.href=url;});
+  var q=new URLSearchParams(location.search);
+  var camp=(q.get('camp')||q.get('utm_campaign')||'').replace(/[^A-Za-z0-9_-]/g,'');
+  var ct=camp?('ad_'+camp):'ad_murayama';
+  var IOS='https://apps.apple.com/jp/app/apple-store/id6785268481?pt=129075299&ct='+encodeURIComponent(ct)+'&mt=8';
+  var AND='https://play.google.com/store/apps/details?id=com.toriiku.app&referrer='+encodeURIComponent('utm_source='+ct);
+  Array.prototype.forEach.call(document.querySelectorAll('a[href*="apps.apple.com"],a[href*="play.google.com"]'),function(a){
+    if(a.classList.contains('js-app')){ a.href = and ? AND : IOS; }
+    else if(a.href.indexOf('play.google.com')>=0){ a.href = AND; }
+    else { a.href = IOS; }
+  });
   var fb=document.querySelector('.fixbar');
   window.addEventListener('scroll',function(){ if(window.scrollY>320){fb.classList.add('on');}else{fb.classList.remove('on');} },{passive:true});
 })();
