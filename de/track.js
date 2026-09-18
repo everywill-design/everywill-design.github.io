@@ -37,11 +37,22 @@
     [0.5,0.9].forEach(function(t){ if(p>=t && !hit[t]){ hit[t]=1; ev('scroll', Math.round(t*100)+'%'); } });
   },{passive:true});
 })();
-// 固定バーはスクロールしてから出す
+// 固定バーは「1画面目のボタンが画面から消えたら」出す（塗りボタンは常に1つ）
 (function(){
-  function f(){ var b=document.querySelector('.fixbar'); if(!b) return;
-    if(window.scrollY>640) b.classList.add('on'); else b.classList.remove('on'); }
-  document.addEventListener('DOMContentLoaded',function(){ f(); window.addEventListener('scroll',f,{passive:true}); });
+  function start(){
+    var bar=document.querySelector('.fixbar');
+    if(!bar) return;
+    var cta=document.querySelector('.hero .appbtns')||document.querySelector('.hero .btn');
+    if(cta && 'IntersectionObserver' in window){
+      new IntersectionObserver(function(es){
+        if(es[0].isIntersecting){ bar.classList.remove('on'); } else { bar.classList.add('on'); }
+      },{threshold:0}).observe(cta);
+      return;
+    }
+    function f(){ if(window.scrollY>640){ bar.classList.add('on'); } else { bar.classList.remove('on'); } }
+    f(); window.addEventListener('scroll',f,{passive:true});
+  }
+  document.addEventListener('DOMContentLoaded',start);
 })();
 // 住所をコピー
 (function(){

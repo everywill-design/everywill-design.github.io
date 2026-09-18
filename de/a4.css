@@ -1,0 +1,13 @@
+/* 着地ページ 1画面目の改善（v1・m.css と a3.css は触らない） */
+
+/* 1) スマホでは主役を1つに：ヒーロー画像を出さない（PCはそのまま） */
+@media(max-width:899px){
+  .hero-p{display:none}
+  .hero{padding:26px 0 30px}
+}
+
+/* 2) 数字を目立たせる */
+.hero .lead b{color:var(--or);font-weight:900;font-size:1.12em}
+
+/* 3) 社会的意義はボタンの下へ（HTML側で移動済み）。上に区切りを入れる */
+.hero .lead2{margin-top:20px;padding-top:16px;border-top:1px solid rgba(35,26,20,.12)}
