@@ -1,13 +1,21 @@
-/* 着地ページ 1画面目の改善（v1・m.css と a3.css は触らない） */
+/* 着地ページ 1画面目の改善（v2）
+   ・スマホ：見出し → 1行 → 写真（高さを抑える） → ボタン の順にする
+   ・PCはこれまでどおり（右側に大きい写真） */
 
-/* 1) スマホでは主役を1つに：ヒーロー画像を出さない（PCはそのまま） */
+/* PCでは、文章の中に入れた写真は出さない */
+.hero-m{display:none}
+
 @media(max-width:899px){
+  /* 元の写真（見出しより上に来てしまうもの）は出さない */
   .hero-p{display:none}
+  /* 代わりに、リード文とボタンの間に高さを抑えた写真を出す */
+  .hero-m{display:block;margin:16px 0 18px}
+  .hero-m img{width:100%;height:180px;object-fit:cover;border-radius:12px;display:block}
   .hero{padding:26px 0 30px}
 }
 
-/* 2) 数字を目立たせる */
+/* 数字を目立たせる */
 .hero .lead b{color:var(--or);font-weight:900;font-size:1.12em}
 
-/* 3) 社会的意義はボタンの下へ（HTML側で移動済み）。上に区切りを入れる */
+/* 社会的意義はボタンの下へ（HTML側で移動済み）。上に区切りを入れる */
 .hero .lead2{margin-top:20px;padding-top:16px;border-top:1px solid rgba(35,26,20,.12)}
