@@ -69,3 +69,28 @@
     });
   });
 })();
+// ストアへのリンクに「どこから来たか」の印を付ける
+// （Google Play の Install Referrer で、広告 → インストール → 登録 をつなぐため）
+(function(){
+  function stamp(){
+    var c = (window.TK && window.TK.camp) || '';
+    if(!c || c === 'owner-check') return;
+    var ref = 'utm_source%3Dtoriiku_lp'
+            + '%26utm_medium%3Dlp'
+            + '%26utm_campaign%3D' + encodeURIComponent(c)
+            + '%26camp%3D' + encodeURIComponent(c);
+    var as = document.querySelectorAll('a[href*="play.google.com/store/apps/details"]');
+    for(var i=0;i<as.length;i++){
+      var h = as[i].getAttribute('href') || '';
+      if(h.indexOf('referrer=') >= 0) continue;
+      as[i].setAttribute('href', h + (h.indexOf('?') >= 0 ? '&' : '?') + 'referrer=' + ref);
+    }
+    var ios = document.querySelectorAll('a[href*="apps.apple.com"]');
+    for(var j=0;j<ios.length;j++){
+      var g = ios[j].getAttribute('href') || '';
+      if(g.indexOf('ct=') >= 0) continue;
+      ios[j].setAttribute('href', g + (g.indexOf('?') >= 0 ? '&' : '?') + 'ct=' + encodeURIComponent(c) + '&mt=8');
+    }
+  }
+  document.addEventListener('DOMContentLoaded', stamp);
+})();
