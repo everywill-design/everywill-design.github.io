@@ -7,6 +7,18 @@
 <link rel="stylesheet" href="m2.css?v=5">
 <link rel="stylesheet" href="a3.css?v=1">
 <link rel="stylesheet" href="a4.css?v=2">
+<style id="hero-trust3">
+/* 1画面目：信用のあかし＋3ステップ（2026/9/19 追加） */
+.trust1{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:12px 0 4px;padding:0}
+.trust1 li{font-size:11px;line-height:1.5;padding:4px 10px;border-radius:999px;background:#fff;border:1px solid var(--line,#EFE4D8);color:var(--sub,#6B6159);white-space:nowrap}
+.trust1 li b{color:var(--ord,#D96C1C);font-weight:700}
+.step3{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:16px 0 0;padding:0}
+.step3 li{background:var(--cream,#FFF8F1);border:1px solid var(--line,#EFE4D8);border-radius:14px;padding:10px 4px;text-align:center}
+.step3 .n{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--or,#F08437);color:#fff;font-size:12px;font-weight:700;line-height:1;margin-bottom:6px}
+.step3 b{display:block;font-size:12px;line-height:1.35;letter-spacing:-.02em;color:var(--ink,#231A14)}
+.step3 i{display:block;font-style:normal;font-size:10px;line-height:1.35;letter-spacing:-.02em;color:var(--sub,#6B6159);margin-top:3px}
+@media(min-width:768px){.trust1{justify-content:flex-start}.trust1 li{font-size:12.5px;padding:5px 12px}.step3{gap:10px}.step3 li{padding:14px 10px}.step3 b{font-size:14.5px;letter-spacing:0}.step3 i{font-size:12px;letter-spacing:0}}
+</style>
 <base target="_blank">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXG9XL50B6"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QXG9XL50B6');</script>
@@ -24,8 +36,18 @@
 <section class="hero"><div class="c hero-in">
   <div class="hero-t">
     <span class="pill">全国どこでも使えます｜アプリ無料</span>
+    <ul class="trust1">
+      <li><b>国土交通省</b>の実証事業に採択</li>
+      <li><b>NHK・日テレ</b>で紹介</li>
+      <li>スタートアップアワード<b>最優秀賞</b></li>
+    </ul>
     <h1>受け取った伝票、<br>撮るだけで<em>ポイント</em>に。</h1>
     <p class="lead">自宅で受け取った荷物の伝票を撮って送るだけ。<br class="pc"><b>初回100pt</b>、そのあとも届くたびに。年間最大<b>8,000円分</b>。</p>
+    <ol class="step3">
+      <li><span class="n">1</span><b>アプリを入れる</b><i>無料・LINEで登録</i></li>
+      <li><span class="n">2</span><b>届いた伝票を撮る</b><i>手入力はゼロ</i></li>
+      <li><span class="n">3</span><b>ポイントが貯まる</b><i>はじめの1回100pt</i></li>
+    </ol>
     <div class="hero-m"><img src="https://toriiku-jp.com/home/img/hero.webp" width="1200" height="840" alt="受け取った荷物の伝票をスマホで撮るイメージ"></div>
     <div class="appbtns">
       <a href="https://apps.apple.com/jp/app/apple-store/id6785268481" data-ev="cta_hero_ios"><img src="https://toriiku-jp.com/home/img/badge-appstore.webp" alt="App Storeでダウンロード" width="360" height="120"></a>
