@@ -90,7 +90,12 @@ footer a{color:#B9ADA4;text-decoration:none}footer img{width:96px;margin:0 auto 
 .area{font-size:11.5px;color:var(--sub);background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:16px 0 0;line-height:1.8}
 .area b{display:block;color:var(--ink);margin-bottom:2px}
 .terms{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:12px 0 0}
-.terms b{display:block;font-size:13px;margin-bottom:6px}
+.terms{padding:0}
+.terms>summary{list-style:none;cursor:pointer;font-size:13px;font-weight:700;color:var(--ink);padding:14px 16px;display:flex;align-items:center;justify-content:space-between}
+.terms>summary::-webkit-details-marker{display:none}
+.terms>summary::after{content:"＋";font-weight:700;color:var(--or)}
+.terms[open]>summary::after{content:"−"}
+.terms>ol{padding:0 16px 14px 2.2em}
 .terms ol{margin:0;padding-left:1.2em}
 .terms li{font-size:11.5px;line-height:1.85;color:var(--sub);margin-bottom:5px}
 .terms u{text-decoration:none;font-weight:700;color:var(--ink)}
@@ -172,8 +177,8 @@ footer a{color:#B9ADA4;text-decoration:none}footer img{width:96px;margin:0 auto 
     <li><span class="n">3</span><div>自宅に届いた荷物の送り状を1枚撮って送る＋LINEに届くアンケートに回答<br><b>10月に届いた荷物でもOK</b></div></li>
   </ol>
   <div class="area"><b>対象エリア（下記の4市）</b>武蔵野市・西東京市・小金井市・三鷹市</div>
-  <div class="terms">
-    <b>モニター募集の詳しい条件</b>
+  <details class="terms">
+    <summary>モニター募集の詳しい条件を見る</summary>
     <ol>
       <li>対象は、満18歳以上で、<u>アプリの会員登録で入力した受け取り住所が上記4市の中にある方</u>です。4市以外の住所でご登録の場合は対象外です（自宅deトリイクのご利用自体は全国どこでも可能です）。</li>
       <li><u>2026年9月30日（火）23時59分まで</u>に、①アプリの会員登録 と ②モニター申込 の<u>両方</u>を完了してください。どちらか一方だけの場合は対象外です。</li>
@@ -185,7 +190,7 @@ footer a{color:#B9ADA4;text-decoration:none}footer img{width:96px;margin:0 auto 
       <li>不正が確認された場合は、ポイントの取り消しやご利用の停止を行うことがあります。</li>
       <li>本募集の内容は、予告なく変更または終了する場合があります。</li>
     </ol>
-  </div>
+  </details>
 </div></section>
 
 <section class="sec"><div class="w">
