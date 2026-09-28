@@ -253,4 +253,24 @@ footer a{color:#B9ADA4;text-decoration:none}footer img{width:96px;margin:0 auto 
   });
 })();
 </script>
+<script>
+/* 計測の二重化：tb_events（Supabase）が落ちてもGA4に残す */
+(function(){
+  function g(n,p){ try{ if(window.gtag) gtag('event',n,p||{}); }catch(e){} }
+  var q=new URLSearchParams(location.search);
+  var camp=(q.get('camp')||q.get('utm_campaign')||'none');
+  var LP='mm_v7';
+  g('lp_view',{camp:camp,lp:LP});
+  document.addEventListener('click',function(e){
+    var el=e.target.closest&&e.target.closest('[data-ev]');
+    if(el) g('lp_click',{camp:camp,lp:LP,ev:el.getAttribute('data-ev')});
+  });
+  var hit={};
+  window.addEventListener('scroll',function(){
+    var h=document.documentElement;
+    var r=(h.scrollTop+window.innerHeight)/h.scrollHeight;
+    [0.5,0.9].forEach(function(t){ if(r>=t&&!hit[t]){hit[t]=1; g('lp_scroll',{camp:camp,lp:LP,depth:Math.round(t*100)});} });
+  },{passive:true});
+})();
+</script>
 </body></html>
