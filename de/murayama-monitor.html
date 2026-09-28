@@ -18,6 +18,11 @@ img{max-width:100%;height:auto;display:block}a{color:inherit}
 .hd a.mini{background:var(--or);color:#fff;text-decoration:none;font-size:12.5px;font-weight:900;padding:9px 14px;border-radius:999px;white-space:nowrap}
 .hero{background:linear-gradient(180deg,#FFF9F3,#fff);padding:22px 0 0}
 .pill{display:inline-block;background:var(--or);color:#fff;font-size:13px;font-weight:900;padding:7px 16px;border-radius:999px}
+.limit{display:flex;align-items:center;gap:10px;background:#FDECEA;border:1px solid #F3C4BF;border-radius:14px;padding:12px 14px;margin:14px 0 0}
+.limit .d{flex:0 0 auto;background:#C62828;color:#fff;font-weight:900;font-size:12px;line-height:1.2;text-align:center;border-radius:10px;padding:7px 10px}
+.limit .d b{display:block;font-size:20px;letter-spacing:-.03em}
+.limit p{margin:0;font-size:12.5px;line-height:1.7;color:#8C2F26;font-weight:700}
+.limit p u{text-decoration:none;color:#C62828}
 .kick{color:var(--or);font-weight:900;font-size:15px;margin:14px 0 0}
 h1{word-break:auto-phrase;font-size:30px;line-height:1.36;font-weight:900;letter-spacing:-.03em;margin:6px 0 0}
 .big{display:flex;align-items:baseline;gap:8px;margin:14px 0 0}
@@ -36,7 +41,7 @@ padding:17px 14px;font-size:18px;font-weight:900;box-shadow:0 10px 22px -8px rgb
 .crown .g img{max-width:170px}.crown .g .wide{grid-column:1/-1;max-width:200px}
 .tick{background:var(--cream);overflow:hidden;padding:14px 0 20px}
 .tick .row{display:flex;gap:44px;width:max-content;animation:sl 22s linear infinite;align-items:center}
-.tick img{height:34px;width:auto;filter:grayscale(1);opacity:.62}
+.tick img{height:38px;width:auto}
 @keyframes sl{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .sec{padding:36px 0}.sec.cr{background:var(--cream)}.sec.nv{background:var(--navy);color:#fff}
 h2{word-break:auto-phrase;font-size:23px;font-weight:900;line-height:1.45;margin:0 0 8px;text-align:center;letter-spacing:-.02em}
@@ -100,11 +105,13 @@ footer a{color:#B9ADA4;text-decoration:none}footer img{width:96px;margin:0 auto 
 </div></header>
 
 <section class="hero"><div class="w">
-  <span class="pill">モニター募集 ／ 9月30日まで</span>
+  <span class="pill">モニター募集 ／ のこり<span class="dl2">2</span>日</span>
   <p class="kick">ネット通販をする方なら、どなたでも。</p>
   <h1>自宅に届いた荷物の<br>送り状を撮るだけ。</h1>
   <div class="big"><b>500</b><i>pt</i><span>＝500円分</span></div>
   <p class="lead">いつも届く荷物でOK。<br>新しく買い物をする必要はありません。</p>
+  <div class="limit"><span class="d">のこり<b id="dleft">2</b>日</span>
+    <p>この地域での募集は<u>9月30日で終わります</u>。次の予定はありません。<br>10月1日以降にご登録の場合、はじめての1枚は<u>100pt</u>になります。</p></div>
   <a class="cta js-store" href="https://apps.apple.com/jp/app/apple-store/id6785268481" data-ev="cta_hero">無料でアプリを入れて会員登録<small>約1分で終わります・費用は一切かかりません</small></a>
   <p class="note">この広告をご覧の方だけの募集です。<br>満18歳以上の方が対象です。</p>
   <div class="shot"><img src="https://toriiku-jp.com/home/img/hero.webp" alt="自宅に届いた荷物の送り状をスマホで撮っているところ"></div>
@@ -138,8 +145,7 @@ footer a{color:#B9ADA4;text-decoration:none}footer img{width:96px;margin:0 auto 
 
 <section class="sec nv"><div class="w">
   <h2>なぜ500ptを<br>お渡しできるのか。</h2>
-  <p class="h2s">理由をはっきり書いておきます。</p>
-  <p class="why">自宅deトリイクは、<b>国土交通省の補助を受けた実証事業</b>です。<br><br>
+    <p class="why">自宅deトリイクは、<b>国土交通省の補助を受けた実証事業</b>です。<br><br>
   いま宅配の現場は人手が足りていません。<br>なかでも再配達は、ドライバーさんの大きな負担です。<br><br>
   <b>使う人が増えれば、その再配達を減らせます。</b>同じ家に何度も行かずに済むので、CO2も減ります。<br><br>
   500ptは、その協力へのお礼です。<br>何かを買う必要はありませんし、あとからお金をいただくこともありません。</p>
@@ -207,7 +213,7 @@ footer a{color:#B9ADA4;text-decoration:none}footer img{width:96px;margin:0 auto 
 
 <section class="close"><div class="w">
   <h2>いつもの1枚を、<br>500ptに変えませんか。</h2>
-  <p class="h2s">モニター募集は9月30日まで。登録は約1分、費用はかかりません。</p>
+  <p class="h2s">募集は<b style="color:#FFB47A">9月30日で終わります</b>。次の予定はありません。<br>10月1日以降のご登録は、はじめての1枚が100ptになります。</p>
   <a class="cta js-store" href="https://apps.apple.com/jp/app/apple-store/id6785268481" data-ev="cta_foot">無料でアプリを入れて会員登録<small>App Store／Google Play</small></a>
   <div class="stores">
     <a class="js-app" href="https://apps.apple.com/jp/app/apple-store/id6785268481" data-ev="cta_foot_ios"><img src="https://toriiku-jp.com/home/img/badge-appstore.webp" alt="App Store"></a>
@@ -222,8 +228,16 @@ footer a{color:#B9ADA4;text-decoration:none}footer img{width:96px;margin:0 auto 
   <p><a href="https://toriiku-jp.com/terms.html#home">利用規約</a>　｜　<a href="https://toriiku-jp.com/home/">自宅deトリイク</a>　｜　<a href="https://toriiku-jp.com/">トリイクスポット</a></p>
 </div></footer>
 
-<div class="fix"><div class="w"><a class="cta js-store" href="https://apps.apple.com/jp/app/apple-store/id6785268481" data-ev="cta_fix">無料でアプリを入れて会員登録</a></div></div>
+<div class="fix"><div class="w"><a class="cta js-store" href="https://apps.apple.com/jp/app/apple-store/id6785268481" data-ev="cta_fix">無料で会員登録<small style="opacity:.95">のこり<span class="dl2">2</span>日・9月30日まで</small></a></div></div>
 
+<script>
+(function(){
+  var end=new Date(2026,8,30,23,59,59);
+  var d=Math.max(0,Math.ceil((end-new Date())/86400000));
+  var e=document.getElementById('dleft'); if(e)e.textContent=d;
+  Array.prototype.forEach.call(document.querySelectorAll('.dl2'),function(x){x.textContent=d;});
+})();
+</script>
 <script src="track.js?v=10"></script>
 <script>
 (function(){
