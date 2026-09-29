@@ -145,6 +145,17 @@ padding:10px 0 calc(10px + env(safe-area-inset-bottom));text-align:center}
 .pick div.on b{color:var(--or)}
 .pick div.on:after{content:"こちらを選ぶ";position:absolute;left:50%;transform:translateX(-50%);bottom:-11px;background:var(--or);color:#fff;font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
 .pickcap{font-size:12.5px;color:var(--sub);line-height:1.75;margin:0 0 4px;text-align:left}
+
+.fold{background:#fff;border:1px solid var(--line);border-radius:12px;margin:0 0 10px}
+.fold>summary{list-style:none;cursor:pointer;font-size:14.5px;font-weight:700;line-height:1.6;padding:16px 46px 16px 18px;position:relative}
+.fold>summary::-webkit-details-marker{display:none}
+.fold>summary:after{content:"＋";position:absolute;right:18px;top:15px;font-size:17px;font-weight:700;color:var(--or)}
+.fold[open]>summary:after{content:"−"}
+.foldbody{padding:0 18px 16px}
+.foldbody p{margin:0 0 12px;font-size:13.5px;line-height:1.9;color:var(--sub)}
+.foldbody p:last-child{margin-bottom:0}
+.foldbody p b{color:var(--ink)}
+.foldbody .proof{margin-top:4px}
 </style>
 <base target="_blank">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXG9XL50B6"></script>
@@ -201,14 +212,22 @@ padding:10px 0 calc(10px + env(safe-area-inset-bottom));text-align:center}
 </div></section>
 
 <section class="sec"><div class="w">
-  <h2>なぜ<em>1,000円分</em>なのか。</h2>
-  <p class="h2s">国土交通省の実証事業だからです。</p>
-  <div class="panel">宅配の現場は人手が足りていません。なかでも再配達は、ドライバーさんの大きな負担です。<br><br>
-  <b>使う人が増えれば、その再配達を減らせます。</b>1,000円分は、その協力へのお礼です。何かを買う必要はありませんし、あとからお金をいただくこともありません。<br><br>
-  いま16市町で実証を進めているため、この地域にお住まいの方が対象です。</div>
-  <a class="proof" href="https://takuhai-poc.jp/" data-ev="nav_mlit">株式会社Every WiLL は、国土交通省の補助対象事業者です
-    <span>「物流負荷の低減に向けた多様・柔軟な受取・注文方法の普及促進事業」の採択事業者一覧に掲載されています。</span></a>
-  <p class="note" style="margin-top:18px"><b>住所や名前が写っても大丈夫です。</b>統計をつくるためだけに使い、期間が過ぎたら消します。</p>
+  <details class="fold">
+    <summary>なぜ1,000円分なのか？（国土交通省の実証事業です）</summary>
+    <div class="foldbody">
+      <p>宅配の現場は人手が足りていません。なかでも再配達は、ドライバーさんの大きな負担です。</p>
+      <p><b>使う人が増えれば、その再配達を減らせます。</b>1,000円分は、その協力へのお礼です。何かを買う必要はありませんし、あとからお金をいただくこともありません。</p>
+      <p>いま16市町で実証を進めているため、この地域にお住まいの方が対象です。</p>
+      <a class="proof" href="https://takuhai-poc.jp/" data-ev="nav_mlit">株式会社Every WiLL は、国土交通省の補助対象事業者です
+        <span>「物流負荷の低減に向けた多様・柔軟な受取・注文方法の普及促進事業」の採択事業者一覧に掲載されています。</span></a>
+    </div>
+  </details>
+  <details class="fold">
+    <summary>送り状に住所や名前が写っても大丈夫？</summary>
+    <div class="foldbody">
+      <p>大丈夫です。統計をつくるためだけに使い、期間が過ぎたら消します。写っている方への連絡や営業には使いません。</p>
+    </div>
+  </details>
 </div></section>
 
 <section class="sec cr"><div class="w">
@@ -283,7 +302,7 @@ padding:10px 0 calc(10px + env(safe-area-inset-bottom));text-align:center}
 })();
 </script>
 <script src="track.js?v=10"></script>
-<script>try{if(window.TK)TK.ev("lp_ver","v13b");}catch(e){}</script>
+<script>try{if(window.TK)TK.ev("lp_ver","v14");}catch(e){}</script>
 <script>
 (function(){
   var ua=navigator.userAgent||'';var and=/Android/i.test(ua);
@@ -304,7 +323,7 @@ padding:10px 0 calc(10px + env(safe-area-inset-bottom));text-align:center}
   function g(n,p){ try{ if(window.gtag) gtag('event',n,p||{}); }catch(e){} }
   var q=new URLSearchParams(location.search);
   var camp=(q.get('camp')||q.get('utm_campaign')||'none');
-  var LP='mm_v13b';
+  var LP='mm_v14';
   g('lp_view',{camp:camp,lp:LP});
   document.addEventListener('click',function(e){
     var el=e.target.closest&&e.target.closest('[data-ev]');
