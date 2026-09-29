@@ -137,6 +137,14 @@ footer img{width:104px;margin:0 auto 12px}
 padding:10px 0 calc(10px + env(safe-area-inset-bottom));text-align:center}
 .fix .btn{min-height:52px;font-size:15px;min-width:260px}
 .fix .cap{display:block;font-size:11.5px;color:var(--sub);margin-top:6px;line-height:1.5}
+
+.pick{display:flex;gap:8px;margin:14px 0 18px}
+.pick div{flex:1;border:2px solid var(--line);border-radius:12px;padding:10px 6px;text-align:center;font-size:11.5px;line-height:1.5;color:#9A9A9A;background:#fff;position:relative}
+.pick div b{display:block;font-size:13px;font-weight:700;margin-top:4px}
+.pick div.on{border-color:var(--or);color:var(--ink);background:#FFF6EE}
+.pick div.on b{color:var(--or)}
+.pick div.on:after{content:"こちらを選ぶ";position:absolute;left:50%;transform:translateX(-50%);bottom:-11px;background:var(--or);color:#fff;font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.pickcap{font-size:12.5px;color:var(--sub);line-height:1.75;margin:0 0 4px;text-align:left}
 </style>
 <base target="_blank">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXG9XL50B6"></script>
@@ -150,9 +158,9 @@ padding:10px 0 calc(10px + env(safe-area-inset-bottom));text-align:center}
 </div></header>
 
 <section class="hero"><div class="w">
-  <p class="eyeline">立川市・所沢市など16市町にお住まいの方へ</p>
+  <p class="eyeline">自宅deトリイク｜立川市・所沢市など16市町にお住まいの方へ</p>
   <h1>受け取った伝票、<br>撮るだけで<br><em>1,000円分</em>。</h1>
-  <p class="desc">面倒な手続きは一切なし。<br>受け取った荷物の伝票を撮って送るだけ。</p>
+  <p class="desc">アプリ「<b>自宅deトリイク</b>」で、受け取った荷物の伝票を撮って送るだけ。面倒な手続きは一切ありません。</p>
   <p class="hnote"><img src="https://toriiku-jp.com/home/img/icon-coins.svg" alt="">9月30日までに会員登録した方だけの特典です。</p>
   <div class="shot"><img src="https://toriiku-jp.com/home/img/hero.webp" alt="自宅に届いた荷物の送り状をスマホで撮っているところ"></div>
   <div class="badges">
@@ -180,8 +188,10 @@ padding:10px 0 calc(10px + env(safe-area-inset-bottom));text-align:center}
   <h2>かんたん<em>3ステップ</em></h2>
   <p class="h2s">9月30日までにやるのは、1つめだけ。</p>
   <ul class="cards">
-    <li><span class="n">1</span><b>アプリを入れて会員登録</b><i>無料・約1分</i>
-      <p>LINEで登録して、受け取り住所（ご自宅）を入れるだけ。<b>9月30日23:59まで</b>に済ませてください。</p></li>
+    <li><span class="n">1</span><b>アプリを入れて「自宅deトリイク」を選ぶ</b><i>無料・約1分</i>
+      <p class="pickcap">アプリを開くと、受け取り方法が2つ出ます。<b>右側の「自宅deトリイク」</b>の「はじめる」を押してください。</p>
+      <div class="pick"><div>トリイクスポット<b>はじめる</b></div><div class="on">自宅deトリイク<b>はじめる</b></div></div>
+      <p>あとはLINEで登録して、受け取り住所（ご自宅）を入れるだけ。<b>9月30日23:59まで</b>に済ませてください。</p></li>
     <li><span class="n">2</span><b>届いた荷物の伝票を撮る</b><i>手入力はゼロ</i>
       <p>10月に届いた荷物でも大丈夫。急いで用意する必要はありません。</p></li>
     <li><span class="n">3</span><b>1,000円分が受け取れる</b><i>1pt＝1円</i>
@@ -237,12 +247,13 @@ padding:10px 0 calc(10px + env(safe-area-inset-bottom));text-align:center}
   <details><summary>1,000円分は、いつ・どうすればもらえますか？</summary><p>9月30日23:59までにアプリで会員登録を済ませてください。そのあと、自宅に届いた荷物の送り状を1枚撮って送り、LINEに届くアンケートに答えると確定します。送り状は10月に届いた荷物のものでも大丈夫です（10月31日まで）。</p></details>
   <details><summary>どんな荷物が対象ですか？</summary><p>ご自宅で受け取った宅配便の荷物です。ネット通販でも、お中元などの贈り物でもかまいません。いつも届いている荷物で大丈夫です。</p></details>
   <details><summary>9月中に荷物が届かないのですが、間に合いますか？</summary><p>大丈夫です。9月30日までに会員登録を済ませておけば、送り状の写真は10月に届いた荷物のもので構いません。</p></details>
+  <details><summary>アプリを開いたら「トリイクスポット」と「自宅deトリイク」が出ました。どちらですか？</summary><p>右側の「<b>自宅deトリイク</b>」を選んで「はじめる」を押してください。左の「トリイクスポット」は、お店などの受取場所まで取りに行く別のサービスです。1,000円分の対象は「自宅deトリイク」です。</p></details>
   <p class="link"><a href="https://toriiku-jp.com/terms.html#home">利用規約を見る</a></p>
 </div></section>
 
 <section class="close"><div class="w">
   <h2>いつもの1枚を、<br><em>1,000円分</em>に。</h2>
-  <p class="h2s">会員登録は9月30日23:59で終わります。</p>
+  <p class="h2s">アプリ「自宅deトリイク」の会員登録は<br>9月30日23:59で終わります。</p>
   <div class="btnwrap"><a class="btn js-store" href="https://apps.apple.com/jp/app/apple-store/id6785268481" data-ev="cta_foot">無料で会員登録する</a></div>
   <div class="badges">
     <a class="js-app" href="https://apps.apple.com/jp/app/apple-store/id6785268481" data-ev="cta_foot_ios"><img src="https://toriiku-jp.com/home/img/badge-appstore.webp" alt="App Store からダウンロード"></a>
@@ -271,7 +282,7 @@ padding:10px 0 calc(10px + env(safe-area-inset-bottom));text-align:center}
 })();
 </script>
 <script src="track.js?v=10"></script>
-<script>try{if(window.TK)TK.ev("lp_ver","v11p");}catch(e){}</script>
+<script>try{if(window.TK)TK.ev("lp_ver","v12p");}catch(e){}</script>
 <script>
 (function(){
   var ua=navigator.userAgent||'';var and=/Android/i.test(ua);
@@ -292,7 +303,7 @@ padding:10px 0 calc(10px + env(safe-area-inset-bottom));text-align:center}
   function g(n,p){ try{ if(window.gtag) gtag('event',n,p||{}); }catch(e){} }
   var q=new URLSearchParams(location.search);
   var camp=(q.get('camp')||q.get('utm_campaign')||'none');
-  var LP='mm_v11p';
+  var LP='mm_v12p';
   g('lp_view',{camp:camp,lp:LP});
   document.addEventListener('click',function(e){
     var el=e.target.closest&&e.target.closest('[data-ev]');
