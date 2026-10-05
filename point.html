@@ -78,6 +78,103 @@
   ]
 }
 </script>
+<style>
+/* ============================================================
+   交換先ロゴ一覧（デジコ ロゴ・商標クリエイティブガイドライン対応）
+   既存 css/point.min.css との衝突を避けるため、point-* を使わず
+   gift-* の独自クラスで完結させ、継承される値もすべて明示的に上書きする。
+   ロゴ枠 132x120px（SP 124x120px）で各社の最小使用サイズを満たす。
+   ============================================================ */
+.gift-grid{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  justify-content:center !important;
+  align-items:flex-start !important;
+  gap:24px !important;
+  max-width:560px !important;
+  margin:0 auto !important;
+  padding:0 !important;
+  list-style:none !important;
+}
+.gift-grid *{box-sizing:border-box;}
+.gift-item{
+  display:flex !important;
+  flex:0 0 auto !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:flex-start !important;
+  width:168px !important;
+  min-width:0 !important;
+  max-width:none !important;
+  height:auto !important;
+  margin:0 !important;
+  padding:0 8px !important;
+  background:none !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  transform:none !important;
+}
+.gift-logo{
+  display:flex !important;
+  flex:0 0 auto !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:132px !important;
+  height:120px !important;
+  margin:0 !important;
+  padding:0 !important;
+  background:none !important;
+  border:0 !important;
+  border-radius:0 !important;
+  font-size:0 !important;
+}
+.gift-logo img{
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  max-width:132px !important;
+  max-height:120px !important;
+  min-width:0 !important;
+  object-fit:contain !important;
+  border:0 !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+  vertical-align:middle !important;
+}
+.gift-label{
+  display:block !important;
+  width:132px !important;
+  min-height:2.8em !important;
+  margin:26px 0 0 !important;
+  padding:0 !important;
+  font-family:"Noto Sans JP",sans-serif;
+  font-size:12px !important;
+  font-weight:700 !important;
+  line-height:1.4 !important;
+  color:#333 !important;
+  text-align:center !important;
+  letter-spacing:0 !important;
+  word-break:auto-phrase;
+}
+/* Google Play：「g」の下部が丸まらない書体を指定 */
+.gift-label-latin{font-family:Arial,Helvetica,sans-serif !important;}
+.gift-note{
+  margin:32px auto 0 !important;
+  max-width:560px !important;
+  font-size:13px !important;
+  line-height:1.7 !important;
+  color:#555 !important;
+  text-align:center !important;
+}
+@media (max-width:400px){
+  .gift-grid{gap:16px !important;max-width:280px !important;}
+  .gift-item{width:132px !important;padding:0 4px !important;}
+  .gift-logo{width:124px !important;}
+  .gift-logo img{max-width:124px !important;}
+  .gift-label{width:124px !important;font-size:11.5px !important;}
+}
+</style>
 </head>
 <body>
 
@@ -159,56 +256,56 @@
       </h2>
     </header>
 
-    <div class="point-grid">
-      <div class="point-card">
-        <div class="point-card-icon bg-paypay">P</div>
-        <p class="point-card-name">PayPayマネーライト</p>
+    <div class="gift-grid">
+
+      <div class="gift-item">
+        <span class="gift-logo"><img src="img/amazon_point.webp" alt="Amazonギフトカード" width="396" height="119" loading="lazy" decoding="async"></span>
+        <span class="gift-label">Amazonギフトカード</span>
       </div>
-      <div class="point-card">
-        <div class="point-card-icon bg-amazon">a</div>
-        <p class="point-card-name">Amazonギフトカード</p>
+
+      <div class="gift-item">
+        <span class="gift-logo"><img src="img/quocardpay.webp" alt="QUOカードPay" width="396" height="383" loading="lazy" decoding="async"></span>
+        <span class="gift-label">QUOカードPay</span>
       </div>
-      <div class="point-card">
-        <div class="point-card-icon bg-apple"><i class="fa-brands fa-apple" aria-hidden="true"></i></div>
-        <p class="point-card-name">Apple Gift Card</p>
+
+      <div class="gift-item">
+        <span class="gift-logo"><img src="img/googleplay.webp" alt="Google Play ギフトコード" width="396" height="256" loading="lazy" decoding="async"></span>
+        <span class="gift-label gift-label-latin">Google Play ギフトコード</span>
       </div>
-      <div class="point-card">
-        <div class="point-card-icon bg-google"><i class="fa-brands fa-google-play" aria-hidden="true"></i></div>
-        <p class="point-card-name" style="font-family: Arial, Helvetica, sans-serif;">Google Play ギフトコード</p>
+
+      <div class="gift-item">
+        <span class="gift-logo"><img src="img/edy.webp" alt="EdyギフトID" width="254" height="396" loading="lazy" decoding="async"></span>
+        <span class="gift-label">EdyギフトID</span>
       </div>
-      <div class="point-card">
-        <div class="point-card-icon bg-quo">Q</div>
-        <p class="point-card-name">QUOカードPay</p>
+
+      <div class="gift-item">
+        <span class="gift-logo"><img src="img/nanaco.webp" alt="nanacoギフト" width="396" height="396" loading="lazy" decoding="async"></span>
+        <span class="gift-label">nanacoギフト</span>
       </div>
-      <div class="point-card">
-        <div class="point-card-icon bg-nanaco">n</div>
-        <p class="point-card-name">nanacoギフト</p>
+
+      <div class="gift-item">
+        <span class="gift-logo"><img src="img/aupay.webp" alt="au PAY ギフトカード" width="396" height="75" loading="lazy" decoding="async"></span>
+        <span class="gift-label">au PAY ギフトカード</span>
       </div>
-      <div class="point-card">
-        <div class="point-card-icon bg-waon">W</div>
-        <p class="point-card-name">WAON POINT eギフト</p>
+
+      <div class="gift-item">
+        <span class="gift-logo"><img src="img/apple.webp" alt="Apple Gift Card" width="396" height="317" loading="lazy" decoding="async"></span>
+        <span class="gift-label">Apple Gift Card</span>
       </div>
-      <div class="point-card">
-        <div class="point-card-icon bg-aupay">au</div>
-        <p class="point-card-name">au PAY ギフトカード</p>
+
+      <div class="gift-item">
+        <span class="gift-logo"><img src="img/waon.webp" alt="WAON POINT eギフト" width="341" height="396" loading="lazy" decoding="async"></span>
+        <span class="gift-label">WAON POINT eギフト</span>
       </div>
-      <div class="point-card">
-        <div class="point-card-icon bg-edy">E</div>
-        <p class="point-card-name">EdyギフトID</p>
+
+      <div class="gift-item">
+        <span class="gift-logo"><img src="img/paypay.webp" alt="PayPayマネーライト" width="396" height="100" loading="lazy" decoding="async"></span>
+        <span class="gift-label">PayPayマネーライト</span>
       </div>
-      <div class="point-card">
-        <div class="point-card-icon bg-tosho"><i class="fa-solid fa-book" aria-hidden="true"></i></div>
-        <p class="point-card-name">図書カードネットギフト</p>
-      </div>
-      <div class="point-card">
-        <div class="point-card-icon bg-dpoint">d</div>
-        <p class="point-card-name">dポイントギフト</p>
-      </div>
-      <div class="point-card">
-        <div class="point-card-icon bg-cafe"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i></div>
-        <p class="point-card-name">ドリンクチケット</p>
-      </div>
+
     </div>
+
+    <p class="gift-note">このほか、dポイントギフト・図書カードネットギフト・ドリンクチケットにも交換いただけます。</p>
 
     <ul class="point-notes">
       <li>トリイクポイントは、外部サービス「デジコ（株式会社DIGITALIO提供）」を通じて、お好きなポイント・ギフトに交換します。</li>
@@ -314,7 +411,6 @@
         <span class="point-detail-sub">※本プログラムはトリイクによる提供です。本トリイクポイントについてのお問い合わせは Amazonではお受けしておりません。トリイク事務局までお願いいたします。</span>
         <span class="point-detail-sub">※Amazon、Amazon.co.jp およびそれらのロゴは Amazon.com, Inc.またはその関連会社の商標です。</span>
         <span class="point-detail-sub" style="font-family: Arial, Helvetica, sans-serif;">※Google Play は Google LLC の商標です。</span>
-        <span class="point-detail-sub">※PeXから外部への交換には手数料がかかる場合がございます。</span>
         <span class="point-detail-sub">※© 2026 iTunes K.K. All rights reserved.</span>
         <span class="point-detail-sub">※「QUOカードPay」もしくは「クオ・カード ペイ」およびそれらのロゴは 株式会社クオカードの登録商標です。</span>
         <span class="point-detail-sub">※「nanaco（ナナコ）」と「nanacoギフト」は株式会社セブン・カードサービスの登録商標です。</span>
